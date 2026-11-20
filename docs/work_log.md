@@ -132,3 +132,10 @@ Read the full reconstruction brief. Inspected workspace attachments, tool availa
   its own mesh — not texture swaps or whole-wall animation.
 - All six test suites pass; 200/200 geometry coverage.
 - Next: commit/push; smoke-test server; gen1 renders on render host; acceptance gates.
+
+### 2026-11-20 · hull deck detail (brief B.2) (continued, no stop)
+- source/hull/fittings.js: deck planking strips with caulking gaps, hatches with
+  coamings, glazed skylights, deck drains/scuppers on boat deck. Production-quality
+  deck surfaces (not flat planes).
+- All six test suites pass; 200/200 geometry coverage.
+- Next: commit/push; smoke-test server; gen1 renders on render host; acceptance gates.
