@@ -139,3 +139,10 @@ Read the full reconstruction brief. Inspected workspace attachments, tool availa
   deck surfaces (not flat planes).
 - All six test suites pass; 200/200 geometry coverage.
 - Next: commit/push; smoke-test server; gen1 renders on render host; acceptance gates.
+
+### 2026-11-20 · mast rigging (brief B.2) (continued, no stop)
+- source/hull/fittings.js: mast standing rigging — fore/aft stays + port/stbd shrouds
+  per mast, with catenary sag and brass turnbuckles at deck attachments. Schooner rig
+  per Titanic Belfast (3 masts).
+- All six test suites pass; 200/200 geometry coverage.
+- Next: commit/push; smoke-test server; gen1 renders on render host; acceptance gates.

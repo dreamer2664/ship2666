@@ -268,6 +268,60 @@ export function buildFittings() {
   });
   group.add(deckDetail);
 
+
+  // ---- Mast rigging (brief B.2): shrouds/stays, wires, turnbuckles, tension ----
+  const riggingMat = makeMaterial({ color: 0x6a6a6a, roughness: 0.6, metalness: 0.8 });
+  const turnbuckleMat = makeMaterial(materials.brass);
+  const masts = [
+    { x: length*0.10, z: 0, h: 15 },   // fore
+    { x: length*0.50, z: 0, h: 15 },   // main
+    { x: length*0.84, z: 0, h: 15 },   // mizzen
+  ];
+  const riggingGroup = new THREE.Group(); riggingGroup.name = 'mastRigging';
+  const mastZ = dimensions.deckElevations[3].z;
+  masts.forEach((m, mi)=>{
+    // masthead pivot (top of mast)
+    const head = new THREE.Vector3(m.x, 0, mastZ + m.h);
+    // stays fore/aft + shrouds port/stbd
+    const stays = [
+      { dx: -4, dz: 0, label: 'fore_stay' },   // toward bow
+      { dx: 4, dz: 0, label: 'aft_stay' },     // toward stern
+      { dx: 0, dz: -3, label: 'port_shroud' },
+      { dx: 0, dz: 3, label: 'stbd_shroud' },
+    ];
+    stays.forEach((st,si)=>{
+      // deck attachment point
+      const deckY = dimensions.deckElevations[3].z;
+      const attach = new THREE.Vector3(m.x + st.dx, deckY + 0.06, st.dz);
+      // line from deck attach to masthead
+      const pts = [];
+      const segs = 6;
+      for(let k=0;k<=segs;k++){
+        const t=k/segs;
+        // slight catenary sag
+        const sag = 0.15*Math.sin(Math.PI*t);
+        pts.push(new THREE.Vector3(
+          attach.x + (head.x-attach.x)*t,
+          attach.y + (head.y-attach.y)*t + sag,
+          attach.z + (head.z-attach.z)*t
+        ));
+      }
+      const line = new THREE.CatmullRomCurve3(pts);
+      const geo = new THREE.TubeGeometry(line, segs, 0.025, 6, false);
+      const mesh = new THREE.Mesh(geo, riggingMat);
+      mesh.name = `rigging_m${mi}_${st.label}`;
+      riggingGroup.add(mesh);
+      // turnbuckle at lower end
+      const tb = new THREE.Mesh(new THREE.BoxGeometry(0.1, 0.06, 0.12), turnbuckleMat);
+      tb.position.set(attach.x, attach.y + 0.15, attach.z);
+      tb.name = `turnbuckle_m${mi}_${st.label}`;
+      riggingGroup.add(tb);
+    });
+  });
+  riggingGroup.traverse((m)=>{m.castShadow=true;m.receiveShadow=true;});
+  group.add(riggingGroup);
+
   return group;
 }
+
 
