@@ -7,6 +7,7 @@
 //
 // These are Pass B/C base definitions. The materials pass refines each with
 // albedo/normal/roughness/metalness/opacity maps and trim sheets.
+import * as THREE from 'three';
 
 export const materials = {
   // ---- Painted steel hull ----

@@ -38,6 +38,10 @@ renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 renderer.shadowMap.enabled = true;
 renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 document.getElementById('viewport').appendChild(renderer.domElement);
+// Expose camera/renderer for headless render capture pipeline.
+window.__threeCamera = camera;
+window.__threeRenderer = renderer;
+window.__threeScene = scene;
 
 const controls = new OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true;
