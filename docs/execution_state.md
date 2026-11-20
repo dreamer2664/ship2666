@@ -4,17 +4,18 @@
 - Session: 2 (resumed 2026-11-20, local Europe/Rome) — continuous work, no stops.
 - Status: **RESEARCH — NOT COMPLETE** (production modelling underway; blockout scaffold replaced).
 - Active-work estimate: research + runtime build + 200-space inventory + production hull
-  (strakes/frames/rivets/stern/stem/funnels/masts/deckhouses) + fittings + interiors (200/200
-  geometry coverage + per-room-type PBR materials) + boilers + period lighting + functional doors
-  + 6 test suites.
-- Last verified local commit: `077a95c` (functional per-door animation).
-- Last verified remote commit: `077a95c` on `origin/teutonic-0JYIGPYC` (pushed, verified).
+  (strakes/frames/rivets/stern/stem/funnels/masts/deckhouses) + fittings (railings, lifeboats+davits,
+  anchors, windlass/capstan, bollards, companionways, cowl vents, portholes, funnels, masts,
+  deck planking/hatches/skylights/drains) + interiors (200/200 geometry coverage +
+  per-room-type PBR materials) + boilers + period lighting + functional doors + 6 test suites.
+- Last verified local commit: `57fc97d` (hull deck detail).
+- Last verified remote commit: `57fc97d` on `origin/teutonic-0JYIGPYC` (pushed, verified).
 
 ## Stack (session 2)
 - Browser-explorable Three.js (no build step, no GPU), entry `index.html`, serve `./tools/serve.sh` (port 5173).
 - Full scene verified serving: hull + fittings + twin engines + propellers + rudder + spectral ocean
   + interiors (200 rooms, per-room-type materials) + boiler rooms + period lighting
-  (nav lights red/green/white, cabin practicals, engine glow) + functional per-door open/close.
+  + functional per-door open/close + deck detail. All modules HTTP 200 including Three.js CDN.
 - Ship state (telegraph→steam→load→RPM→propeller→rudder→smoke/wake) drives all motion.
 
 ## Hardware
@@ -37,12 +38,12 @@
 ## Blockers / unfinished
 - Gen1 inspection renders not captured (no GPU, no headless browser — documented in
   tools/render_capture_plan.md; not a reduced quality target).
-- Acceptance-gate verification; hull plate/rivet refinement; texture maps/trim sheets.
+- Hull plate/rivet refinement; texture maps/trim sheets; acceptance-gate verification.
 
 ## Next exact actions
 1. Commit/push execution state (this record).
 2. Smoke-test full app server (done — all modules HTTP 200).
-3. Hull production detail refinement (deck planking, hatches, skylights, vents, drains).
+3. Hull production detail refinement; quality checklist progress tracking.
 4. Gen1 renders on render host; acceptance-gate verification.
 5. Commit/push checkpoint every 10-15 min or per milestone.
 
