@@ -71,3 +71,11 @@ Read the full reconstruction brief. Inspected workspace attachments, tool availa
 - Next: commit/push; continue production hull detail (rivets/plates), more
   interior rooms, materials/lighting pass; capture gen1 when a render host
   is available.
+
+### 2026-11-20 · space coverage test (continued, no stop)
+- tests/test_space_coverage.py: validates all 200 spaces (unique IDs, valid decks,
+  confidence/status/evidence type, classified Type, dimensions), checks interiors.js
+  geometry rooms reference only inventory space IDs, and confirms 200+ target met.
+- All three tests pass: check_inventories, test_render_manifest, test_space_coverage.
+- Next: commit/push; materials/lighting pass (PBR textures, trim sheets); functional
+  mechanism tests (door pivots, engine kinematics, rudder); gen1 renders on render host.
