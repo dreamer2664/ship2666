@@ -88,3 +88,13 @@ Read the full reconstruction brief. Inspected workspace attachments, tool availa
 - All three test suites pass.
 - Next: commit/push; materials/lighting pass (PBR, trim sheets); functional
   mechanism tests; gen1 renders on render host.
+
+### 2026-11-20 · shipState kinematic test + materials plan (continued, no stop)
+- tests/test_ship_state.py: design-review of the lag/limit state model — full ahead
+  converges to ~90 rpm / load 1, stop decays to 0, full astern negative RPM,
+  rudder bounded to +/-35 deg, three piston phases offset by 120 deg, all state
+  bounds hold. Passes.
+- All four test suites pass.
+- Next: commit/push; materials/lighting pass (differentiated brass/copper/iron/steel,
+  upholstery fibre, glass thickness); hull rivet/plate detail; functional door-pivot
+  tests; gen1 renders on render host.
