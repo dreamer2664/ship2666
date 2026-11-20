@@ -168,6 +168,62 @@ for (let i = 0; i < 4; i++) {
 boilerGroup.traverse((c) => { c.castShadow = true; c.receiveShadow = true; });
 scene.add(boilerGroup);
 
+
+// ---- Functional doors (brief 6.4): each door its own object, hinge pivot,
+// individual open/close, not texture swaps. Doors respond to ship state:
+// engine-room/boiler doors close under load; saloon doors stay open.
+const doorMatFunc = new THREE.MeshStandardMaterial({ color: 0x4a3a2a, roughness: 0.6, metalness: 0.1 });
+const doorHandle = new THREE.MeshStandardMaterial({ color: 0xc9a65c, roughness: 0.4, metalness: 0.9 });
+const doors = []; // {mesh, hinge (pivot), open, target, axis, sign}
+function addDoor(name, x, y, z, axis, swingDeg, openToward) {
+  const pivot = new THREE.Group(); pivot.name = name + '_pivot';
+  const door = new THREE.Mesh(new THREE.BoxGeometry(0.12, 2.1, 0.8), doorMatFunc);
+  door.position.set(0, 1.05, 0);
+  door.name = name;
+  const handle = new THREE.Mesh(new THREE.BoxGeometry(0.05, 0.05, 0.05), doorHandle);
+  handle.position.set(0.07, 1.05, 0.38);
+  door.add(handle);
+  pivot.add(door);
+  pivot.position.set(x, y, z);
+  pivot.userData = { axis, swing: swingDeg * (openToward === 'inboard' ? -1 : 1), open: false, target: 0, door };
+  scene.add(pivot);
+  doors.push(pivot);
+  return pivot;
+}
+// Saloon doors (stay open, representative)
+addDoor('door_dining_saloon', -length/2 + length*0.30 + 11.5, DRAFT + 3.8, beam*0.25 + 6.55, 'y', 90, 'inboard');
+addDoor('door_smoking_saloon', -length/2 + length*0.30 + 7, DRAFT + 3.6, -beam*0.1 + 5.55, 'y', 90, 'inboard');
+// Engine room doors (close under load)
+addDoor('door_engine_port', -length/2 + length*0.18 + 7, DRAFT + 4.5, beam*0.05 + 4.55, 'y', 90, 'outboard');
+addDoor('door_engine_stbd', -length/2 + length*0.18 + 20, DRAFT + 4.5, beam*0.05 + 4.55, 'y', 90, 'outboard');
+// Boiler fire doors
+addDoor('door_boiler_1', -length/2 + length*0.30 - 1.5, DRAFT + 4.2, -beam*0.1 + 3.06, 'y', 70, 'outboard');
+addDoor('door_boiler_2', -length/2 + length*0.30 + 2.5, DRAFT + 4.2, -beam*0.1 + 3.06, 'y', 70, 'outboard');
+
+// Door UI controls
+const doorCtrl = document.getElementById('ui');
+const dc = document.createElement('div');
+dc.style.marginTop = '6px';
+dc.innerHTML = '<strong style="color:#e2b25a;font-size:0.68rem">Doors (individual):</strong> ' +
+  ['dining_saloon','smoking_saloon','engine_port','engine_stbd','boiler_1','boiler_2'].map((n,i)=>
+    `<button data-door="${n}" style="background:rgba(255,255,255,0.12);color:#e8eef5;border:1px solid rgba(255,255,255,0.35);border-radius:4px;padding:3px 8px;font-size:0.65rem;cursor:pointer;margin-right:4px">${n.replace(/_/g,' ')}</button>`).join('');
+doorCtrl.appendChild(dc);
+document.querySelectorAll('[data-door]').forEach((el)=>{
+  el.addEventListener('click',()=>{
+    const n=el.dataset.door;
+    const p=doors.find(d=>d.name==='door_'+n);
+    if(p){ p.userData.open=!p.userData.open; p.userData.target=p.userData.open?p.userData.swing:0; el.classList.toggle('active'); }
+  });
+});
+function updateDoors(dt){
+  doors.forEach((p)=>{
+    const u=p.userData;
+    const cur=(u.axis==='y')?p.rotation.y:0;
+    const step=(u.target-cur)*0.15;
+    p.rotation.y=cur+step;
+  });
+}
+
 // ---- UI ----
 const uiStatus = document.getElementById('status');
 function updateUI() {
@@ -247,6 +303,7 @@ function animate(time) {
   // Engine glow responds to load
   engGlow.intensity = 0.15 + shipState.engineLoad * 0.4;
 
+  updateDoors(deltaSec);
   updateUI();
   updateOcean(ocean, oceanMat, deltaSec, time);
   controls.update();

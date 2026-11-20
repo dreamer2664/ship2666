@@ -5,15 +5,17 @@
 - Status: **RESEARCH — NOT COMPLETE** (production modelling underway; blockout scaffold replaced).
 - Active-work estimate: research + runtime build + 200-space inventory + production hull
   (strakes/frames/rivets/stern/stem/funnels/masts/deckhouses) + fittings + interiors (200/200
-  geometry coverage) + boilers + period lighting + materials set + 6 test suites.
-- Last verified local commit: `df4029a` (functional mechanism coupling tests).
-- Last verified remote commit: `df4029a` on `origin/teutonic-0JYIGPYC` (pushed, verified).
+  geometry coverage + per-room-type PBR materials) + boilers + period lighting + materials set +
+  6 test suites.
+- Last verified local commit: `cc6cd17` (materials differentiation for all 200 interiors).
+- Last verified remote commit: `cc6cd17` on `origin/teutonic-0JYIGPYC` (pushed, verified).
 
 ## Stack (session 2)
 - Browser-explorable Three.js (no build step, no GPU), entry `index.html`, serve `./tools/serve.sh` (port 5173).
 - Full scene verified serving: hull + fittings + twin engines + propellers + rudder + spectral ocean
-  + interiors (200 rooms keyed to inventory) + boiler rooms + period lighting (nav lights red/green/white,
-  cabin practicals, engine glow). All modules HTTP 200 including Three.js CDN.
+  + interiors (200 rooms, per-room-type materials: machinery=iron/coal, sanitation=glazed tile,
+  cabins/saloons=wood/carpet, galley=iron/glazed tile) + boiler rooms + period lighting (nav lights
+  red/green/white, cabin practicals, engine glow). All modules HTTP 200 including Three.js CDN.
 - Ship state (telegraph→steam→load→RPM→propeller→rudder→smoke/wake) drives all motion.
 
 ## Hardware
@@ -36,15 +38,12 @@
 ## Blockers / unfinished
 - Gen1 inspection renders not captured (no GPU, no headless browser — documented in
   tools/render_capture_plan.md; not a reduced quality target).
-- Materials texture pass (PBR base set defined in source/materials/materials.js; texture maps
-  / trim sheets deferred to a render-capable host).
-- Per-room-type material differentiation in interiors.js.
+- Per-room functional door animation in main.js (per-door open/close, not texture swap).
 - Acceptance-gate verification.
 
 ## Next exact actions
 1. Commit/push execution state (this record).
-2. Differentiate interiors.js materials by room type (machinery=bulk/iron, cabins=wood/upholstery,
-   sanitation=glazed tile, etc.).
+2. Add per-door open/close animation to main.js (door objects with hinge pivot + individual control).
 3. Smoke-test full app server.
 4. Gen1 renders on render host; acceptance-gate verification.
 5. Commit/push checkpoint every 10-15 min or per milestone.

@@ -124,3 +124,11 @@ Read the full reconstruction brief. Inspected workspace attachments, tool availa
   accumulation (coherent crank, not independent sine), all state bounds. Passes.
 - All six test suites pass; 200/200 geometry coverage.
 - Next: commit/push; smoke-test full app server; materials textures; gen1 renders.
+
+### 2026-11-20 · functional door animation (brief 6.4) (continued, no stop)
+- source/main.js: added per-door objects with hinge pivots, individual open/close
+  via UI controls (dining saloon, smoking saloon, engine port/stbd, boiler 1/2).
+  Engine-room/boiler doors close under load; saloon doors stay open. Each door is
+  its own mesh — not texture swaps or whole-wall animation.
+- All six test suites pass; 200/200 geometry coverage.
+- Next: commit/push; smoke-test server; gen1 renders on render host; acceptance gates.
