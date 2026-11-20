@@ -1,7 +1,9 @@
 # SHIP2666 · RMS Teutonic (1889)
 
 **Status: RESEARCH — NOT COMPLETE**  
-**Agent branch: `teutonic-0JYIGPYC`**
+**Agent branch: `teutonic-9NXT5G1C`**
+
+The initial branch was taken over by a concurrent writer after its first push. This agent's own history was preserved on the new isolated branch; no external commits were overwritten or merged. See the execution-state incident record.
 
 An evidence-led, editable reconstruction of the White Star liner RMS *Teutonic*, built by Harland & Wolff. The work follows whole-vessel coverage, production modelling, materials and functional/visual inspection in that order. A blockout is not a finished reconstruction.
 

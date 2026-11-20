@@ -13,7 +13,10 @@ import subprocess
 ROOT = Path(__file__).resolve().parents[1]
 
 def git(*args):
-    result = subprocess.run(['git', *args], cwd=ROOT, text=True, capture_output=True, check=True)
+    result = subprocess.run(['git', *args], cwd=ROOT, text=True, capture_output=True)
+    if result.returncode:
+        detail = (result.stdout + result.stderr).replace(os.environ.get('GH_TOKEN', '\0'), '[REDACTED]')
+        raise SystemExit(f'Git {args[0]} failed ({result.returncode}): {detail}')
     return result.stdout.strip()
 
 

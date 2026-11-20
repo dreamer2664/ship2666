@@ -1,7 +1,7 @@
 # Execution state
 
 - Session: 1
-- Branch: `teutonic-0JYIGPYC` — resume this branch; do not allocate another.
+- Branch: `teutonic-9NXT5G1C` — resume this branch; do not allocate another.
 - Session checkpoint clock started: 2026-11-20T07:13:05Z (UTC).
 - Status: **RESEARCH — NOT COMPLETE**.
 - Active-work estimate: not yet totaled; use the timestamped work log, not requested workload as reported time.
@@ -12,6 +12,10 @@
 Authenticated GitHub access without writing or printing the credential. Inspected `dreamer2664/ship2666`: public and genuinely empty. Inspected remote and local refs, allocated the branch with Python `secrets`, verified nonexistence on origin, created it as an orphan branch. No prior agent work was present.
 
 Workspace: `/home/user/workspace/ship2666`. Two CPU cores, approximately 3.8 GiB system RAM, roughly 19.5 GiB disk free at initialization. No GPU detected; Blender and PDF CLI tools not installed.
+
+## Branch-isolation incident (2026-11-20 07:33 UTC)
+
+The original `teutonic-0JYIGPYC` was initially empty and uniquely allocated, but a concurrent writer subsequently pushed eight or more commits to it. The next push was rejected as non-fast-forward. This agent fetched and inspected the divergence without changing the other history. Local research commit `dcd5dcc` and the entire initial history were preserved on **`teutonic-9NXT5G1C`**, a fresh random suffix checked against local and origin refs. The original branch is no longer this agent's destination. No external commits were merged, rewritten, overwritten or deleted. Resume only `teutonic-9NXT5G1C`; do not treat the default branch's execution record as this agent's record.
 
 ## Blockers and unfinished work
 
@@ -31,7 +35,7 @@ Workspace: `/home/user/workspace/ship2666`. Two CPU cores, approximately 3.8 GiB
 ```sh
 cd /home/user/workspace/ship2666
 git status --short --branch
-git switch teutonic-0JYIGPYC
+git switch teutonic-9NXT5G1C
 git log -5 --oneline
 ```
 
