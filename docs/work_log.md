@@ -146,3 +146,13 @@ Read the full reconstruction brief. Inspected workspace attachments, tool availa
   per Titanic Belfast (3 masts).
 - All six test suites pass; 200/200 geometry coverage.
 - Next: commit/push; smoke-test server; gen1 renders on render host; acceptance gates.
+
+### 2026-11-20 · smoke particle system (continued, no stop)
+- source/main.js: added smoke particle system emitting from both funnels.
+  Particles rise, disperse with turbulence + wind drift, fade with age.
+  Emission rate tied to shipState.smokeOutput (both funnels share one state —
+  not independent sprites). "Demo smoke" button sets full_ahead.
+  Smoke group is a child of hull so it moves with heave/pitch/roll.
+- All 8 test suites pass; all 11 modules pass syntax check.
+- Next: commit/push; acceptance gates verified (29/29 checkable, 4 blocked
+  by no-GPU/no-browser, explicitly disclosed).
