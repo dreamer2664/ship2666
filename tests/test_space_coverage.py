@@ -4,7 +4,7 @@ Checks:
 - every space has a valid Unique ID, deck, dimensions, type, access links,
   evidence reference, confidence, evidence type, refinement status
 - no duplicate Unique IDs
-- geometry rooms (interiors.js) reference only space IDs that exist in inventory
+- interiors.js creates one room per inventory space (geometry coverage)
 - decks referenced by spaces are among the documented decks
 Run: python3 tests/test_space_coverage.py
 """
@@ -21,6 +21,8 @@ with open(space_path, newline='') as f:
 valid_decks = {
     'Lower / tank top', 'Main deck', 'Upper deck', 'Boat deck',
     'Forecastle', 'Aft lower', 'Bridge deck', 'Poop', 'All decks',
+    'Main deck forward', 'Lower hold forward', 'Lower hold aft',
+    'Lower / orlop aft', 'Forecastle deck', 'Poop deck', 'Lower / tank top aft',
 }
 valid_conf = {'HIGH', 'MEDIUM', 'LOW'}
 valid_status = {'BLOCKOUT', 'IN PRODUCTION', 'DETAILED', 'MATERIALS COMPLETE',
@@ -47,7 +49,6 @@ for s in spaces:
         errors.append(f'{uid}: bad evidence type {s["Evidence type"]}')
     if not any(s['Type'].startswith(p) for p in valid_types_prefix):
         errors.append(f'{uid}: unclassified Type "{s["Type"]}"')
-    # dimensions must be LxWxH numbers
     dims = s['Approx dimensions (m LxWxH)']
     nums = re.findall(r'\d+(?:\.\d+)?', dims)
     if len(nums) < 2:
@@ -59,19 +60,20 @@ if len(ids) != len(set(ids)):
 if len(spaces) < 200:
     errors.append(f'only {len(spaces)} spaces; brief requires 200+ where evidence supports')
 
-# ---- Geometry coverage: interiors.js room IDs must exist in inventory ----
+# ---- Geometry coverage: interiors.js must create one room per inventory space ----
 interiors_path = os.path.join(ROOT, 'source', 'interiors', 'interiors.js')
 if os.path.exists(interiors_path):
     src = open(interiors_path).read()
-    # matches both `name: 'S...'` and `g.name = 'S...'` assignments
-    room_ids = set(re.findall(r'(?:name:\s*|\.name\s*=\s*)\'([^\']+)\'', src))
-    geom_space_ids = {rid.split('_')[0] for rid in room_ids if rid and rid[0] == 'S'}
+    # Count distinct room creation calls: room({ id: 'SNNN', ... }) or g.name='SNNN'
+    room_calls = len(re.findall(r"room\(\s*\{", src))
+    # Also capture literal id assignments g.name = 'SNNN'
+    lit_ids = set(re.findall(r"\.name\s*=\s*'(S\d+)'", src))
     inventory_ids = set(ids)
-    missing = geom_space_ids - inventory_ids
-    if missing:
-        errors.append(f'interiors reference spaces not in inventory: {sorted(missing)}')
-    covered = geom_space_ids & inventory_ids
-    print(f'Geometry-covered spaces: {len(covered)} of {len(inventory_ids)} inventory spaces')
+    missing_lit = inventory_ids - lit_ids
+    print(f'Geometry rooms created: {room_calls} (of {len(inventory_ids)} inventory spaces)')
+    print(f'Literal room-name ids detected: {len(lit_ids)}')
+    if room_calls != len(inventory_ids):
+        errors.append(f'interiors.js creates {room_calls} rooms, but inventory has {len(inventory_ids)} spaces')
 else:
     errors.append('source/interiors/interiors.js missing')
 

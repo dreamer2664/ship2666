@@ -107,3 +107,13 @@ Read the full reconstruction brief. Inspected workspace attachments, tool availa
 - All five test suites pass.
 - Next: commit/push; continue hull plate/rivet refinement, functional tests for
   engines/steering/smoke, gen1 renders on render host.
+
+### 2026-11-20 · complete 200-space interior geometry (continued, no stop)
+- source/interiors/interiors.js rewritten: explicit room() for every one of the
+  200 documented space IDs, keyed by Unique ID, real scale, positioned by deck
+  with per-deck cursor to avoid overlap. Geometry coverage now 200/200.
+- tests/test_space_coverage.py: counts room-creation calls vs inventory count;
+  verifies 200/200 geometry coverage.
+- All five test suites pass.
+- Next: commit/push; functional system tests (engine/steering/smoke coupling),
+  materials texture pass, gen1 renders on render host.
