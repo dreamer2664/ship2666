@@ -23,7 +23,7 @@
     "Capture gen1 inspection renders from port/starboard bow, broadside, stern, deck-level, machinery.",
     "Expand space_inventory geometry coverage toward all 200 documented spaces.",
     "Begin production hull riveting/plating and materials pass.",
-    "Run gen render pipeline on render-capable host; validate manifest.",
+    "Run gen render pipeline on render-capable host; validate manifest."
   ],
   "retentionRule": "Keep gen1..gen9; only delete gen1..gen5 after gen10 validated; rolling window of newest five thereafter. Never delete renders/final/, source files, references, code, scripts, tests, manifests or documentation."
 }
