@@ -2,26 +2,28 @@
   "generation": 1,
   "timestamp": "2026-11-20T07:30:00Z",
   "branch": "teutonic-0JYIGPYC",
-  "commit": "pending",
+  "commit": "4930c5e",
   "session": 2,
-  "description": "Initial render-generation placeholder: runtime verified serving. No inspection renders captured yet.",
+  "description": "Initial render-generation placeholder: runtime verified serving. No inspection renders captured yet (no GPU / no headless browser in this sandbox — documented technical constraint in tools/render_capture_plan.md).",
   "cameraIds": [],
   "sceneAreasInspected": [],
   "imagePaths": [],
   "qualitySettings": { "preview": true, "note": "No GPU; high-resolution offline renders deferred to render farm / documented workflow" },
-  "changesSincePrevious": "Initial generation; runtime (Three.js hull, ocean, engines, ship state) built and verified serving via local HTTP server.",
+  "changesSincePrevious": "Initial generation; runtime (Three.js hull, ocean, engines, ship state, interiors, boilers, fittings) built and verified serving via local HTTP server.",
   "knownDefects": [
-    "Hull is Pass A blockout geometry, not production plated/riveted geometry.",
+    "Hull is Pass B production geometry but lacks riveted plate detail and final materials.",
     "No deckhouse/superstructure beyond flat deck plates and funnels/masts.",
-    "No interior rooms modelled yet.",
+    "Interior rooms are representative samples, not full 200-space geometry coverage.",
     "Engine is a simplified kinematic approximation, not thermodynamic simulation.",
     "Ocean is a simplified two-layer surface, not full Tessendorf spectrum.",
-    "No close-up inspection renders captured yet.",
+    "No close-up inspection renders captured yet (no render-capable host in sandbox).",
+    "manifest.json imagePaths empty until gen captures run on a render host."
   ],
   "nextCorrections": [
-    "Capture gen1 inspection renders from port/starboard bow, broadside, stern.",
-    "Expand space_inventory.csv toward 200+ documented spaces.",
-    "Begin production modelling of hull plating and exterior fittings.",
+    "Capture gen1 inspection renders from port/starboard bow, broadside, stern, deck-level, machinery.",
+    "Expand space_inventory geometry coverage toward all 200 documented spaces.",
+    "Begin production hull riveting/plating and materials pass.",
+    "Run gen render pipeline on render-capable host; validate manifest.",
   ],
-  "retentionRule": "Keep gen1..gen9; only delete gen1..gen5 after gen10 validated; rolling window of newest five thereafter."
+  "retentionRule": "Keep gen1..gen9; only delete gen1..gen5 after gen10 validated; rolling window of newest five thereafter. Never delete renders/final/, source files, references, code, scripts, tests, manifests or documentation."
 }
