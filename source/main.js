@@ -1,14 +1,15 @@
 // SHIP2666 — Main application: explorable RMS Teutonic (1889) reconstruction.
 //
 // Editable 3D project: Three.js scene with procedurally generated hull, decks,
-// funnels, masts, twin engine rooms, propellers, rudder, spectral ocean, interiors
-// and boiler rooms. Ship state (telegraph/helm/steam/shaft/smoke) is the single
-// source of truth and drives all motion kinematically.
+// funnels, masts, twin engine rooms, propellers, rudder, spectral ocean, interiors,
+// boiler rooms and exterior fittings. Ship state (telegraph/helm/steam/shaft/smoke)
+// is the single source of truth and drives all motion kinematically.
 
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { dimensions } from './ship/dimensions.js';
 import { buildHull } from './hull/hull.js';
+import { buildFittings } from './hull/fittings.js';
 import { buildOcean, updateOcean, oceanHeightAt } from './ocean/ocean.js';
 import { buildEngine } from './machinery/engine.js';
 import { buildInteriors } from './interiors/interiors.js';
@@ -71,6 +72,12 @@ hull.position.set(-length / 2, DRAFT, 0);
 hull.traverse((c) => { c.castShadow = true; c.receiveShadow = true; });
 scene.add(hull);
 
+// ---- Exterior fittings ----
+const fittings = buildFittings();
+fittings.position.set(-length / 2, 0, 0);
+fittings.traverse((c) => { c.castShadow = true; c.receiveShadow = true; });
+scene.add(fittings);
+
 // Twin engines
 const enginePort = buildEngine(-1);
 const engineStbd = buildEngine(+1);
@@ -121,7 +128,7 @@ scene.add(interiors);
 
 // ---- Boiler rooms + stokeholds (lower / tank top) ----
 const boilerGroup = new THREE.Group(); boilerGroup.name = 'boilerRooms';
-const boilerZ = depth * 0.08; // depth/deck elevation approx lower deck
+const boilerZ = depth * 0.08;
 for (let i = 0; i < 4; i++) {
   const b = buildBoiler();
   b.position.set(-length / 2 + length * (0.12 + i * 0.14), DRAFT + 2.2, (i % 2 === 0 ? -1 : 1) * beam * 0.12);
@@ -190,7 +197,7 @@ function animate(time) {
   hull.position.y = heaveY;
   hull.rotation.x = pitch;
   hull.rotation.z = roll;
-  [enginePort, engineStbd, propPort, propStbd, rudder, interiors, boilerGroup].forEach((o) => {
+  [enginePort, engineStbd, propPort, propStbd, rudder, interiors, boilerGroup, fittings].forEach((o) => {
     o.position.y = heaveY;
     o.rotation.x = pitch;
     o.rotation.z = roll;

@@ -44,3 +44,13 @@ Read the full reconstruction brief. Inspected workspace attachments, tool availa
 - Verified hull.js syntax with node --check.
 - Next: commit/push; advance interior architecture (rooms from space_inventory.csv)
   and machinery (boilers, engines kinematic); capture gen1 renders.
+
+### 2026-11-20 · exterior fittings + scene wiring (continued, no stop)
+- source/hull/fittings.js: railings/stanchions (boat deck both sides + centreline),
+  4 lifeboats with davits (port/stbd fwd/aft), 2 anchors (bow), windlass/capstan
+  (forecastle), bollards (forecastle/boat deck/poop), companionways, cowl
+  ventilators — all real scale, mapped to space_inventory.csv.
+- source/main.js: scene now includes hull + fittings + twin engines + propellers +
+  rudder + ocean + interiors + boiler group; fittings move with ship heave/pitch/roll.
+- All objects cast/receive shadows.
+- Next: commit/push; smoke-test server; capture gen1 inspection renders.
