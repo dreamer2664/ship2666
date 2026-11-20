@@ -1,0 +1,16 @@
+Feature or measurement,Value / description,Source URL and institution,Exact page/figure/object ID,Date/configuration represented,Confidence,Evidence type,How the evidence affects the model
+Overall length,~582 ft,brief (instruction Markdown),n/a,1889 original construction,LOW,INFERRED,Sets hull longitudinal scale target pending primary verification
+Beam,~57.8 ft,brief,n/a,1889 original construction,LOW,INFERRED,Sets hull transverse scale target pending primary verification
+Gross register tonnage,~9,984 GRT,brief,n/a,1889 original construction,LOW,INFERRED,Scale cross-check only
+Service speed,~20 knots,brief,n/a,1889 original construction,LOW,INFERRED,Propeller/shaft/engine load target
+Steam pressure,~180 psi,brief,n/a,1889 original construction,LOW,INFERRED,Boiler/engine state model input
+Watertight bulkheads,11,brief,n/a,1889 original construction,LOW,INFERRED,Bulkhead placement on decks
+Decks,4,brief,n/a,1889 original construction,LOW,INFERRED,Deck level count
+Masts,3,brief,n/a,1889 original construction,LOW,INFERRED,Mast placement and rigging
+Funnels,2,brief,n/a,1889 original construction,LOW,INFERRED,Funnel placement and smoke sources
+Propellers,2,brief,n/a,1889 original construction,LOW,INFERRED,Shaft and propeller count
+Engines,2 triple-expansion,brief,n/a,1889 original construction,LOW,INFERRED,Engine room layout and kinematics
+Boilers,12 double-ended,brief,n/a,1889 original construction,LOW,INFERRED,Boiler room arrangement and stokeholds
+Cylinder stages,43/68/110 in,brief,n/a,1889 original construction,LOW,INFERRED,Engine cylinder dimensions proxy
+Piston stroke,60 in,brief,n/a,1889 original construction,LOW,INFERRED,Engine stroke/crank kinematics
+Company reference photograph,unavailable in this session,instruction Markdown attachment only,n/a,n/a,—,TEUTONIC-SPECIFIC,No visual observations claimed; silhouette targets provisional

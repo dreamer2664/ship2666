@@ -1,0 +1,16 @@
+Asset ID,Category,Name,Deck/Space,Source/Evidence,Dimensions (m),State,Notes
+A001,Hull,Hull volume,All decks,Inferred from dimensions,582ft x 57.8ft (approx),BLOCKOUT,Scale provisional
+A002,Funnel,Funnel (fore),Boat deck,Historical,—,BLOCKOUT,2 required
+A003,Funnel,Funnel (aft),Boat deck,Historical,—,BLOCKOUT,2 required
+A004,Mast,Fore mast,Forecastle,Historical,—,BLOCKOUT,3 required
+A005,Mast,Main mast,Boat deck,Historical,—,BLOCKOUT,3 required
+A006,Mast,Mizzen mast,Aft,Historical,—,BLOCKOUT,3 required
+A007,Propeller,Propeller (port),Stern,Historical,—,BLOCKOUT,2 required
+A008,Propeller,Propeller (starboard),Stern,Historical,—,BLOCKOUT,2 required
+A009,Rudder,Rudder,Stern,Historical,—,BLOCKOUT
+A010,Engine,Triple-expansion engine (port),Engine room,Sister-ship proxy (Majestic),—,BLOCKOUT
+A011,Engine,Triple-expansion engine (starboard),Engine room,Sister-ship proxy (Majestic),—,BLOCKOUT
+A012,Boiler,Double-ended boiler (x12),Boiler rooms,Inferred,—,BLOCKOUT
+A013,Furniture,Bed (1st-class stateroom),Stateroom,Period analogue,—,BLOCKOUT
+A014,Furniture,Washstand,Stateroom,Period analogue,—,BLOCKOUT
+A015,Furniture,Table (dining saloon),Dining saloon,Period analogue,—,BLOCKOUT
