@@ -1,16 +1,30 @@
 Feature or measurement,Value / description,Source URL and institution,Exact page/figure/object ID,Date/configuration represented,Confidence,Evidence type,How the evidence affects the model
-Overall length,~582 ft,brief (instruction Markdown),n/a,1889 original construction,LOW,INFERRED,Sets hull longitudinal scale target pending primary verification
-Beam,~57.8 ft,brief,n/a,1889 original construction,LOW,INFERRED,Sets hull transverse scale target pending primary verification
-Gross register tonnage,~9,984 GRT,brief,n/a,1889 original construction,LOW,INFERRED,Scale cross-check only
-Service speed,~20 knots,brief,n/a,1889 original construction,LOW,INFERRED,Propeller/shaft/engine load target
-Steam pressure,~180 psi,brief,n/a,1889 original construction,LOW,INFERRED,Boiler/engine state model input
-Watertight bulkheads,11,brief,n/a,1889 original construction,LOW,INFERRED,Bulkhead placement on decks
-Decks,4,brief,n/a,1889 original construction,LOW,INFERRED,Deck level count
-Masts,3,brief,n/a,1889 original construction,LOW,INFERRED,Mast placement and rigging
-Funnels,2,brief,n/a,1889 original construction,LOW,INFERRED,Funnel placement and smoke sources
-Propellers,2,brief,n/a,1889 original construction,LOW,INFERRED,Shaft and propeller count
-Engines,2 triple-expansion,brief,n/a,1889 original construction,LOW,INFERRED,Engine room layout and kinematics
-Boilers,12 double-ended,brief,n/a,1889 original construction,LOW,INFERRED,Boiler room arrangement and stokeholds
-Cylinder stages,43/68/110 in,brief,n/a,1889 original construction,LOW,INFERRED,Engine cylinder dimensions proxy
-Piston stroke,60 in,brief,n/a,1889 original construction,LOW,INFERRED,Engine stroke/crank kinematics
-Company reference photograph,unavailable in this session,instruction Markdown attachment only,n/a,n/a,—,TEUTONIC-SPECIFIC,No visual observations claimed; silhouette targets provisional
+Official number,96334,https://www.titanicbelfast.com/history-of-titanic/ship-fact-files/teutonic-fact-file,Titanic Belfast fact file,1889 original construction,HIGH,TEUTONIC-SPECIFIC,Identity confirmation
+Builder,"Harland & Wolff Ltd, Queen's Island, Belfast",https://www.titanicbelfast.com/history-of-titanic/ship-fact-files/teutonic-fact-file,Titanic Belfast fact file,1889 original construction,HIGH,TEUTONIC-SPECIFIC,Builder identity
+Yard number,208,https://www.titanicbelfast.com/history-of-titanic/ship-fact-files/teutonic-fact-file,Titanic Belfast fact file,1889 original construction,HIGH,TEUTONIC-SPECIFIC,Builder identity
+Launched,19 January 1889,https://www.titanicbelfast.com/history-of-titanic/ship-fact-files/teutonic-fact-file,Titanic Belfast fact file,1889 original construction,HIGH,TEUTONIC-SPECIFIC,Configuration date anchor
+Handed over,25 July 1889,https://www.titanicbelfast.com/history-of-titanic/ship-fact-files/teutonic-fact-file,Titanic Belfast fact file,1889 original construction,HIGH,TEUTONIC-SPECIFIC,Configuration date anchor
+Length,565.5 ft,https://www.titanicbelfast.com/history-of-titanic/ship-fact-files/teutonic-fact-file,Titanic Belfast fact file,1889 original construction,HIGH,TEUTONIC-SPECIFIC,Hull longitudinal scale (likely LBP; distinct from overall)
+Beam / breadth,57.8 ft,https://www.titanicbelfast.com/history-of-titanic/ship-fact-files/teutonic-fact-file,Titanic Belfast fact file,1889 original construction,HIGH,TEUTONIC-SPECIFIC,Hull transverse scale
+Depth,39.25 ft,https://www.titanicbelfast.com/history-of-titanic/ship-fact-files/teutonic-fact-file,Titanic Belfast fact file,1889 original construction,HIGH,TEUTONIC-SPECIFIC,Deck elevation / freeboard reference
+Gross registered tonnage,"9,984.26 GRT",https://www.titanicbelfast.com/history-of-titanic/ship-fact-files/teutonic-fact-file,Titanic Belfast fact file,1889 original construction,HIGH,TEUTONIC-SPECIFIC,Scale cross-check
+Decks,4,https://www.titanicbelfast.com/history-of-titanic/ship-fact-files/teutonic-fact-file,Titanic Belfast fact file,1889 original construction,HIGH,TEUTONIC-SPECIFIC,Deck level count
+Masts,3,https://www.titanicbelfast.com/history-of-titanic/ship-fact-files/teutonic-fact-file,Titanic Belfast fact file,1889 original construction,HIGH,TEUTONIC-SPECIFIC,Mast placement and rigging
+Bulkheads,11,https://www.titanicbelfast.com/history-of-titanic/ship-fact-files/teutonic-fact-file,Titanic Belfast fact file,1889 original construction,HIGH,TEUTONIC-SPECIFIC,Bulkhead placement on decks
+Stern,Elliptical,https://www.titanicbelfast.com/history-of-titanic/ship-fact-files/teutonic-fact-file,Titanic Belfast fact file,1889 original construction,HIGH,TEUTONIC-SPECIFIC,Aft hull form
+Framework,Steel (Siemens-Martin process),https://www.titanicbelfast.com/history-of-titanic/ship-fact-files/teutonic-fact-file,Titanic Belfast fact file,1889 original construction,HIGH,TEUTONIC-SPECIFIC,Hull construction material
+Engine type,2 x triple-expansion inverted direct-acting surface-condensing,https://www.titanicbelfast.com/history-of-titanic/ship-fact-files/teutonic-fact-file,Titanic Belfast fact file,1889 original construction,HIGH,TEUTONIC-SPECIFIC,Engine room layout and kinematics
+Cylinders per engine,HP 43 in; IP 68 in; LP 110 in,https://www.titanicbelfast.com/history-of-titanic/ship-fact-files/teutonic-fact-file,Titanic Belfast fact file,1889 original construction,HIGH,TEUTONIC-SPECIFIC,Engine cylinder dimensions
+Stroke,60 in,https://www.titanicbelfast.com/history-of-titanic/ship-fact-files/teutonic-fact-file,Titanic Belfast fact file,1889 original construction,HIGH,TEUTONIC-SPECIFIC,Engine stroke/crank kinematics
+Nominal horsepower,"2,400 NHP",https://www.titanicbelfast.com/history-of-titanic/ship-fact-files/teutonic-fact-file,Titanic Belfast fact file,1889 original construction,HIGH,TEUTONIC-SPECIFIC,Engine power target
+Boilers,12 cylindrical multi-tubular steel,https://www.titanicbelfast.com/history-of-titanic/ship-fact-files/teutonic-fact-file,Titanic Belfast fact file,1889 original construction,HIGH,TEUTONIC-SPECIFIC,Boiler room arrangement and stokeholds
+Boiler pressure,180 psi when loaded,https://www.titanicbelfast.com/history-of-titanic/ship-fact-files/teutonic-fact-file,Titanic Belfast fact file,1889 original construction,HIGH,TEUTONIC-SPECIFIC,Boiler/engine state model input
+Propellers,Twin screw,https://www.titanicbelfast.com/history-of-titanic/ship-fact-files/teutonic-fact-file,Titanic Belfast fact file,1889 original construction,HIGH,TEUTONIC-SPECIFIC,Shaft and propeller count
+Speed,20 knots,https://www.titanicbelfast.com/history-of-titanic/ship-fact-files/teutonic-fact-file,Titanic Belfast fact file,1889 original construction,HIGH,TEUTONIC-SPECIFIC,Propeller/shaft/engine load target
+Funnel colour (1889),"Yellow (buff), two funnels set apart for saloon between",https://www.rmg.co.uk/collections/objects/rmgc-object-15130,RMG BHC3657 Wyllie painting,"1889 (July, Spithead review)",HIGH,TEUTONIC-SPECIFIC,Funnel materials and spacing
+Port-bow view July 1889,Leaving Liverpool for Spithead review 4 Aug 1889,https://www.rmg.co.uk/collections/objects/rmgc-object-15130,RMG BHC3657,1889,HIGH,TEUTONIC-SPECIFIC,Exterior profile reference
+Port broadside c.1890,"At anchor in River Mersey, Francis Frith negative 26635",https://www.rmg.co.uk/collections/objects/rmgc-object-999661,RMG G2542 glass photonegative,c.1890,HIGH,TEUTONIC-SPECIFIC,Exterior profile / hull reference
+Overall length (brief),~582 ft overall,brief (instruction Markdown),n/a,1889 original construction,LOW,INFERRED,Likely overall length; distinct from 565.5 ft LBP - do not average
+Rig,Schooner,https://www.titanicbelfast.com/history-of-titanic/ship-fact-files/teutonic-fact-file,Titanic Belfast fact file,1889 original construction,HIGH,TEUTONIC-SPECIFIC,Mast/rigging configuration
+Armament (4.7-inch guns),"Two guns specially mounted for Spithead review - occasion-specific, NOT standard",https://www.rmg.co.uk/collections/objects/rmgc-object-15130,RMG BHC3657,1889 (review occasion),HIGH,TEUTONIC-SPECIFIC,EXCLUDE from base model (no armament)
+Company reference photograph,Unavailable in this session; instruction Markdown only,attachment,n/a,n/a,LOW,TEUTONIC-SPECIFIC,No visual observations claimed

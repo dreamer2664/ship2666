@@ -1,0 +1,27 @@
+{
+  "generation": 1,
+  "timestamp": "2026-11-20T07:30:00Z",
+  "branch": "teutonic-0JYIGPYC",
+  "commit": "pending",
+  "session": 2,
+  "description": "Initial render-generation placeholder: runtime verified serving. No inspection renders captured yet.",
+  "cameraIds": [],
+  "sceneAreasInspected": [],
+  "imagePaths": [],
+  "qualitySettings": { "preview": true, "note": "No GPU; high-resolution offline renders deferred to render farm / documented workflow" },
+  "changesSincePrevious": "Initial generation; runtime (Three.js hull, ocean, engines, ship state) built and verified serving via local HTTP server.",
+  "knownDefects": [
+    "Hull is Pass A blockout geometry, not production plated/riveted geometry.",
+    "No deckhouse/superstructure beyond flat deck plates and funnels/masts.",
+    "No interior rooms modelled yet.",
+    "Engine is a simplified kinematic approximation, not thermodynamic simulation.",
+    "Ocean is a simplified two-layer surface, not full Tessendorf spectrum.",
+    "No close-up inspection renders captured yet.",
+  ],
+  "nextCorrections": [
+    "Capture gen1 inspection renders from port/starboard bow, broadside, stern.",
+    "Expand space_inventory.csv toward 200+ documented spaces.",
+    "Begin production modelling of hull plating and exterior fittings.",
+  ],
+  "retentionRule": "Keep gen1..gen9; only delete gen1..gen5 after gen10 validated; rolling window of newest five thereafter."
+}

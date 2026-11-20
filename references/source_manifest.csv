@@ -1,14 +1,14 @@
 Title,Institution,URL,Date,Licence/usage notes,Local filename,Status
-Titanic Belfast — Teutonic Fact File,Titanic Belfast,https://www.titanicbelfast.com/history-of-titanic/ship-fact-files/teutonic-fact-file,—,To verify,—,pending
-RMG — Teutonic (1889) broadside photograph,Royal Museums Greenwich,https://www.rmg.co.uk/collections/objects/rmgc-object-999661,—,To verify,—,pending
-RMG — The 'Teutonic' leaving Liverpool,Royal Museums Greenwich,https://www.rmg.co.uk/collections/objects/rmgc-object-15130,—,To verify,—,pending
+Titanic Belfast — Teutonic Fact File,Titanic Belfast,https://www.titanicbelfast.com/history-of-titanic/ship-fact-files/teutonic-fact-file,—,To verify; facts recorded in evidence_ledger.csv as TEUTONIC-SPECIFIC/HIGH,titanicbelfast_teutonic_factfile.webp,inspected
+RMG — Teutonic (1889) broadside photograph,Royal Museums Greenwich / National Maritime Museum,https://www.rmg.co.uk/collections/objects/rmgc-object-999661,circa 1890,Museum image; contact RMG Images for reuse licence,rmg_g2542_teutonic_broadside_c1890.jpg,inspected (object G2542, Francis Frith negative 26635)
+RMG — The 'Teutonic' leaving Liverpool,Royal Museums Greenwich / National Maritime Museum,https://www.rmg.co.uk/collections/objects/rmgc-object-15130,1889,Museum image; contact RMG Images for reuse licence,rmg_bhc3657_wyllie_leaving_liverpool_1889.jpg,inspected (object BHC3657, Wyllie painting; note occasion-specific 4.7-inch guns excluded from base model)
 The Atlantic Ferry (1900),Arthur J. Maginnis / Univ. of Illinois,https://brittlebooks.library.illinois.edu/brittlebooks_open/Books2009-09/magiar0001atlfer/magiar0001atlfer.pdf,1900,Public domain digitised book,—,pending
 USM — Teutonic first-class accommodation plan,Univ. of Southern Maine (Morse Collection),https://digitalcommons.usm.maine.edu/oml-morse-collection-gallery/2648/,—,To verify,—,pending
 USM — Saloon and state rooms plan, Majestic and Teutonic,Univ. of Southern Maine (Morse Collection),https://digitalcommons.usm.maine.edu/oml-morse-collection-gallery/2651/,—,To verify,—,pending
 Norway Heritage — S.S. Teutonic,Norway Heritage,https://www.norwayheritage.com/ships/teuto/,—,To verify,—,pending
 GG Archives — Ocean Magazine of Travel, Sept 1889,GG Archives,https://www.ggarchives.com/OT/Publications/OceanMagazineOfTravel-1889-09.html,1889-09,Period publication,—,pending
 Wikimedia Commons — Teutonic (ship, 1889) category,Wikimedia Commons,https://commons.wikimedia.org/wiki/Category:Teutonic_(ship,_1889),—,Varies by file,—,pending
-Science Museum — Catalogue of Naval and Marine Engineering Collection,Science Museum / Wikimedia,https://upload.wikimedia.org/wikipedia/commons/4/42/Catalogue_of_the_naval_and_marine_engineering_collection_in_the_..._museum_.._%28IA_catalogueofnaval00scierich%29.pdf,—,To verify,entry 856 (Majestic engines),pending
+Science Museum — Catalogue of Naval and Marine Engineering Collection,Science Museum / Wikimedia,https://upload.wikimedia.org/wikipedia/commons/4/42/Catalogue_of_the_naval_and_marine_engineering_collection_in_the_..._museum_.._%28IA_catalogueofnaval00scierich%29.pdf,—,To verify; entry 856 (Majestic engines, sister-ship proxy),—,pending
 T. Main — The Progress of Marine Engineering (1893),T. Main / Wikimedia,https://upload.wikimedia.org/wikipedia/commons/9/90/The_progress_of_marine_engineering%2C_from_the_time_of_Watt_until_the_present_day_%28IA_cu31924031187879%29.pdf,1893,Public domain,—,pending
 Tessendorf — Simulating Ocean Water,Jerry Tessendorf / ResearchGate,https://www.researchgate.net/publication/264839743_Simulating_Ocean_Water,—,To verify,—,pending
-Blender Manual — Ocean Modifier,Blender Foundation,https://docs.blender.org/manual/en/5.3/modeling/modifiers/physics/ocean.html,—,CC-ish documentation,—,pending
+Blender Manual — Ocean Modifier,Blender Foundation,https://docs.blender.org/manual/en/5.3/modeling/modifiers/physics/ocean.html,—,Documentation reference,—,pending
