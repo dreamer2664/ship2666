@@ -1,9 +1,9 @@
 // SHIP2666 — Main application: explorable RMS Teutonic (1889) reconstruction.
 //
 // Editable 3D project: Three.js scene with procedurally generated hull, decks,
-// funnels, masts, twin engines, propellers, rudder, and a spectral ocean.
-// Ship state (engine/telegraph/helm/smoke) is the single source of truth and
-// drives all motion kinematically.
+// funnels, masts, twin engine rooms, propellers, rudder, spectral ocean, interiors
+// and boiler rooms. Ship state (telegraph/helm/steam/shaft/smoke) is the single
+// source of truth and drives all motion kinematically.
 
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
@@ -11,6 +11,8 @@ import { dimensions } from './ship/dimensions.js';
 import { buildHull } from './hull/hull.js';
 import { buildOcean, updateOcean, oceanHeightAt } from './ocean/ocean.js';
 import { buildEngine } from './machinery/engine.js';
+import { buildInteriors } from './interiors/interiors.js';
+import { buildBoiler, buildStokehold } from './machinery/boilers.js';
 import {
   shipState, setTelegraph, setHelm, tick, getPistonPhase,
 } from './systems/shipState.js';
@@ -19,7 +21,6 @@ import { materials, makeMaterial } from './materials/materials.js';
 // ---- Configuration ----
 const { length, beam, depth } = dimensions;
 const DRAFT = 7.2; // m, provisional
-const SHIP_Z = 0; // ship centreline transverse offset
 
 // ---- Scene ----
 const scene = new THREE.Scene();
@@ -66,18 +67,15 @@ scene.add(ocean);
 
 // ---- Hull ----
 const hull = buildHull();
-hull.position.set(-length / 2, DRAFT, SHIP_Z);
-hull.traverse((c) => {
-  c.castShadow = true;
-  c.receiveShadow = true;
-});
+hull.position.set(-length / 2, DRAFT, 0);
+hull.traverse((c) => { c.castShadow = true; c.receiveShadow = true; });
 scene.add(hull);
 
 // Twin engines
 const enginePort = buildEngine(-1);
 const engineStbd = buildEngine(+1);
-engineStbd.position.z = 14; // forward a bit
-enginePort.position.z = -14; // aft a bit (twin engine rooms)
+engineStbd.position.set(0, DRAFT, 14);
+enginePort.position.set(0, DRAFT, -14);
 [enginePort, engineStbd].forEach((e) => {
   e.traverse((c) => { c.castShadow = true; c.receiveShadow = true; });
   scene.add(e);
@@ -87,8 +85,7 @@ enginePort.position.z = -14; // aft a bit (twin engine rooms)
 const propMat = new THREE.MeshStandardMaterial({ color: 0x7a8288, roughness: 0.3, metalness: 0.85 });
 const rudderMat = new THREE.MeshStandardMaterial({ color: 0x2a3a4a, roughness: 0.5, metalness: 0.4 });
 
-const sternX = -length / 2; // AP at local X=0 -> world X = -length/2
-const sternZ = 0;
+const sternX = -length / 2;
 const propZ = beam * 0.3;
 
 function buildPropeller(zSign) {
@@ -99,11 +96,10 @@ function buildPropeller(zSign) {
   for (let b = 0; b < 4; b++) {
     const blade = new THREE.Mesh(new THREE.BoxGeometry(0.1, 0.5, 2.6), propMat);
     blade.rotation.y = (b / 4) * Math.PI * 2;
-    blade.position.z = 0;
     g.add(blade);
   }
-  g.position.set(sternX, 0.9, zSign * propZ);
-  g.rotation.y = Math.PI / 2; // face aft
+  g.position.set(sternX, DRAFT + 0.9, zSign * propZ);
+  g.rotation.y = Math.PI / 2;
   g.userData = { blades: g.children.slice(1) };
   return g;
 }
@@ -113,9 +109,29 @@ scene.add(propPort);
 scene.add(propStbd);
 
 const rudder = new THREE.Mesh(new THREE.BoxGeometry(0.25, 3.4, 2.6), rudderMat);
-rudder.position.set(sternX, 0.9, 0);
+rudder.position.set(sternX, DRAFT + 0.9, 0);
 rudder.rotation.y = Math.PI / 2;
 scene.add(rudder);
+
+// ---- Interiors (positioned within hull local coords; hull offset -length/2 in X) ----
+const interiors = buildInteriors();
+interiors.position.set(-length / 2, 0, 0);
+interiors.traverse((c) => { c.castShadow = true; c.receiveShadow = true; });
+scene.add(interiors);
+
+// ---- Boiler rooms + stokeholds (lower / tank top) ----
+const boilerGroup = new THREE.Group(); boilerGroup.name = 'boilerRooms';
+const boilerZ = depth * 0.08; // depth/deck elevation approx lower deck
+for (let i = 0; i < 4; i++) {
+  const b = buildBoiler();
+  b.position.set(-length / 2 + length * (0.12 + i * 0.14), DRAFT + 2.2, (i % 2 === 0 ? -1 : 1) * beam * 0.12);
+  boilerGroup.add(b);
+  const s = buildStokehold();
+  s.position.set(-length / 2 + length * (0.12 + i * 0.14), DRAFT + 0.3, (i % 2 === 0 ? -1 : 1) * beam * 0.35);
+  boilerGroup.add(s);
+}
+boilerGroup.traverse((c) => { c.castShadow = true; c.receiveShadow = true; });
+scene.add(boilerGroup);
 
 // ---- UI ----
 const ui = {
@@ -149,10 +165,8 @@ function animate(time) {
   tick(deltaSec, time);
   window.__shipShaftAngle = shipState.shaftAngle;
 
-  // Ship heave / pitch / roll from ocean surface (mass/inertia approximated:
-  // ship follows wave with damping, not instant).
-  const cx = 0; // ship centre world X (hull centred)
-  const cz = SHIP_Z;
+  // Ship heave / pitch / roll from ocean surface (mass/inertia approximated).
+  const cx = 0, cz = 0;
   const h0 = oceanHeightAt(oceanMat, cx, cz, time);
   const hBow = oceanHeightAt(oceanMat, cx + length * 0.45, cz, time);
   const hStern = oceanHeightAt(oceanMat, cx - length * 0.45, cz, time);
@@ -160,10 +174,9 @@ function animate(time) {
   const hStbd = oceanHeightAt(oceanMat, cx, cz - beam * 0.4, time);
 
   const targetHeave = h0;
-  const targetPitch = Math.atan2(hBow - hStern, length * 0.9) * 3; // deg, amplified for readability
+  const targetPitch = Math.atan2(hBow - hStern, length * 0.9) * 3;
   const targetRoll = Math.atan2(hStbd - hPort, beam * 0.8) * 2;
 
-  // Damped follow (inertia)
   if (!window.__shipHeave) window.__shipHeave = h0;
   if (!window.__shipPitch) window.__shipPitch = 0;
   if (!window.__shipRoll) window.__shipRoll = 0;
@@ -171,45 +184,40 @@ function animate(time) {
   window.__shipPitch += (targetPitch - window.__shipPitch) * 0.05;
   window.__shipRoll += (targetRoll - window.__shipRoll) * 0.05;
 
-  hull.position.y = DRAFT + window.__shipHeave;
-  hull.rotation.x = THREE.MathUtils.degToRad(window.__shipPitch);
-  hull.rotation.z = THREE.MathUtils.degToRad(window.__shipRoll);
-  // Apply same to engines so they move with ship
-  [enginePort, engineStbd, propPort, propStbd, rudder].forEach((o) => {
-    o.position.y = DRAFT + window.__shipHeave;
-    o.rotation.x = THREE.MathUtils.degToRad(window.__shipPitch);
-    o.rotation.z = THREE.MathUtils.degToRad(window.__shipRoll);
+  const heaveY = DRAFT + window.__shipHeave;
+  const pitch = THREE.MathUtils.degToRad(window.__shipPitch);
+  const roll = THREE.MathUtils.degToRad(window.__shipRoll);
+  hull.position.y = heaveY;
+  hull.rotation.x = pitch;
+  hull.rotation.z = roll;
+  [enginePort, engineStbd, propPort, propStbd, rudder, interiors, boilerGroup].forEach((o) => {
+    o.position.y = heaveY;
+    o.rotation.x = pitch;
+    o.rotation.z = roll;
   });
 
-  // Engine tick animation
   if (enginePort.tick) enginePort.tick();
   if (engineStbd.tick) engineStbd.tick();
 
-  // Propeller spin (visual, from shaft rpm)
   const spin = (shipState.shaftRpm / 60) * 2 * Math.PI * deltaSec;
   [propPort, propStbd].forEach((p) => {
     p.rotation.y += spin;
     p.children.slice(1).forEach((b) => { b.rotation.y += spin; });
   });
 
-  // Rudder turn
   rudder.rotation.y = Math.PI / 2 + THREE.MathUtils.degToRad(shipState.rudderAngle);
 
-  // Smoke output read into UI
   updateUI();
-
   updateOcean(ocean, oceanMat, deltaSec, time);
   controls.update();
   renderer.render(scene, camera);
   requestAnimationFrame(animate);
 }
 
-// ---- Resize ----
 window.addEventListener('resize', () => {
   camera.aspect = window.innerWidth / window.innerHeight;
   camera.updateProjectionMatrix();
   renderer.setSize(window.innerWidth, window.innerHeight);
 });
 
-// Start
 requestAnimationFrame(animate);
