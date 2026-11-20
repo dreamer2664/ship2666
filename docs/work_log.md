@@ -54,3 +54,20 @@ Read the full reconstruction brief. Inspected workspace attachments, tool availa
   rudder + ocean + interiors + boiler group; fittings move with ship heave/pitch/roll.
 - All objects cast/receive shadows.
 - Next: commit/push; smoke-test server; capture gen1 inspection renders.
+
+### 2026-11-20 · render pipeline + tests (continued, no stop)
+- source/lighting/cameras.js: 27 named inspection cameras (exterior bow/both
+  broadsides/stern/elevated/deck-level, decks, public rooms, cabins per class,
+  crew/service, machinery, cutaways, detail close-ups) + 3 lighting environments
+  (daylight/overcast/dusk); cameraOrder sweep for complete generations.
+- tools/render_capture_plan.md: documents no-GPU/no-headless-browser technical
+  constraint (not a reduced quality target) + how gen renders will be captured
+  on a render-capable host; retention rule logic.
+- tests/test_render_manifest.py: validates manifest schema + retention rule
+  (keep gen1..gen9; delete gen1..gen5 only after gen10 validated; rolling
+  window of newest five).
+- No actual screenshot capture possible in this sandbox (no GPU, no Blender,
+  no headless browser); editable 3D source remains the deliverable.
+- Next: commit/push; continue production hull detail (rivets/plates), more
+  interior rooms, materials/lighting pass; capture gen1 when a render host
+  is available.
