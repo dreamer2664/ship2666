@@ -96,68 +96,37 @@ export function buildHull() {
   hull.castShadow = hull.receiveShadow = true;
   group.add(hull);
 
-  // ---- Plate courses (strakes): raised ridges at keel/bilge/sheer/deck levels ----
-  const strakeZs = [0.5, 1.6, sheerHeightAt(0.5), sheerHeightAt(0.5) + 0.9];
-  const strakeGeo = new THREE.BufferGeometry();
-  const sv = [], sf = [];
-  let cid = 0;
-  strakeZs.forEach((z) => {
+
+  // ---- Plate courses with actual plate boundaries ----
+  // Each strake divided into plates between adjacent hull stations (real plate courses,
+  // not just raised ridges). Plate edges follow frame lines.
+  const plateGeo = new THREE.BufferGeometry();
+  const pv = [], pf = [];
+  let pid = 0;
+  const plateZs = [0.5, 1.6, sheerHeightAt(0.5), sheerHeightAt(0.5) + 0.9];
+  plateZs.forEach((z) => {
     [-1, 1].forEach((side) => {
       const ring = [];
       for (let r = 0; r < ringCount; r++) {
         const t = stations[r].t;
         const hb = halfBreadthAt(t, z);
-        sv.push(stations[r].x, side * hb, z);
-        ring.push(cid++);
+        pv.push(stations[r].x, side * hb, z);
+        ring.push(pid++);
       }
+      // plates between adjacent stations (quad strips)
       for (let r = 0; r < ringCount - 1; r++) {
         const a = ring[r], b = ring[r] + 1, c = ring[r + 1] + 1, d = ring[r + 1];
-        sf.push(a, b, c, a, c, d);
+        pf.push(a, b, c, a, c, d);
       }
     });
   });
-  strakeGeo.setAttribute('position', new THREE.Float32BufferAttribute(sv, 3));
-  strakeGeo.setIndex(sf);
-  strakeGeo.computeVertexNormals();
-  const strakes = new THREE.Mesh(strakeGeo, strakeMat);
-  strakes.name = 'plateCourses';
-  strakes.castShadow = strakes.receiveShadow = true;
-  group.add(strakes);
-
-  // ---- Rivets: rows along strake seams and plate lines, regular spacing ----
-  // Rivet diameter ~0.025 m, spaced ~0.12 m along seams. Follow strakeZs seams.
-  const rivetGeo = new THREE.CylinderGeometry(0.014, 0.014, 0.03, 6);
-  const rivets = new THREE.Group(); rivets.name = 'rivets';
-  const rivetSpacing = 0.14; // m along seam
-  strakeZs.forEach((z) => {
-    [-1, 1].forEach((side) => {
-      let dist = 0;
-      for (let r = 0; r < ringCount - 1; r++) {
-        const t0 = stations[r].t, t1 = stations[r + 1].t;
-        const hb0 = halfBreadthAt(t0, z);
-        const hb1 = halfBreadthAt(t1, z);
-        const x0 = stations[r].x, x1 = stations[r + 1].x;
-        const segLen = Math.sqrt((x1 - x0) ** 2 + (side * hb1 - side * hb0) ** 2);
-        let placed = 0;
-        while (dist < segLen) {
-          const k = dist / segLen;
-          const x = x0 + (x1 - x0) * k;
-          const y = side * (hb0 + (hb1 - hb0) * k);
-          const m = new THREE.Mesh(rivetGeo, rivetMat);
-          m.position.set(x, y, z);
-          // align rivet shank roughly normal to hull surface (use side for yaw)
-          m.rotation.y = side === 1 ? -Math.PI / 4 : Math.PI / 4;
-          m.name = `rivet_z${z}_s${side}_r${r}`;
-          m.castShadow = m.receiveShadow = true;
-          rivets.add(m);
-          dist += rivetSpacing;
-          placed++;
-        }
-        dist -= segLen; // carry remainder into next segment
-      }
-    });
-  });
-  group.add(rivets);
+  plateGeo.setAttribute('position', new THREE.Float32BufferAttribute(pv, 3));
+  plateGeo.setIndex(pf);
+  plateGeo.computeVertexNormals();
+  const plates = new THREE.Mesh(plateGeo, strakeMat);
+  plates.name = 'plateCourses';
+  plates.castShadow = plates.receiveShadow = true;
+  group.add(plates);
 
   // ---- Structural frames at stations ----
   const frameGeo = new THREE.BufferGeometry();
