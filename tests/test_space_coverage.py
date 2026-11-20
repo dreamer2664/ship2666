@@ -63,8 +63,8 @@ if len(spaces) < 200:
 interiors_path = os.path.join(ROOT, 'source', 'interiors', 'interiors.js')
 if os.path.exists(interiors_path):
     src = open(interiors_path).read()
-    room_ids = set(re.findall(r"name:\s*'([^']+)'", src))
-    # room ids are like 'S037_dining_saloon'; strip suffix after first '_'
+    # matches both `name: 'S...'` and `g.name = 'S...'` assignments
+    room_ids = set(re.findall(r'(?:name:\s*|\.name\s*=\s*)\'([^\']+)\'', src))
     geom_space_ids = {rid.split('_')[0] for rid in room_ids if rid and rid[0] == 'S'}
     inventory_ids = set(ids)
     missing = geom_space_ids - inventory_ids
