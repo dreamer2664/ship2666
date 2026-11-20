@@ -18,6 +18,9 @@ __pycache__/
 *.blend1
 *.blend2
 
+# Full glTF is retained locally; native source and compressed runtime regions are versioned.
+assets/models/teutonic.glb
+
 # Reproducible builds and bounded job logs
 build/
 dist/

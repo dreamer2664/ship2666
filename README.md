@@ -15,7 +15,9 @@ An evidence-led, editable reconstruction of the White Star liner RMS *Teutonic*,
 - Hardware: two CPU cores, approximately 3.8 GiB RAM; no GPU or Blender installation detected at initialization.
 - The shared spatial source now contains 299 individually identified regions and 317 access links, with inferred boundaries explicitly labelled.
 - Nine Python spatial/dimensional tests and eight JavaScript mechanical/state tests pass. These do not constitute historical or visual approval.
-- Native Blender construction sources include hull openings, rooms/furniture, independent hinge pivots, mechanically linked engines, 16 boilers / 76 furnace mouths, and the full exterior. The first full build hit a camera-input error; this was corrected and the verified native build is the next checkpoint.
+- The actual editable Blender scene is saved in `assets/models/teutonic_working.blend`. It includes hull openings, rooms/furniture, independent hinge pivots, mechanically linked engines, 16 boilers / 76 furnace mouths, and exterior fittings. All are still subject to correction and refinement.
+- Live runtime: `npm install && npm run dev`. Production compilation passes. Compressed glTF regions load on demand; the dense deck stage is being optimized after a browser-test timeout.
+- Native inspection uses official Blender 3.6.23 with CPU denoising; Debian 3.4.1 remains suitable for source construction/export. Eight gen1 preview images have been rendered and inspected; defects are tracked in [the defect register](docs/defects.csv).
 - No finished assets, photographic-realism claim, final render or complete acceptance gate is claimed.
 
 See [execution state](docs/execution_state.md) and [work log](docs/work_log.md) for recovery and progress. Project source, evidence, inventories, tests and an interactive inspection runtime will be added on this branch; the build/run instructions will be updated when verified.

@@ -1,0 +1,58 @@
+{
+  "started_utc": "2026-11-20T08:27:22.487Z",
+  "tests": [
+    {
+      "name": "Exterior loads and actually renders",
+      "passed": true,
+      "details": {
+        "frames": 4,
+        "calls": 136,
+        "triangles": 1073038,
+        "spaces": 299
+      }
+    },
+    {
+      "name": "Machinery region loads with correct movable joint counts",
+      "passed": true,
+      "details": {
+        "helm": 1,
+        "propeller": 2,
+        "rudder": 1,
+        "connecting_rod": 6,
+        "crankshaft": 2,
+        "crosshead": 6,
+        "door": 5
+      }
+    },
+    {
+      "name": "Telegraph and shafts respond through shared state",
+      "passed": true,
+      "details": {
+        "rpm": [
+          58.39963145580299,
+          58.39963145580299
+        ],
+        "pressure": 112.94600102759213,
+        "smoke": 0.32681509448084534,
+        "wake": 0.41571028077674843
+      }
+    },
+    {
+      "name": "Stop command preserves inertial run-down",
+      "passed": true,
+      "details": {
+        "rpm": 58.15165696652967,
+        "cooling": true
+      }
+    },
+    {
+      "name": "Deck register and search select a real source-linked room",
+      "passed": false,
+      "error": "page.waitForFunction: Timeout 30000ms exceeded."
+    }
+  ],
+  "errors": [],
+  "warnings": [],
+  "fatal": "page.waitForFunction: Timeout 30000ms exceeded.",
+  "finished_utc": "2026-11-20T08:29:54.941Z"
+}

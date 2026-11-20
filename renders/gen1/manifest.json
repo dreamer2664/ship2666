@@ -1,0 +1,193 @@
+{
+  "generation": 1,
+  "created_utc": "2026-11-20T08:20:59.881263+00:00",
+  "status": "IN_PROGRESS",
+  "kind": "INSPECTION_PREVIEW_NOT_FINAL",
+  "build_commit": "44b3af2b08c56bdc9997aa563ba1dc8f50d1c3e0",
+  "native_sha256": "5fc577c23801c6e1239873d906dd899ff2c176196af41f502ee9cda372be78a0",
+  "native_snapshot": "build/review_sources/gen1.blend",
+  "expected_cameras": [
+    "port_bow",
+    "starboard_bow",
+    "port_profile",
+    "starboard_profile",
+    "stern",
+    "elevated",
+    "promenade",
+    "saloon",
+    "smoking",
+    "stateroom_g",
+    "crew",
+    "engine",
+    "engine_top",
+    "stokehold",
+    "cutaway",
+    "hull_detail",
+    "boat_detail"
+  ],
+  "images": [
+    {
+      "camera_id": "port_bow",
+      "areas": [
+        "hull",
+        "foredeck",
+        "superstructure",
+        "rigging"
+      ],
+      "image_path": "renders/gen1/port_bow.png",
+      "width": 1280,
+      "height": 720,
+      "samples": 12,
+      "engine": "Blender Cycles CPU",
+      "denoised": true,
+      "quality": "PREVIEW \u2014 NOT FINAL",
+      "seconds": 23.34,
+      "sha256": "00ffe7e2e75ac1ff7417e05e515c931e94993850f21b3189c55ec96f96ae83fd",
+      "reviewed": false,
+      "review_notes": []
+    },
+    {
+      "camera_id": "port_profile",
+      "areas": [
+        "silhouette",
+        "sheer",
+        "mast and funnel spacing"
+      ],
+      "image_path": "renders/gen1/port_profile.png",
+      "width": 1280,
+      "height": 720,
+      "samples": 12,
+      "engine": "Blender Cycles CPU",
+      "denoised": true,
+      "quality": "PREVIEW \u2014 NOT FINAL",
+      "seconds": 10.36,
+      "sha256": "19dcbfcc94534a3edf86676fd4450e53c43e25235b456b1da74c4597712a9df8",
+      "reviewed": false,
+      "review_notes": []
+    },
+    {
+      "camera_id": "saloon",
+      "areas": [
+        "dining furniture",
+        "dome",
+        "columns"
+      ],
+      "image_path": "renders/gen1/saloon.png",
+      "width": 1280,
+      "height": 720,
+      "samples": 16,
+      "engine": "Blender Cycles CPU",
+      "denoised": true,
+      "quality": "PREVIEW \u2014 NOT FINAL",
+      "seconds": 49.09,
+      "sha256": "e53229747338dc67ed7772b4e3b778365c7e0e204b0f935b0c7c74ae03b7f9da",
+      "reviewed": false,
+      "review_notes": []
+    },
+    {
+      "camera_id": "smoking",
+      "areas": [
+        "curved settees",
+        "panelling",
+        "skylight"
+      ],
+      "image_path": "renders/gen1/smoking.png",
+      "width": 1280,
+      "height": 720,
+      "samples": 16,
+      "engine": "Blender Cycles CPU",
+      "denoised": true,
+      "quality": "PREVIEW \u2014 NOT FINAL",
+      "seconds": 41.2,
+      "sha256": "4788571270798209b75833da43e99e2d62b1adbccfff77368b877f99aba7fe5b",
+      "reviewed": false,
+      "review_notes": []
+    },
+    {
+      "camera_id": "stateroom_g",
+      "areas": [
+        "berth",
+        "bedding",
+        "washstand",
+        "wood finish"
+      ],
+      "image_path": "renders/gen1/stateroom_g.png",
+      "width": 1280,
+      "height": 720,
+      "samples": 16,
+      "engine": "Blender Cycles CPU",
+      "denoised": true,
+      "quality": "PREVIEW \u2014 NOT FINAL",
+      "seconds": 44.7,
+      "sha256": "b821cc3bf6d7aa5f28ac8c635f0c03ce5bd408a410bc3ae20178b571f1cfb9b6",
+      "reviewed": false,
+      "review_notes": []
+    },
+    {
+      "camera_id": "crew",
+      "areas": [
+        "crew berths",
+        "service fittings"
+      ],
+      "image_path": "renders/gen1/crew.png",
+      "width": 1280,
+      "height": 720,
+      "samples": 16,
+      "engine": "Blender Cycles CPU",
+      "denoised": true,
+      "quality": "PREVIEW \u2014 NOT FINAL",
+      "seconds": 48.27,
+      "sha256": "d651788e74caa0b5b22ab679e6278cbc45276163e3f3125f5c5485bc5714ae41",
+      "reviewed": false,
+      "review_notes": []
+    },
+    {
+      "camera_id": "engine",
+      "areas": [
+        "frames",
+        "crank",
+        "crossheads",
+        "condenser",
+        "piping"
+      ],
+      "image_path": "renders/gen1/engine.png",
+      "width": 1280,
+      "height": 720,
+      "samples": 16,
+      "engine": "Blender Cycles CPU",
+      "denoised": true,
+      "quality": "PREVIEW \u2014 NOT FINAL",
+      "seconds": 45.29,
+      "sha256": "b41f8fdef0bd6e020e879b5e6f65da0731ccac92f244ab7820f5e077e2fcf909",
+      "reviewed": false,
+      "review_notes": []
+    },
+    {
+      "camera_id": "stokehold",
+      "areas": [
+        "furnace mouths",
+        "boiler shells",
+        "steam fittings"
+      ],
+      "image_path": "renders/gen1/stokehold.png",
+      "width": 1280,
+      "height": 720,
+      "samples": 16,
+      "engine": "Blender Cycles CPU",
+      "denoised": true,
+      "quality": "PREVIEW \u2014 NOT FINAL",
+      "seconds": 40.7,
+      "sha256": "be53f30fa93c55a5b2b0c1a1b75c86738829fe3326db26d4dd34bd25890e4f40",
+      "reviewed": false,
+      "review_notes": []
+    }
+  ],
+  "changes_since_previous": "Initial whole-vessel construction and multi-area defect inspection.",
+  "known_defects": [
+    "Historic lines, exact room dimensions and company-photo match are unresolved.",
+    "Inventory has no visually approved spaces.",
+    "Some cabin berths did not fit the first-pass door clearances.",
+    "Full auxiliary systems, continuous collision and close-up final materials remain unfinished."
+  ],
+  "next_corrections": []
+}

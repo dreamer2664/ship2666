@@ -10,6 +10,13 @@
     "layout": "python3 tools/make_layout.py",
     "test:python": "python3 -m pytest tests -q"
   },
-  "dependencies": {"three": "0.170.0"},
-  "devDependencies": {"vite": "6.4.1", "@playwright/test": "1.56.1"}
+  "dependencies": {
+    "three": "0.170.0"
+  },
+  "devDependencies": {
+    "@gltf-transform/cli": "^4.2.1",
+    "@playwright/test": "1.56.1",
+    "meshoptimizer": "^0.22.0",
+    "vite": "6.4.1"
+  }
 }

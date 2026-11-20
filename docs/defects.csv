@@ -1,0 +1,20 @@
+id,priority,area,defect,status,next_action
+H001,CRITICAL,Historical configuration,Company photograph was not supplied,BLOCKED,Acquire original photo before claiming exterior match
+H002,CRITICAL,Hull and spatial geometry,Builder lines and exact metric cabin boundaries unavailable,BLOCKED,Keep inference explicit and seek authoritative lines and full plans
+H003,HIGH,Research,USM full-resolution plan images unavailable through supplied records,BLOCKED,Retain catalogue leads without claiming inspected geometry
+V001,HIGH,Smoke,Native volume end caps appear as detached grey discs,OPEN,Correct closed-volume winding and fade density at age boundary
+V002,HIGH,Ocean,Orthographic profile reveals underwater hull through an unbounded air region,OPEN,Add water body absorption/scattering and inspect surface contact
+V003,HIGH,Cabins,16 berth placements failed first-pass clearance fitting,OPEN,Adjust plan-derived vestibule geometry or fit period-width berths without clipping
+V004,HIGH,Windows,Outer-room walls block some true hull and deckhouse apertures,OPEN,Cut corresponding interior openings and model reveals
+V005,HIGH,Machinery,Main engine support pattern has four feet rather than sourced three-point support,OPEN,Replace with front A-frame and rear single support
+V006,HIGH,Machinery,Outer catwalks lack enough visible structural support,OPEN,Add stanchions and correctly attached cantilever brackets
+V007,HIGH,Lighting,Stokehold inspection lamp intersects solid uptake and spaces are underlit,OPEN,Relocate practicals into working clearances and add declared neutral QC preset
+V008,MEDIUM,Materials,Wood grain is visibly striped and incorrectly oriented on vertical joinery,OPEN,Correct metric UV orientation and refine or replace original material maps
+V009,HIGH,Public rooms,Smoking room is sparse and lacks the evidenced roof light and elaborate panelling,OPEN,Add researched skylight and coffered joinery across public rooms
+V010,MEDIUM,Inspection cameras,Port-bow framing crops the stem and saloon camera is inside the stair bay,OPEN,Correct repeatable camera framing and disclose camera change in next manifest
+R001,HIGH,Runtime,Main-deck loading or rendering timed out in software-browser test,OPEN,Separate overview architecture from nearby furnishings and retest
+R002,HIGH,Runtime,Default exterior export omitted after-deckhouse architecture,OPEN,Include exterior architecture and rebuild region exports
+R003,MEDIUM,Runtime,Distant surface z-fighting and water aliasing degrade exterior preview,OPEN,Use distance-appropriate near clipping and analytical wave normals
+F001,CRITICAL,Functionality,Continuous whole-vessel character collision and all stair traversal unfinished,OPEN,Implement and validate geometric collision; disclose linked-landing approximation
+F002,HIGH,Functionality,Auxiliary valve gear and many service mechanisms are decorative,OPEN,Implement sourced mechanisms and test individually before functional claims
+Q001,CRITICAL,Quality,No space or representative close-up has final visual approval,OPEN,Continue whole-vessel modelling materials and multi-distance inspection

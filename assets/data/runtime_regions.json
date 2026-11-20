@@ -1,0 +1,131 @@
+{
+  "exterior": {
+    "objects": 53,
+    "bytes": 25938508,
+    "uncompressed_path": "build/runtime_uncompressed/exterior.glb",
+    "compressed_path": "assets/runtime/exterior.glb",
+    "compressed_bytes": 5102952,
+    "categories": {
+      "deck_fittings": 1,
+      "boat_deck": 1,
+      "bridge": 1,
+      "superstructure": 1,
+      "boat_gear": 14,
+      "railings": 1,
+      "funnel": 2,
+      "helm_wheel": 1,
+      "helm": 1,
+      "hull_detail": 4,
+      "hull": 2,
+      "boat": 14,
+      "rigging": 1,
+      "propeller_blades": 2,
+      "propeller": 2,
+      "rudder_blade": 1,
+      "rudder": 1,
+      "weather": 1,
+      "ship": 1
+    },
+    "compression": "Meshopt; no simplification or hierarchy flattening; 768 px WebP runtime maps"
+  },
+  "machinery": {
+    "objects": 52,
+    "bytes": 20650984,
+    "uncompressed_path": "build/runtime_uncompressed/machinery.glb",
+    "compressed_path": "assets/runtime/machinery.glb",
+    "compressed_bytes": 3567944,
+    "categories": {
+      "staircase": 7,
+      "boiler": 16,
+      "moving_machinery": 12,
+      "connecting_rod": 6,
+      "machinery": 4,
+      "crankshaft": 2,
+      "crosshead": 6,
+      "door_leaf": 5,
+      "door": 5,
+      "pipework": 1,
+      "steering_gear": 1,
+      "floor": 6,
+      "space": 6,
+      "ship": 1
+    },
+    "compression": "Meshopt; no simplification or hierarchy flattening; 768 px WebP runtime maps"
+  },
+  "main": {
+    "objects": 935,
+    "bytes": 106901940,
+    "uncompressed_path": "build/runtime_uncompressed/main.glb",
+    "compressed_path": "assets/runtime/main.glb",
+    "compressed_bytes": 25826276,
+    "categories": {
+      "staircase": 5,
+      "door_leaf": 132,
+      "door": 132,
+      "deck": 1,
+      "ceiling": 164,
+      "floor": 168,
+      "room": 168,
+      "space": 168,
+      "fixture": 168,
+      "furniture": 129,
+      "ship": 1
+    },
+    "compression": "Meshopt; no simplification or hierarchy flattening; 768 px WebP runtime maps"
+  },
+  "upper": {
+    "objects": 228,
+    "bytes": 38397588,
+    "uncompressed_path": "build/runtime_uncompressed/upper.glb",
+    "compressed_path": "assets/runtime/upper.glb",
+    "compressed_bytes": 9233752,
+    "categories": {
+      "staircase": 2,
+      "door_leaf": 31,
+      "door": 31,
+      "deck": 1,
+      "ceiling": 38,
+      "furniture": 32,
+      "floor": 42,
+      "room": 41,
+      "space": 42,
+      "fixture": 41,
+      "ship": 1
+    },
+    "compression": "Meshopt; no simplification or hierarchy flattening; 768 px WebP runtime maps"
+  },
+  "lower": {
+    "objects": 432,
+    "bytes": 74641388,
+    "uncompressed_path": "build/runtime_uncompressed/lower.glb",
+    "compressed_path": "assets/runtime/lower.glb",
+    "compressed_bytes": 18455968,
+    "categories": {
+      "staircase": 5,
+      "door_leaf": 55,
+      "door": 55,
+      "deck": 2,
+      "ceiling": 79,
+      "floor": 82,
+      "room": 80,
+      "space": 82,
+      "fixture": 60,
+      "furniture": 69,
+      "ship": 1
+    },
+    "compression": "Meshopt; no simplification or hierarchy flattening; 768 px WebP runtime maps"
+  },
+  "structure": {
+    "objects": 2,
+    "bytes": 1831844,
+    "uncompressed_path": "build/runtime_uncompressed/structure.glb",
+    "compressed_path": "assets/runtime/structure.glb",
+    "compressed_bytes": 467652,
+    "categories": {
+      "bulkhead": 1,
+      "structure": 1,
+      "ship": 1
+    },
+    "compression": "Meshopt; no simplification or hierarchy flattening; 768 px WebP runtime maps"
+  }
+}

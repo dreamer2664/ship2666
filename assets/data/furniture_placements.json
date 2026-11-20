@@ -1,0 +1,5718 @@
+{
+  "items": [
+    {
+      "space_id": "M-FC-P-01AI",
+      "type": "berth",
+      "center": [
+        18.16,
+        4.5840000000000005,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 1.5707963267948966,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-P-01BI",
+      "type": "berth",
+      "center": [
+        20.939999999999998,
+        4.5840000000000005,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 1.5707963267948966,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-P-01AO",
+      "type": "berth",
+      "center": [
+        18.374999999999996,
+        7.4866,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-P-01AO",
+      "type": "washstand",
+      "center": [
+        17.945999999999998,
+        6.4246,
+        9.18
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-P-01BO",
+      "type": "berth",
+      "center": [
+        20.724999999999998,
+        7.4866,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-P-01BO",
+      "type": "washstand",
+      "center": [
+        21.153999999999996,
+        6.4246,
+        9.18
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-P-02AI",
+      "type": "berth",
+      "center": [
+        22.935,
+        4.5840000000000005,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 1.5707963267948966,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-P-02BI",
+      "type": "berth",
+      "center": [
+        25.865,
+        4.5840000000000005,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 1.5707963267948966,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-P-02AO",
+      "type": "berth",
+      "center": [
+        23.149999999999995,
+        7.4866,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-P-02AO",
+      "type": "washstand",
+      "center": [
+        23.149999999999995,
+        6.4246,
+        9.18
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-P-02BO",
+      "type": "berth",
+      "center": [
+        25.649999999999995,
+        7.4866,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-P-02BO",
+      "type": "washstand",
+      "center": [
+        25.649999999999995,
+        6.4246,
+        9.18
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-P-03AI",
+      "type": "berth",
+      "center": [
+        27.985,
+        4.5840000000000005,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 1.5707963267948966,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-P-03BI",
+      "type": "berth",
+      "center": [
+        31.015,
+        4.5840000000000005,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 1.5707963267948966,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-P-03AO",
+      "type": "berth",
+      "center": [
+        28.199999999999996,
+        7.4866,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-P-03AO",
+      "type": "washstand",
+      "center": [
+        28.199999999999996,
+        6.4246,
+        9.18
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-P-03BO",
+      "type": "berth",
+      "center": [
+        30.799999999999997,
+        7.4866,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-P-03BO",
+      "type": "washstand",
+      "center": [
+        30.799999999999997,
+        6.4246,
+        9.18
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-P-04AI",
+      "type": "berth",
+      "center": [
+        33.16,
+        4.5840000000000005,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 1.5707963267948966,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-P-04BI",
+      "type": "berth",
+      "center": [
+        36.14,
+        4.5840000000000005,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 1.5707963267948966,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-P-04AO",
+      "type": "berth",
+      "center": [
+        33.375,
+        7.4866,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-P-04AO",
+      "type": "washstand",
+      "center": [
+        33.375,
+        6.4246,
+        9.18
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-P-04BO",
+      "type": "berth",
+      "center": [
+        35.925000000000004,
+        7.4866,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-P-04BO",
+      "type": "washstand",
+      "center": [
+        35.925000000000004,
+        6.4246,
+        9.18
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-P-05AI",
+      "type": "berth",
+      "center": [
+        38.26,
+        4.5840000000000005,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 1.5707963267948966,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-P-05BI",
+      "type": "berth",
+      "center": [
+        41.239999999999995,
+        4.5840000000000005,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 1.5707963267948966,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-P-05AO",
+      "type": "berth",
+      "center": [
+        38.475,
+        7.4866,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-P-05AO",
+      "type": "washstand",
+      "center": [
+        38.475,
+        6.4246,
+        9.18
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-P-05BO",
+      "type": "berth",
+      "center": [
+        41.025,
+        7.4866,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-P-05BO",
+      "type": "washstand",
+      "center": [
+        41.025,
+        6.4246,
+        9.18
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-P-06AI",
+      "type": "berth",
+      "center": [
+        43.434999999999995,
+        4.5840000000000005,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 1.5707963267948966,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-P-06BI",
+      "type": "berth",
+      "center": [
+        46.565,
+        4.5840000000000005,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 1.5707963267948966,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-P-06AO",
+      "type": "berth",
+      "center": [
+        43.65,
+        7.4866,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-P-06AO",
+      "type": "washstand",
+      "center": [
+        43.65,
+        6.4246,
+        9.18
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-P-06BO",
+      "type": "berth",
+      "center": [
+        46.35,
+        7.4584779999999995,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-P-06BO",
+      "type": "washstand",
+      "center": [
+        46.35,
+        6.420022,
+        9.18
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-P-07AI",
+      "type": "berth",
+      "center": [
+        48.86,
+        4.5840000000000005,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 1.5707963267948966,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-P-07BI",
+      "type": "berth",
+      "center": [
+        52.04,
+        4.5840000000000005,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 1.5707963267948966,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-P-07AO",
+      "type": "berth",
+      "center": [
+        49.075,
+        7.41694,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-P-07AO",
+      "type": "washstand",
+      "center": [
+        49.075,
+        6.41326,
+        9.18
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-P-07BO",
+      "type": "washstand",
+      "center": [
+        51.825,
+        7.372598,
+        9.18
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-P-07BO",
+      "type": "chair",
+      "center": [
+        51.824999999999996,
+        6.372302,
+        9.18
+      ],
+      "size": [
+        0.47,
+        0.47
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-P-A01",
+      "type": "berth",
+      "center": [
+        -17.050000000000004,
+        7.4193999999999996,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-P-A01",
+      "type": "washstand",
+      "center": [
+        -17.050000000000004,
+        6.351,
+        9.18
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-P-A01",
+      "type": "chair",
+      "center": [
+        -17.683,
+        5.997400000000001,
+        9.18
+      ],
+      "size": [
+        0.47,
+        0.47
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-P-A02",
+      "type": "berth",
+      "center": [
+        -14.149999999999999,
+        7.4193999999999996,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-P-A02",
+      "type": "washstand",
+      "center": [
+        -14.149999999999999,
+        6.351,
+        9.18
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-P-A02",
+      "type": "chair",
+      "center": [
+        -14.783,
+        5.997400000000001,
+        9.18
+      ],
+      "size": [
+        0.47,
+        0.47
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-P-A03",
+      "type": "berth",
+      "center": [
+        -11.25,
+        7.4193999999999996,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-P-A03",
+      "type": "washstand",
+      "center": [
+        -11.25,
+        6.351,
+        9.18
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-P-A03",
+      "type": "chair",
+      "center": [
+        -11.883,
+        5.997400000000001,
+        9.18
+      ],
+      "size": [
+        0.47,
+        0.47
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-P-A04",
+      "type": "berth",
+      "center": [
+        -8.35,
+        7.4193999999999996,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-P-A04",
+      "type": "washstand",
+      "center": [
+        -8.35,
+        6.351,
+        9.18
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-P-A04",
+      "type": "chair",
+      "center": [
+        -8.983,
+        5.997400000000001,
+        9.18
+      ],
+      "size": [
+        0.47,
+        0.47
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-P-A05",
+      "type": "berth",
+      "center": [
+        -5.449999999999999,
+        7.4193999999999996,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-P-A05",
+      "type": "washstand",
+      "center": [
+        -5.45,
+        6.351,
+        9.18
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-P-A05",
+      "type": "chair",
+      "center": [
+        -6.083,
+        5.997400000000001,
+        9.18
+      ],
+      "size": [
+        0.47,
+        0.47
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-SC-P-01AI",
+      "type": "berth",
+      "center": [
+        -60.54,
+        4.5840000000000005,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 1.5707963267948966,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-SC-P-01BI",
+      "type": "berth",
+      "center": [
+        -57.76,
+        4.5840000000000005,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 1.5707963267948966,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-SC-P-01AO",
+      "type": "washstand",
+      "center": [
+        -60.324999999999996,
+        6.77851,
+        9.18
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-SC-P-01BO",
+      "type": "washstand",
+      "center": [
+        -57.974999999999994,
+        6.933396,
+        9.18
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-SC-P-01BO",
+      "type": "chair",
+      "center": [
+        -57.975,
+        6.300804000000001,
+        9.18
+      ],
+      "size": [
+        0.47,
+        0.47
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-SC-P-02AI",
+      "type": "berth",
+      "center": [
+        -55.865,
+        4.5840000000000005,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 1.5707963267948966,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-SC-P-02BI",
+      "type": "berth",
+      "center": [
+        -53.135000000000005,
+        4.5840000000000005,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 1.5707963267948966,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-SC-P-02AO",
+      "type": "washstand",
+      "center": [
+        -55.65,
+        7.085014,
+        9.18
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-SC-P-02AO",
+      "type": "chair",
+      "center": [
+        -56.103,
+        6.325486000000001,
+        9.18
+      ],
+      "size": [
+        0.47,
+        0.47
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-SC-P-02BO",
+      "type": "washstand",
+      "center": [
+        -53.35,
+        7.1872679999999995,
+        9.18
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-SC-P-02BO",
+      "type": "chair",
+      "center": [
+        -52.897000000000006,
+        6.342132,
+        9.18
+      ],
+      "size": [
+        0.47,
+        0.47
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-SC-P-03AI",
+      "type": "berth",
+      "center": [
+        -51.215,
+        4.5840000000000005,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 1.5707963267948966,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-SC-P-03BI",
+      "type": "berth",
+      "center": [
+        -48.385,
+        4.5840000000000005,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 1.5707963267948966,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-SC-P-03AO",
+      "type": "washstand",
+      "center": [
+        -51.0,
+        7.253229999999999,
+        9.18
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-SC-P-03AO",
+      "type": "chair",
+      "center": [
+        -51.00000000000001,
+        6.35287,
+        9.18
+      ],
+      "size": [
+        0.47,
+        0.47
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-SC-P-03BO",
+      "type": "washstand",
+      "center": [
+        -48.599999999999994,
+        7.319106,
+        9.18
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-SC-P-03BO",
+      "type": "chair",
+      "center": [
+        -48.6,
+        6.363594000000001,
+        9.18
+      ],
+      "size": [
+        0.47,
+        0.47
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-SC-P-04AI",
+      "type": "berth",
+      "center": [
+        -46.39,
+        4.5840000000000005,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 1.5707963267948966,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-SC-P-04BI",
+      "type": "berth",
+      "center": [
+        -43.510000000000005,
+        4.5840000000000005,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 1.5707963267948966,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-SC-P-04AO",
+      "type": "washstand",
+      "center": [
+        -46.175,
+        7.386444,
+        9.18
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-SC-P-04AO",
+      "type": "chair",
+      "center": [
+        -46.175000000000004,
+        6.374556000000001,
+        9.18
+      ],
+      "size": [
+        0.47,
+        0.47
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-SC-P-04BO",
+      "type": "berth",
+      "center": [
+        -43.338,
+        6.931696000000001,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 1.5707963267948966,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-SC-P-04BO",
+      "type": "washstand",
+      "center": [
+        -44.184000000000005,
+        7.453696000000001,
+        9.18
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-SC-P-05AI",
+      "type": "berth",
+      "center": [
+        -41.49,
+        4.5840000000000005,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 1.5707963267948966,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-SC-P-05BI",
+      "type": "berth",
+      "center": [
+        -38.61,
+        4.5840000000000005,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 1.5707963267948966,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-SC-P-05AO",
+      "type": "berth",
+      "center": [
+        -41.275,
+        7.402234,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-SC-P-05AO",
+      "type": "washstand",
+      "center": [
+        -41.275,
+        6.410866,
+        9.18
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-SC-P-05BO",
+      "type": "berth",
+      "center": [
+        -38.824999999999996,
+        7.469486,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-SC-P-05BO",
+      "type": "washstand",
+      "center": [
+        -38.824999999999996,
+        6.421814,
+        9.18
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-SC-P-C01",
+      "type": "berth",
+      "center": [
+        -60.15,
+        0.8008000000000001,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-SC-P-C02",
+      "type": "berth",
+      "center": [
+        -57.4,
+        0.8008000000000001,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-SC-P-C03",
+      "type": "berth",
+      "center": [
+        -54.65,
+        0.8008000000000001,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-SC-P-C04",
+      "type": "berth",
+      "center": [
+        -51.949999999999996,
+        0.8008000000000001,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-SC-P-C05",
+      "type": "berth",
+      "center": [
+        -49.199999999999996,
+        0.8008000000000001,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-S-01AI",
+      "type": "berth",
+      "center": [
+        18.16,
+        -4.584,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 1.5707963267948966,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-S-01BI",
+      "type": "berth",
+      "center": [
+        20.939999999999998,
+        -4.584,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 1.5707963267948966,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-S-01AO",
+      "type": "berth",
+      "center": [
+        18.374999999999996,
+        -7.4866,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-S-01AO",
+      "type": "washstand",
+      "center": [
+        17.945999999999998,
+        -6.4246,
+        9.18
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-S-01BO",
+      "type": "berth",
+      "center": [
+        20.724999999999998,
+        -7.4866,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-S-01BO",
+      "type": "washstand",
+      "center": [
+        21.153999999999996,
+        -6.4246,
+        9.18
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-S-02AI",
+      "type": "berth",
+      "center": [
+        22.935,
+        -4.584,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 1.5707963267948966,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-S-02BI",
+      "type": "berth",
+      "center": [
+        25.865,
+        -4.584,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 1.5707963267948966,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-S-02AO",
+      "type": "berth",
+      "center": [
+        23.149999999999995,
+        -7.4866,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-S-02AO",
+      "type": "washstand",
+      "center": [
+        23.149999999999995,
+        -6.4246,
+        9.18
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-S-02BO",
+      "type": "berth",
+      "center": [
+        25.649999999999995,
+        -7.4866,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-S-02BO",
+      "type": "washstand",
+      "center": [
+        25.649999999999995,
+        -6.4246,
+        9.18
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-S-03AI",
+      "type": "berth",
+      "center": [
+        27.985,
+        -4.584,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 1.5707963267948966,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-S-03BI",
+      "type": "berth",
+      "center": [
+        31.015,
+        -4.584,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 1.5707963267948966,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-S-03AO",
+      "type": "berth",
+      "center": [
+        28.199999999999996,
+        -7.4866,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-S-03AO",
+      "type": "washstand",
+      "center": [
+        28.199999999999996,
+        -6.4246,
+        9.18
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-S-03BO",
+      "type": "berth",
+      "center": [
+        30.799999999999997,
+        -7.4866,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-S-03BO",
+      "type": "washstand",
+      "center": [
+        30.799999999999997,
+        -6.4246,
+        9.18
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-S-04AI",
+      "type": "berth",
+      "center": [
+        33.16,
+        -4.584,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 1.5707963267948966,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-S-04BI",
+      "type": "berth",
+      "center": [
+        36.14,
+        -4.584,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 1.5707963267948966,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-S-04AO",
+      "type": "berth",
+      "center": [
+        33.375,
+        -7.4866,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-S-04AO",
+      "type": "washstand",
+      "center": [
+        33.375,
+        -6.4246,
+        9.18
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-S-04BO",
+      "type": "berth",
+      "center": [
+        35.925000000000004,
+        -7.4866,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-S-04BO",
+      "type": "washstand",
+      "center": [
+        35.925000000000004,
+        -6.4246,
+        9.18
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-S-05AI",
+      "type": "berth",
+      "center": [
+        38.26,
+        -4.584,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 1.5707963267948966,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-S-05BI",
+      "type": "berth",
+      "center": [
+        41.239999999999995,
+        -4.584,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 1.5707963267948966,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-S-05AO",
+      "type": "berth",
+      "center": [
+        38.475,
+        -7.4866,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-S-05AO",
+      "type": "washstand",
+      "center": [
+        38.475,
+        -6.4246,
+        9.18
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-S-05BO",
+      "type": "berth",
+      "center": [
+        41.025,
+        -7.4866,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-S-05BO",
+      "type": "washstand",
+      "center": [
+        41.025,
+        -6.4246,
+        9.18
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-S-06AI",
+      "type": "berth",
+      "center": [
+        43.434999999999995,
+        -4.584,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 1.5707963267948966,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-S-06BI",
+      "type": "berth",
+      "center": [
+        46.565,
+        -4.584,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 1.5707963267948966,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-S-06AO",
+      "type": "berth",
+      "center": [
+        43.65,
+        -7.4866,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-S-06AO",
+      "type": "washstand",
+      "center": [
+        43.65,
+        -6.4246,
+        9.18
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-S-06BO",
+      "type": "berth",
+      "center": [
+        46.35,
+        -7.4584779999999995,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-S-06BO",
+      "type": "washstand",
+      "center": [
+        46.35,
+        -6.420022,
+        9.18
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-S-07AI",
+      "type": "berth",
+      "center": [
+        48.86,
+        -4.584,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 1.5707963267948966,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-S-07BI",
+      "type": "berth",
+      "center": [
+        52.04,
+        -4.584,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 1.5707963267948966,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-S-07AO",
+      "type": "berth",
+      "center": [
+        49.075,
+        -7.41694,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-S-07AO",
+      "type": "washstand",
+      "center": [
+        49.075,
+        -6.41326,
+        9.18
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-S-07BO",
+      "type": "washstand",
+      "center": [
+        51.825,
+        -7.372598,
+        9.18
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-S-07BO",
+      "type": "chair",
+      "center": [
+        51.824999999999996,
+        -6.3723019999999995,
+        9.18
+      ],
+      "size": [
+        0.47,
+        0.47
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-S-A01",
+      "type": "berth",
+      "center": [
+        -17.050000000000004,
+        -7.4193999999999996,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-S-A01",
+      "type": "washstand",
+      "center": [
+        -17.050000000000004,
+        -6.351,
+        9.18
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-S-A01",
+      "type": "chair",
+      "center": [
+        -17.683,
+        -5.997400000000001,
+        9.18
+      ],
+      "size": [
+        0.47,
+        0.47
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-S-A02",
+      "type": "berth",
+      "center": [
+        -14.149999999999999,
+        -7.4193999999999996,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-S-A02",
+      "type": "washstand",
+      "center": [
+        -14.149999999999999,
+        -6.351,
+        9.18
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-S-A02",
+      "type": "chair",
+      "center": [
+        -14.783,
+        -5.997400000000001,
+        9.18
+      ],
+      "size": [
+        0.47,
+        0.47
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-S-A03",
+      "type": "berth",
+      "center": [
+        -11.25,
+        -7.4193999999999996,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-S-A03",
+      "type": "washstand",
+      "center": [
+        -11.25,
+        -6.351,
+        9.18
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-S-A03",
+      "type": "chair",
+      "center": [
+        -11.883,
+        -5.997400000000001,
+        9.18
+      ],
+      "size": [
+        0.47,
+        0.47
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-S-A04",
+      "type": "berth",
+      "center": [
+        -8.35,
+        -7.4193999999999996,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-S-A04",
+      "type": "washstand",
+      "center": [
+        -8.35,
+        -6.351,
+        9.18
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-S-A04",
+      "type": "chair",
+      "center": [
+        -8.983,
+        -5.997400000000001,
+        9.18
+      ],
+      "size": [
+        0.47,
+        0.47
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-S-A05",
+      "type": "berth",
+      "center": [
+        -5.449999999999999,
+        -7.4193999999999996,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-S-A05",
+      "type": "washstand",
+      "center": [
+        -5.45,
+        -6.351,
+        9.18
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-FC-S-A05",
+      "type": "chair",
+      "center": [
+        -6.083,
+        -5.997400000000001,
+        9.18
+      ],
+      "size": [
+        0.47,
+        0.47
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-SC-S-01AI",
+      "type": "berth",
+      "center": [
+        -60.54,
+        -4.584,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 1.5707963267948966,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-SC-S-01BI",
+      "type": "berth",
+      "center": [
+        -57.76,
+        -4.584,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 1.5707963267948966,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-SC-S-01AO",
+      "type": "washstand",
+      "center": [
+        -60.324999999999996,
+        -6.77851,
+        9.18
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-SC-S-01BO",
+      "type": "washstand",
+      "center": [
+        -57.974999999999994,
+        -6.933396,
+        9.18
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-SC-S-01BO",
+      "type": "chair",
+      "center": [
+        -57.975,
+        -6.300803999999999,
+        9.18
+      ],
+      "size": [
+        0.47,
+        0.47
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-SC-S-02AI",
+      "type": "berth",
+      "center": [
+        -55.865,
+        -4.584,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 1.5707963267948966,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-SC-S-02BI",
+      "type": "berth",
+      "center": [
+        -53.135000000000005,
+        -4.584,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 1.5707963267948966,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-SC-S-02AO",
+      "type": "washstand",
+      "center": [
+        -55.65,
+        -7.085014,
+        9.18
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-SC-S-02AO",
+      "type": "chair",
+      "center": [
+        -56.103,
+        -6.325486,
+        9.18
+      ],
+      "size": [
+        0.47,
+        0.47
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-SC-S-02BO",
+      "type": "washstand",
+      "center": [
+        -53.35,
+        -7.1872679999999995,
+        9.18
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-SC-S-02BO",
+      "type": "chair",
+      "center": [
+        -52.897000000000006,
+        -6.342131999999999,
+        9.18
+      ],
+      "size": [
+        0.47,
+        0.47
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-SC-S-03AI",
+      "type": "berth",
+      "center": [
+        -51.215,
+        -4.584,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 1.5707963267948966,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-SC-S-03BI",
+      "type": "berth",
+      "center": [
+        -48.385,
+        -4.584,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 1.5707963267948966,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-SC-S-03AO",
+      "type": "washstand",
+      "center": [
+        -51.0,
+        -7.253229999999999,
+        9.18
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-SC-S-03AO",
+      "type": "chair",
+      "center": [
+        -51.00000000000001,
+        -6.352869999999999,
+        9.18
+      ],
+      "size": [
+        0.47,
+        0.47
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-SC-S-03BO",
+      "type": "washstand",
+      "center": [
+        -48.599999999999994,
+        -7.319106,
+        9.18
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-SC-S-03BO",
+      "type": "chair",
+      "center": [
+        -48.6,
+        -6.363594,
+        9.18
+      ],
+      "size": [
+        0.47,
+        0.47
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-SC-S-04AI",
+      "type": "berth",
+      "center": [
+        -46.39,
+        -4.584,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 1.5707963267948966,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-SC-S-04BI",
+      "type": "berth",
+      "center": [
+        -43.510000000000005,
+        -4.584,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 1.5707963267948966,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-SC-S-04AO",
+      "type": "washstand",
+      "center": [
+        -46.175,
+        -7.386444,
+        9.18
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-SC-S-04AO",
+      "type": "chair",
+      "center": [
+        -46.175000000000004,
+        -6.374556,
+        9.18
+      ],
+      "size": [
+        0.47,
+        0.47
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-SC-S-04BO",
+      "type": "berth",
+      "center": [
+        -43.338,
+        -6.9316960000000005,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 1.5707963267948966,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-SC-S-04BO",
+      "type": "washstand",
+      "center": [
+        -44.184000000000005,
+        -7.453696000000001,
+        9.18
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-SC-S-05AI",
+      "type": "berth",
+      "center": [
+        -41.49,
+        -4.584,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 1.5707963267948966,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-SC-S-05BI",
+      "type": "berth",
+      "center": [
+        -38.61,
+        -4.584,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 1.5707963267948966,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-SC-S-05AO",
+      "type": "berth",
+      "center": [
+        -41.275,
+        -7.402233999999999,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-SC-S-05AO",
+      "type": "washstand",
+      "center": [
+        -41.275,
+        -6.410866,
+        9.18
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-SC-S-05BO",
+      "type": "berth",
+      "center": [
+        -38.824999999999996,
+        -7.469486,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-SC-S-05BO",
+      "type": "washstand",
+      "center": [
+        -38.824999999999996,
+        -6.421814,
+        9.18
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-SC-S-C01",
+      "type": "berth",
+      "center": [
+        -60.15,
+        -0.8008000000000002,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-SC-S-C02",
+      "type": "berth",
+      "center": [
+        -57.4,
+        -0.8008000000000002,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-SC-S-C03",
+      "type": "berth",
+      "center": [
+        -54.65,
+        -0.8008000000000002,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-SC-S-C04",
+      "type": "berth",
+      "center": [
+        -51.949999999999996,
+        -0.8008000000000002,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-SC-S-C05",
+      "type": "berth",
+      "center": [
+        -49.199999999999996,
+        -0.8008000000000002,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-SERVICE-P-1",
+      "type": "berth",
+      "center": [
+        -31.5,
+        7.4193999999999996,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-SERVICE-P-1",
+      "type": "washstand",
+      "center": [
+        -31.5,
+        6.351,
+        9.18
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-SERVICE-P-1",
+      "type": "chair",
+      "center": [
+        -32.763000000000005,
+        5.997400000000001,
+        9.18
+      ],
+      "size": [
+        0.47,
+        0.47
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-SERVICE-S-1",
+      "type": "berth",
+      "center": [
+        -31.5,
+        -7.4193999999999996,
+        9.18
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-SERVICE-S-1",
+      "type": "washstand",
+      "center": [
+        -31.5,
+        -6.351,
+        9.18
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "M-SERVICE-S-1",
+      "type": "chair",
+      "center": [
+        -32.763000000000005,
+        -5.997400000000001,
+        9.18
+      ],
+      "size": [
+        0.47,
+        0.47
+      ],
+      "angle": 0,
+      "floor_z": 9.18,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "U-ENG-P-1",
+      "type": "berth",
+      "center": [
+        -31.75,
+        4.0536,
+        11.979999999999999
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 0,
+      "floor_z": 11.979999999999999,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "U-ENG-P-1",
+      "type": "washstand",
+      "center": [
+        -31.75,
+        4.814,
+        11.979999999999999
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 11.979999999999999,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "U-ENG-P-1",
+      "type": "chair",
+      "center": [
+        -32.86300000000001,
+        5.0796,
+        11.979999999999999
+      ],
+      "size": [
+        0.47,
+        0.47
+      ],
+      "angle": 0,
+      "floor_z": 11.979999999999999,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "U-ENG-P-2",
+      "type": "berth",
+      "center": [
+        -27.250000000000004,
+        4.0536,
+        11.979999999999999
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 0,
+      "floor_z": 11.979999999999999,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "U-ENG-P-2",
+      "type": "washstand",
+      "center": [
+        -27.250000000000004,
+        4.814,
+        11.979999999999999
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 11.979999999999999,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "U-ENG-P-2",
+      "type": "chair",
+      "center": [
+        -28.363,
+        5.0796,
+        11.979999999999999
+      ],
+      "size": [
+        0.47,
+        0.47
+      ],
+      "angle": 0,
+      "floor_z": 11.979999999999999,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "U-ENG-S-1",
+      "type": "berth",
+      "center": [
+        -31.75,
+        -4.053599999999999,
+        11.979999999999999
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 0,
+      "floor_z": 11.979999999999999,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "U-ENG-S-1",
+      "type": "washstand",
+      "center": [
+        -31.75,
+        -4.814,
+        11.979999999999999
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 11.979999999999999,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "U-ENG-S-1",
+      "type": "chair",
+      "center": [
+        -32.86300000000001,
+        -5.079599999999999,
+        11.979999999999999
+      ],
+      "size": [
+        0.47,
+        0.47
+      ],
+      "angle": 0,
+      "floor_z": 11.979999999999999,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "U-ENG-S-2",
+      "type": "berth",
+      "center": [
+        -27.250000000000004,
+        -4.053599999999999,
+        11.979999999999999
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 0,
+      "floor_z": 11.979999999999999,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "U-ENG-S-2",
+      "type": "washstand",
+      "center": [
+        -27.250000000000004,
+        -4.814,
+        11.979999999999999
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 11.979999999999999,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "U-ENG-S-2",
+      "type": "chair",
+      "center": [
+        -28.363,
+        -5.079599999999999,
+        11.979999999999999
+      ],
+      "size": [
+        0.47,
+        0.47
+      ],
+      "angle": 0,
+      "floor_z": 11.979999999999999,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "U-STATEROOM-E",
+      "type": "berth",
+      "center": [
+        -0.050000000000000044,
+        4.1328,
+        11.979999999999999
+      ],
+      "size": [
+        1.9,
+        1.0
+      ],
+      "angle": 0,
+      "floor_z": 11.979999999999999,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "U-STATEROOM-E",
+      "type": "chair",
+      "center": [
+        -0.6829999999999998,
+        5.0796,
+        11.979999999999999
+      ],
+      "size": [
+        0.47,
+        0.47
+      ],
+      "angle": 0,
+      "floor_z": 11.979999999999999,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "U-STATEROOM-F",
+      "type": "berth",
+      "center": [
+        2.8499999999999996,
+        4.1328,
+        11.979999999999999
+      ],
+      "size": [
+        1.9,
+        1.0
+      ],
+      "angle": 0,
+      "floor_z": 11.979999999999999,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "U-STATEROOM-F",
+      "type": "chair",
+      "center": [
+        2.217,
+        5.0796,
+        11.979999999999999
+      ],
+      "size": [
+        0.47,
+        0.47
+      ],
+      "angle": 0,
+      "floor_z": 11.979999999999999,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "U-STATEROOM-G",
+      "type": "berth",
+      "center": [
+        5.750000000000001,
+        4.1328,
+        11.979999999999999
+      ],
+      "size": [
+        1.9,
+        1.0
+      ],
+      "angle": 0,
+      "floor_z": 11.979999999999999,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "U-STATEROOM-G",
+      "type": "chair",
+      "center": [
+        5.117,
+        5.0796,
+        11.979999999999999
+      ],
+      "size": [
+        0.47,
+        0.47
+      ],
+      "angle": 0,
+      "floor_z": 11.979999999999999,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "U-STATEROOM-H",
+      "type": "berth",
+      "center": [
+        8.65,
+        4.1328,
+        11.979999999999999
+      ],
+      "size": [
+        1.9,
+        1.0
+      ],
+      "angle": 0,
+      "floor_z": 11.979999999999999,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "U-STATEROOM-H",
+      "type": "chair",
+      "center": [
+        8.017000000000001,
+        5.0796,
+        11.979999999999999
+      ],
+      "size": [
+        0.47,
+        0.47
+      ],
+      "angle": 0,
+      "floor_z": 11.979999999999999,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "U-STATEROOM-I",
+      "type": "berth",
+      "center": [
+        19.499999999999996,
+        4.1328,
+        11.979999999999999
+      ],
+      "size": [
+        1.9,
+        1.0
+      ],
+      "angle": 0,
+      "floor_z": 11.979999999999999,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "U-STATEROOM-I",
+      "type": "chair",
+      "center": [
+        18.897000000000002,
+        5.0796,
+        11.979999999999999
+      ],
+      "size": [
+        0.47,
+        0.47
+      ],
+      "angle": 0,
+      "floor_z": 11.979999999999999,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "U-STATEROOM-J",
+      "type": "berth",
+      "center": [
+        22.299999999999997,
+        4.1328,
+        11.979999999999999
+      ],
+      "size": [
+        1.9,
+        1.0
+      ],
+      "angle": 0,
+      "floor_z": 11.979999999999999,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "U-STATEROOM-J",
+      "type": "chair",
+      "center": [
+        21.697,
+        5.0796,
+        11.979999999999999
+      ],
+      "size": [
+        0.47,
+        0.47
+      ],
+      "angle": 0,
+      "floor_z": 11.979999999999999,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "U-STATEROOM-K",
+      "type": "berth",
+      "center": [
+        25.099999999999998,
+        4.1328,
+        11.979999999999999
+      ],
+      "size": [
+        1.9,
+        1.0
+      ],
+      "angle": 0,
+      "floor_z": 11.979999999999999,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "U-STATEROOM-K",
+      "type": "chair",
+      "center": [
+        24.497,
+        5.0796,
+        11.979999999999999
+      ],
+      "size": [
+        0.47,
+        0.47
+      ],
+      "angle": 0,
+      "floor_z": 11.979999999999999,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "U-STATEROOM-L",
+      "type": "berth",
+      "center": [
+        28.999999999999996,
+        4.1328,
+        11.979999999999999
+      ],
+      "size": [
+        1.9,
+        1.0
+      ],
+      "angle": 0,
+      "floor_z": 11.979999999999999,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "U-STATEROOM-L",
+      "type": "washstand",
+      "center": [
+        27.775999999999996,
+        5.0652,
+        11.979999999999999
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 11.979999999999999,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "U-STATEROOM-L",
+      "type": "chair",
+      "center": [
+        30.262999999999998,
+        5.0796,
+        11.979999999999999
+      ],
+      "size": [
+        0.47,
+        0.47
+      ],
+      "angle": 0,
+      "floor_z": 11.979999999999999,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "U-STATEROOM-R",
+      "type": "berth",
+      "center": [
+        19.799999999999997,
+        -4.1328,
+        11.979999999999999
+      ],
+      "size": [
+        1.9,
+        1.0
+      ],
+      "angle": 0,
+      "floor_z": 11.979999999999999,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "U-STATEROOM-R",
+      "type": "washstand",
+      "center": [
+        19.055999999999997,
+        -5.0652,
+        11.979999999999999
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 11.979999999999999,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "U-STATEROOM-R",
+      "type": "chair",
+      "center": [
+        20.583,
+        -5.079599999999999,
+        11.979999999999999
+      ],
+      "size": [
+        0.47,
+        0.47
+      ],
+      "angle": 0,
+      "floor_z": 11.979999999999999,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "U-STATEROOM-S",
+      "type": "berth",
+      "center": [
+        23.199999999999996,
+        -4.1328,
+        11.979999999999999
+      ],
+      "size": [
+        1.9,
+        1.0
+      ],
+      "angle": 0,
+      "floor_z": 11.979999999999999,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "U-STATEROOM-S",
+      "type": "washstand",
+      "center": [
+        22.455999999999996,
+        -5.0652,
+        11.979999999999999
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 11.979999999999999,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "U-STATEROOM-S",
+      "type": "chair",
+      "center": [
+        23.982999999999997,
+        -5.079599999999999,
+        11.979999999999999
+      ],
+      "size": [
+        0.47,
+        0.47
+      ],
+      "angle": 0,
+      "floor_z": 11.979999999999999,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "U-STATEROOM-T",
+      "type": "berth",
+      "center": [
+        26.599999999999998,
+        -4.1328,
+        11.979999999999999
+      ],
+      "size": [
+        1.9,
+        1.0
+      ],
+      "angle": 0,
+      "floor_z": 11.979999999999999,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "U-STATEROOM-T",
+      "type": "washstand",
+      "center": [
+        25.855999999999995,
+        -5.0652,
+        11.979999999999999
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 11.979999999999999,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "U-STATEROOM-T",
+      "type": "chair",
+      "center": [
+        27.383,
+        -5.079599999999999,
+        11.979999999999999
+      ],
+      "size": [
+        0.47,
+        0.47
+      ],
+      "angle": 0,
+      "floor_z": 11.979999999999999,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "U-STATEROOM-U",
+      "type": "berth",
+      "center": [
+        0.5,
+        -4.1328,
+        11.979999999999999
+      ],
+      "size": [
+        1.9,
+        1.0
+      ],
+      "angle": 0,
+      "floor_z": 11.979999999999999,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "U-STATEROOM-U",
+      "type": "washstand",
+      "center": [
+        -0.42399999999999993,
+        -5.0652,
+        11.979999999999999
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 11.979999999999999,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "U-STATEROOM-U",
+      "type": "chair",
+      "center": [
+        1.463,
+        -5.079599999999999,
+        11.979999999999999
+      ],
+      "size": [
+        0.47,
+        0.47
+      ],
+      "angle": 0,
+      "floor_z": 11.979999999999999,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "U-STATEROOM-V",
+      "type": "berth",
+      "center": [
+        4.4,
+        -4.1328,
+        11.979999999999999
+      ],
+      "size": [
+        1.9,
+        1.0
+      ],
+      "angle": 0,
+      "floor_z": 11.979999999999999,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "U-STATEROOM-V",
+      "type": "washstand",
+      "center": [
+        3.536,
+        -5.0652,
+        11.979999999999999
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 11.979999999999999,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "U-STATEROOM-V",
+      "type": "chair",
+      "center": [
+        5.303,
+        -5.079599999999999,
+        11.979999999999999
+      ],
+      "size": [
+        0.47,
+        0.47
+      ],
+      "angle": 0,
+      "floor_z": 11.979999999999999,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "U-STATEROOM-W",
+      "type": "berth",
+      "center": [
+        8.200000000000001,
+        -4.1328,
+        11.979999999999999
+      ],
+      "size": [
+        1.9,
+        1.0
+      ],
+      "angle": 0,
+      "floor_z": 11.979999999999999,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "U-STATEROOM-W",
+      "type": "washstand",
+      "center": [
+        7.335999999999999,
+        -5.0652,
+        11.979999999999999
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 11.979999999999999,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "U-STATEROOM-W",
+      "type": "chair",
+      "center": [
+        9.103,
+        -5.079599999999999,
+        11.979999999999999
+      ],
+      "size": [
+        0.47,
+        0.47
+      ],
+      "angle": 0,
+      "floor_z": 11.979999999999999,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "U-STATEROOM-M",
+      "type": "berth",
+      "center": [
+        33.85,
+        3.7458,
+        11.979999999999999
+      ],
+      "size": [
+        1.9,
+        1.0
+      ],
+      "angle": 0,
+      "floor_z": 11.979999999999999,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "U-STATEROOM-M",
+      "type": "washstand",
+      "center": [
+        33.85,
+        4.679,
+        11.979999999999999
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 11.979999999999999,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "U-STATEROOM-M",
+      "type": "chair",
+      "center": [
+        32.677,
+        5.0166,
+        11.979999999999999
+      ],
+      "size": [
+        0.47,
+        0.47
+      ],
+      "angle": 0,
+      "floor_z": 11.979999999999999,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "U-STATEROOM-M",
+      "type": "wardrobe",
+      "center": [
+        34.915000000000006,
+        5.005800000000001,
+        11.979999999999999
+      ],
+      "size": [
+        0.8,
+        0.45
+      ],
+      "angle": 0,
+      "floor_z": 11.979999999999999,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "U-STATEROOM-N",
+      "type": "berth",
+      "center": [
+        33.85,
+        1.9542000000000002,
+        11.979999999999999
+      ],
+      "size": [
+        1.9,
+        1.0
+      ],
+      "angle": 0,
+      "floor_z": 11.979999999999999,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "U-STATEROOM-N",
+      "type": "washstand",
+      "center": [
+        33.85,
+        0.6978000000000002,
+        11.979999999999999
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 11.979999999999999,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "U-STATEROOM-N",
+      "type": "chair",
+      "center": [
+        32.677,
+        0.6834000000000001,
+        11.979999999999999
+      ],
+      "size": [
+        0.47,
+        0.47
+      ],
+      "angle": 0,
+      "floor_z": 11.979999999999999,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "U-STATEROOM-N",
+      "type": "wardrobe",
+      "center": [
+        34.915000000000006,
+        0.6942000000000002,
+        11.979999999999999
+      ],
+      "size": [
+        0.8,
+        0.45
+      ],
+      "angle": 0,
+      "floor_z": 11.979999999999999,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "U-STATEROOM-O",
+      "type": "berth",
+      "center": [
+        33.85,
+        -1.9542000000000002,
+        11.979999999999999
+      ],
+      "size": [
+        1.9,
+        1.0
+      ],
+      "angle": 0,
+      "floor_z": 11.979999999999999,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "U-STATEROOM-O",
+      "type": "washstand",
+      "center": [
+        33.85,
+        -0.6977999999999998,
+        11.979999999999999
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 11.979999999999999,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "U-STATEROOM-O",
+      "type": "chair",
+      "center": [
+        32.677,
+        -0.6833999999999996,
+        11.979999999999999
+      ],
+      "size": [
+        0.47,
+        0.47
+      ],
+      "angle": 0,
+      "floor_z": 11.979999999999999,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "U-STATEROOM-O",
+      "type": "wardrobe",
+      "center": [
+        34.915000000000006,
+        -0.6941999999999997,
+        11.979999999999999
+      ],
+      "size": [
+        0.8,
+        0.45
+      ],
+      "angle": 0,
+      "floor_z": 11.979999999999999,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "U-STATEROOM-P",
+      "type": "berth",
+      "center": [
+        33.85,
+        -3.7458,
+        11.979999999999999
+      ],
+      "size": [
+        1.9,
+        1.0
+      ],
+      "angle": 0,
+      "floor_z": 11.979999999999999,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "U-STATEROOM-P",
+      "type": "washstand",
+      "center": [
+        33.85,
+        -4.679,
+        11.979999999999999
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 11.979999999999999,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "U-STATEROOM-P",
+      "type": "chair",
+      "center": [
+        32.677,
+        -5.0165999999999995,
+        11.979999999999999
+      ],
+      "size": [
+        0.47,
+        0.47
+      ],
+      "angle": 0,
+      "floor_z": 11.979999999999999,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "U-STATEROOM-P",
+      "type": "wardrobe",
+      "center": [
+        34.915000000000006,
+        -5.0058,
+        11.979999999999999
+      ],
+      "size": [
+        0.8,
+        0.45
+      ],
+      "angle": 0,
+      "floor_z": 11.979999999999999,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "U-STATEROOM-Q",
+      "type": "berth",
+      "center": [
+        29.9,
+        -4.1328,
+        11.979999999999999
+      ],
+      "size": [
+        1.9,
+        1.0
+      ],
+      "angle": 0,
+      "floor_z": 11.979999999999999,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "U-STATEROOM-Q",
+      "type": "washstand",
+      "center": [
+        29.215999999999998,
+        -5.0652,
+        11.979999999999999
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 11.979999999999999,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "U-STATEROOM-Q",
+      "type": "chair",
+      "center": [
+        30.623,
+        -5.079599999999999,
+        11.979999999999999
+      ],
+      "size": [
+        0.47,
+        0.47
+      ],
+      "angle": 0,
+      "floor_z": 11.979999999999999,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-FC-P-01",
+      "type": "berth",
+      "center": [
+        15.700000000000001,
+        7.2064,
+        6.48
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-FC-P-01",
+      "type": "washstand",
+      "center": [
+        15.700000000000001,
+        5.4748,
+        6.48
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-FC-P-01",
+      "type": "chair",
+      "center": [
+        15.7,
+        6.4,
+        6.48
+      ],
+      "size": [
+        0.47,
+        0.47
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-FC-P-02",
+      "type": "berth",
+      "center": [
+        18.299999999999997,
+        7.2064,
+        6.48
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-FC-P-02",
+      "type": "washstand",
+      "center": [
+        18.299999999999997,
+        5.4748,
+        6.48
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-FC-P-02",
+      "type": "chair",
+      "center": [
+        18.3,
+        6.4,
+        6.48
+      ],
+      "size": [
+        0.47,
+        0.47
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-FC-P-03",
+      "type": "berth",
+      "center": [
+        20.9,
+        7.2064,
+        6.48
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-FC-P-03",
+      "type": "washstand",
+      "center": [
+        20.9,
+        5.4748,
+        6.48
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-FC-P-03",
+      "type": "chair",
+      "center": [
+        20.9,
+        6.4,
+        6.48
+      ],
+      "size": [
+        0.47,
+        0.47
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-FC-P-04",
+      "type": "berth",
+      "center": [
+        23.499999999999996,
+        7.2064,
+        6.48
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-FC-P-04",
+      "type": "washstand",
+      "center": [
+        23.499999999999996,
+        5.4748,
+        6.48
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-FC-P-04",
+      "type": "chair",
+      "center": [
+        23.5,
+        6.4,
+        6.48
+      ],
+      "size": [
+        0.47,
+        0.47
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-FC-P-05",
+      "type": "berth",
+      "center": [
+        26.15,
+        7.2064,
+        6.48
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-FC-P-05",
+      "type": "washstand",
+      "center": [
+        26.15,
+        5.4748,
+        6.48
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-FC-P-05",
+      "type": "chair",
+      "center": [
+        26.15,
+        6.4,
+        6.48
+      ],
+      "size": [
+        0.47,
+        0.47
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-FC-P-06",
+      "type": "berth",
+      "center": [
+        28.849999999999998,
+        7.2064,
+        6.48
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-FC-P-06",
+      "type": "washstand",
+      "center": [
+        28.849999999999998,
+        5.4748,
+        6.48
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-FC-P-06",
+      "type": "chair",
+      "center": [
+        28.849999999999998,
+        6.4,
+        6.48
+      ],
+      "size": [
+        0.47,
+        0.47
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-FC-P-07",
+      "type": "berth",
+      "center": [
+        31.549999999999997,
+        7.2064,
+        6.48
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-FC-P-07",
+      "type": "washstand",
+      "center": [
+        31.549999999999997,
+        5.4748,
+        6.48
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-FC-P-07",
+      "type": "chair",
+      "center": [
+        31.549999999999997,
+        6.4,
+        6.48
+      ],
+      "size": [
+        0.47,
+        0.47
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-FC-P-08",
+      "type": "berth",
+      "center": [
+        34.25,
+        7.2064,
+        6.48
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-FC-P-08",
+      "type": "washstand",
+      "center": [
+        34.25,
+        5.4748,
+        6.48
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-FC-P-08",
+      "type": "chair",
+      "center": [
+        34.24999999999999,
+        6.4,
+        6.48
+      ],
+      "size": [
+        0.47,
+        0.47
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-FC-P-09",
+      "type": "berth",
+      "center": [
+        36.95,
+        7.2064,
+        6.48
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-FC-P-09",
+      "type": "washstand",
+      "center": [
+        36.95,
+        5.4748,
+        6.48
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-FC-P-09",
+      "type": "chair",
+      "center": [
+        36.949999999999996,
+        6.4,
+        6.48
+      ],
+      "size": [
+        0.47,
+        0.47
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-FC-P-10",
+      "type": "berth",
+      "center": [
+        39.65,
+        7.2064,
+        6.48
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-FC-P-10",
+      "type": "washstand",
+      "center": [
+        39.65,
+        5.4748,
+        6.48
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-FC-P-10",
+      "type": "chair",
+      "center": [
+        39.64999999999999,
+        6.4,
+        6.48
+      ],
+      "size": [
+        0.47,
+        0.47
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-STEWARD-P-01",
+      "type": "berth",
+      "center": [
+        -52.3,
+        6.6814860000000005,
+        6.48
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-STEWARD-P-01",
+      "type": "washstand",
+      "center": [
+        -52.3,
+        4.0498140000000005,
+        6.48
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-STEWARD-P-01",
+      "type": "chair",
+      "center": [
+        -52.300000000000004,
+        5.425050000000001,
+        6.48
+      ],
+      "size": [
+        0.47,
+        0.47
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-STEWARD-P-02",
+      "type": "berth",
+      "center": [
+        -49.9,
+        6.74891,
+        6.48
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-STEWARD-P-02",
+      "type": "washstand",
+      "center": [
+        -49.9,
+        4.06079,
+        6.48
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-STEWARD-P-02",
+      "type": "chair",
+      "center": [
+        -49.900000000000006,
+        5.46425,
+        6.48
+      ],
+      "size": [
+        0.47,
+        0.47
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-STEWARD-P-03",
+      "type": "berth",
+      "center": [
+        -47.5,
+        6.810400000000001,
+        6.48
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-STEWARD-P-03",
+      "type": "washstand",
+      "center": [
+        -47.5,
+        4.0708,
+        6.48
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-STEWARD-P-03",
+      "type": "chair",
+      "center": [
+        -47.50000000000001,
+        5.5,
+        6.48
+      ],
+      "size": [
+        0.47,
+        0.47
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-STEWARD-P-04",
+      "type": "berth",
+      "center": [
+        -45.099999999999994,
+        6.810400000000001,
+        6.48
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-STEWARD-P-04",
+      "type": "washstand",
+      "center": [
+        -45.099999999999994,
+        4.0708,
+        6.48
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-STEWARD-P-04",
+      "type": "chair",
+      "center": [
+        -45.1,
+        5.5,
+        6.48
+      ],
+      "size": [
+        0.47,
+        0.47
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-STEWARD-P-05",
+      "type": "berth",
+      "center": [
+        -42.699999999999996,
+        6.810400000000001,
+        6.48
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-STEWARD-P-05",
+      "type": "washstand",
+      "center": [
+        -42.699999999999996,
+        4.0708,
+        6.48
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-STEWARD-P-05",
+      "type": "chair",
+      "center": [
+        -42.7,
+        5.5,
+        6.48
+      ],
+      "size": [
+        0.47,
+        0.47
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-STEWARD-P-06",
+      "type": "berth",
+      "center": [
+        -40.3,
+        6.810400000000001,
+        6.48
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-STEWARD-P-06",
+      "type": "washstand",
+      "center": [
+        -40.3,
+        4.0708,
+        6.48
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-STEWARD-P-06",
+      "type": "chair",
+      "center": [
+        -40.300000000000004,
+        5.5,
+        6.48
+      ],
+      "size": [
+        0.47,
+        0.47
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-STEWARD-P-07",
+      "type": "berth",
+      "center": [
+        -37.9,
+        6.810400000000001,
+        6.48
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-STEWARD-P-07",
+      "type": "washstand",
+      "center": [
+        -37.9,
+        4.0708,
+        6.48
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-STEWARD-P-07",
+      "type": "chair",
+      "center": [
+        -37.900000000000006,
+        5.5,
+        6.48
+      ],
+      "size": [
+        0.47,
+        0.47
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-FC-S-01",
+      "type": "berth",
+      "center": [
+        15.700000000000001,
+        -7.2063999999999995,
+        6.48
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-FC-S-01",
+      "type": "washstand",
+      "center": [
+        15.700000000000001,
+        -5.4748,
+        6.48
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-FC-S-01",
+      "type": "chair",
+      "center": [
+        15.7,
+        -6.3999999999999995,
+        6.48
+      ],
+      "size": [
+        0.47,
+        0.47
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-FC-S-02",
+      "type": "berth",
+      "center": [
+        18.299999999999997,
+        -7.2063999999999995,
+        6.48
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-FC-S-02",
+      "type": "washstand",
+      "center": [
+        18.299999999999997,
+        -5.4748,
+        6.48
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-FC-S-02",
+      "type": "chair",
+      "center": [
+        18.3,
+        -6.3999999999999995,
+        6.48
+      ],
+      "size": [
+        0.47,
+        0.47
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-FC-S-03",
+      "type": "berth",
+      "center": [
+        20.9,
+        -7.2063999999999995,
+        6.48
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-FC-S-03",
+      "type": "washstand",
+      "center": [
+        20.9,
+        -5.4748,
+        6.48
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-FC-S-03",
+      "type": "chair",
+      "center": [
+        20.9,
+        -6.3999999999999995,
+        6.48
+      ],
+      "size": [
+        0.47,
+        0.47
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-FC-S-04",
+      "type": "berth",
+      "center": [
+        23.499999999999996,
+        -7.2063999999999995,
+        6.48
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-FC-S-04",
+      "type": "washstand",
+      "center": [
+        23.499999999999996,
+        -5.4748,
+        6.48
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-FC-S-04",
+      "type": "chair",
+      "center": [
+        23.5,
+        -6.3999999999999995,
+        6.48
+      ],
+      "size": [
+        0.47,
+        0.47
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-FC-S-05",
+      "type": "berth",
+      "center": [
+        26.15,
+        -7.2063999999999995,
+        6.48
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-FC-S-05",
+      "type": "washstand",
+      "center": [
+        26.15,
+        -5.4748,
+        6.48
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-FC-S-05",
+      "type": "chair",
+      "center": [
+        26.15,
+        -6.3999999999999995,
+        6.48
+      ],
+      "size": [
+        0.47,
+        0.47
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-FC-S-06",
+      "type": "berth",
+      "center": [
+        28.849999999999998,
+        -7.2063999999999995,
+        6.48
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-FC-S-06",
+      "type": "washstand",
+      "center": [
+        28.849999999999998,
+        -5.4748,
+        6.48
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-FC-S-06",
+      "type": "chair",
+      "center": [
+        28.849999999999998,
+        -6.3999999999999995,
+        6.48
+      ],
+      "size": [
+        0.47,
+        0.47
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-FC-S-07",
+      "type": "berth",
+      "center": [
+        31.549999999999997,
+        -7.2063999999999995,
+        6.48
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-FC-S-07",
+      "type": "washstand",
+      "center": [
+        31.549999999999997,
+        -5.4748,
+        6.48
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-FC-S-07",
+      "type": "chair",
+      "center": [
+        31.549999999999997,
+        -6.3999999999999995,
+        6.48
+      ],
+      "size": [
+        0.47,
+        0.47
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-FC-S-08",
+      "type": "berth",
+      "center": [
+        34.25,
+        -7.2063999999999995,
+        6.48
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-FC-S-08",
+      "type": "washstand",
+      "center": [
+        34.25,
+        -5.4748,
+        6.48
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-FC-S-08",
+      "type": "chair",
+      "center": [
+        34.24999999999999,
+        -6.3999999999999995,
+        6.48
+      ],
+      "size": [
+        0.47,
+        0.47
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-FC-S-09",
+      "type": "berth",
+      "center": [
+        36.95,
+        -7.2063999999999995,
+        6.48
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-FC-S-09",
+      "type": "washstand",
+      "center": [
+        36.95,
+        -5.4748,
+        6.48
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-FC-S-09",
+      "type": "chair",
+      "center": [
+        36.949999999999996,
+        -6.3999999999999995,
+        6.48
+      ],
+      "size": [
+        0.47,
+        0.47
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-FC-S-10",
+      "type": "berth",
+      "center": [
+        39.65,
+        -7.2063999999999995,
+        6.48
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-FC-S-10",
+      "type": "washstand",
+      "center": [
+        39.65,
+        -5.4748,
+        6.48
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-FC-S-10",
+      "type": "chair",
+      "center": [
+        39.64999999999999,
+        -6.3999999999999995,
+        6.48
+      ],
+      "size": [
+        0.47,
+        0.47
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-STEWARD-S-01",
+      "type": "berth",
+      "center": [
+        -52.3,
+        -6.681486,
+        6.48
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-STEWARD-S-01",
+      "type": "washstand",
+      "center": [
+        -52.3,
+        -4.049814,
+        6.48
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-STEWARD-S-01",
+      "type": "chair",
+      "center": [
+        -52.300000000000004,
+        -5.425049999999999,
+        6.48
+      ],
+      "size": [
+        0.47,
+        0.47
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-STEWARD-S-02",
+      "type": "berth",
+      "center": [
+        -49.9,
+        -6.7489099999999995,
+        6.48
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-STEWARD-S-02",
+      "type": "washstand",
+      "center": [
+        -49.9,
+        -4.06079,
+        6.48
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-STEWARD-S-02",
+      "type": "chair",
+      "center": [
+        -49.900000000000006,
+        -5.46425,
+        6.48
+      ],
+      "size": [
+        0.47,
+        0.47
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-STEWARD-S-03",
+      "type": "berth",
+      "center": [
+        -47.5,
+        -6.8104000000000005,
+        6.48
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-STEWARD-S-03",
+      "type": "washstand",
+      "center": [
+        -47.5,
+        -4.0708,
+        6.48
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-STEWARD-S-03",
+      "type": "chair",
+      "center": [
+        -47.50000000000001,
+        -5.5,
+        6.48
+      ],
+      "size": [
+        0.47,
+        0.47
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-STEWARD-S-04",
+      "type": "berth",
+      "center": [
+        -45.099999999999994,
+        -6.8104000000000005,
+        6.48
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-STEWARD-S-04",
+      "type": "washstand",
+      "center": [
+        -45.099999999999994,
+        -4.0708,
+        6.48
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-STEWARD-S-04",
+      "type": "chair",
+      "center": [
+        -45.1,
+        -5.5,
+        6.48
+      ],
+      "size": [
+        0.47,
+        0.47
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-STEWARD-S-05",
+      "type": "berth",
+      "center": [
+        -42.699999999999996,
+        -6.8104000000000005,
+        6.48
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-STEWARD-S-05",
+      "type": "washstand",
+      "center": [
+        -42.699999999999996,
+        -4.0708,
+        6.48
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-STEWARD-S-05",
+      "type": "chair",
+      "center": [
+        -42.7,
+        -5.5,
+        6.48
+      ],
+      "size": [
+        0.47,
+        0.47
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-STEWARD-S-06",
+      "type": "berth",
+      "center": [
+        -40.3,
+        -6.8104000000000005,
+        6.48
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-STEWARD-S-06",
+      "type": "washstand",
+      "center": [
+        -40.3,
+        -4.0708,
+        6.48
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-STEWARD-S-06",
+      "type": "chair",
+      "center": [
+        -40.300000000000004,
+        -5.5,
+        6.48
+      ],
+      "size": [
+        0.47,
+        0.47
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-STEWARD-S-07",
+      "type": "berth",
+      "center": [
+        -37.9,
+        -6.8104000000000005,
+        6.48
+      ],
+      "size": [
+        1.9,
+        0.78
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-STEWARD-S-07",
+      "type": "washstand",
+      "center": [
+        -37.9,
+        -4.0708,
+        6.48
+      ],
+      "size": [
+        0.57,
+        0.44
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    },
+    {
+      "space_id": "L-STEWARD-S-07",
+      "type": "chair",
+      "center": [
+        -37.900000000000006,
+        -5.5,
+        6.48
+      ],
+      "size": [
+        0.47,
+        0.47
+      ],
+      "angle": 0,
+      "floor_z": 6.48,
+      "status": "GEOMETRY_ONLY"
+    }
+  ],
+  "unfitted": [
+    "M-FC-P-07BO: bed does not fit with door clearance",
+    "M-SC-P-01AO: bed does not fit with door clearance",
+    "M-SC-P-01BO: bed does not fit with door clearance",
+    "M-SC-P-02AO: bed does not fit with door clearance",
+    "M-SC-P-02BO: bed does not fit with door clearance",
+    "M-SC-P-03AO: bed does not fit with door clearance",
+    "M-SC-P-03BO: bed does not fit with door clearance",
+    "M-SC-P-04AO: bed does not fit with door clearance",
+    "M-FC-S-07BO: bed does not fit with door clearance",
+    "M-SC-S-01AO: bed does not fit with door clearance",
+    "M-SC-S-01BO: bed does not fit with door clearance",
+    "M-SC-S-02AO: bed does not fit with door clearance",
+    "M-SC-S-02BO: bed does not fit with door clearance",
+    "M-SC-S-03AO: bed does not fit with door clearance",
+    "M-SC-S-03BO: bed does not fit with door clearance",
+    "M-SC-S-04AO: bed does not fit with door clearance"
+  ]
+}
