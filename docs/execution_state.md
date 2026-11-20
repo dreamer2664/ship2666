@@ -3,7 +3,10 @@
 - Session: 1
 - Branch: `teutonic-9NXT5G1C` — resume this branch; do not allocate another.
 - Session checkpoint clock started: 2026-11-20T07:13:05Z (UTC).
-- Status: **RESEARCH — NOT COMPLETE**.
+- Status: **BLOCKOUT — NOT COMPLETE**.
+- Spatial source: 299 named regions / 317 access records, all metric boundaries marked inferred; no visually approved spaces.
+- Tests verified: 9 Python layout/dimensional tests; 8 JavaScript kinematic/state tests.
+- Native geometry source is implemented; the first full build failed at invalid camera JSON before final save. Corrected the input, moved its validation before geometry, added intermediate native saves; rerun next.
 - Active-work estimate: not yet totaled; use the timestamped work log, not requested workload as reported time.
 - Last verified remote commit: `f5664cf606efb8b76fe7cc260a5d184b138dadbd` (initial branch push confirmed). Subsequent checkpoints are recorded in Git history.
 

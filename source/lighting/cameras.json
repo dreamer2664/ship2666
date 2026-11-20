@@ -1,0 +1,19 @@
+[
+  {"id":"port_bow","label":"Port bow · overall","position":[157,185,77],"target":[0,0,15],"lens":52,"mode":"exterior","areas":["hull","foredeck","superstructure","rigging"]},
+  {"id":"starboard_bow","label":"Starboard bow · overall","position":[151,-187,72],"target":[0,0,15],"lens":52,"mode":"exterior","areas":["starboard hull","boats","funnels"]},
+  {"id":"port_profile","label":"Port broadside · orthographic","position":[0,240,15],"target":[0,0,15],"ortho":198,"mode":"profile","areas":["silhouette","sheer","mast and funnel spacing"]},
+  {"id":"starboard_profile","label":"Starboard broadside · orthographic","position":[0,-240,15],"target":[0,0,15],"ortho":198,"mode":"profile","areas":["starboard silhouette"]},
+  {"id":"stern","label":"Stern and overlapping screws","position":[-126,-57,24],"target":[-62,0,8],"lens":47,"mode":"drydock","areas":["stern","propellers","rudder"]},
+  {"id":"elevated","label":"Elevated whole-ship inspection","position":[83,168,151],"target":[0,0,9],"lens":48,"mode":"exterior","areas":["all exterior decks","lifeboat placement"]},
+  {"id":"promenade","label":"Port promenade at human height","position":[30,7.1,13.67],"target":[-15,7.1,13.6],"lens":29,"mode":"exterior","areas":["railings","door frames","planks","stanchions"]},
+  {"id":"saloon","label":"First-class saloon","position":[15.7,0,10.85],"target":[-0.4,0,12.05],"lens":25,"mode":"interior","areas":["dining furniture","dome","columns"]},
+  {"id":"smoking","label":"First-class smoking saloon","position":[-17.15,-4.8,13.60],"target":[-22.5,2.0,13.1],"lens":24,"mode":"interior","areas":["curved settees","panelling","skylight"]},
+  {"id":"stateroom_g","label":"Upper stateroom G","position":[4.7,3.6,13.48],"target":[6.6,5.1,12.95],"lens":22,"mode":"interior","areas":["berth","bedding","washstand","wood finish"]},
+  {"id":"crew","label":"Steward accommodation","position":[-50.8,3.45,8.02],"target":[-49.0,6.4,7.5],"lens":22,"mode":"interior","areas":["crew berths","service fittings"]},
+  {"id":"engine","label":"Starboard engine working platform","position":[-19.2,-6.2,6.6],"target":[-30.5,-2.0,5.7],"lens":25,"mode":"machinery","areas":["frames","crank","crossheads","condenser","piping"]},
+  {"id":"engine_top","label":"Twin engine cylinder-cover platform","position":[-33.8,-0.1,11.1],"target":[-20.5,0,8.8],"lens":26,"mode":"machinery","areas":["cylinder stages","tail rods","central division"]},
+  {"id":"stokehold","label":"Aft stokehold","position":[-9.8,-6.9,3.7],"target":[-11.7,2,3.3],"lens":25,"mode":"machinery","areas":["furnace mouths","boiler shells","steam fittings"]},
+  {"id":"cutaway","label":"Whole ship longitudinal section","position":[34,-202,82],"target":[0,0,7.5],"ortho":197,"mode":"cutaway","areas":["all decks","rooms","machinery","circulation"]},
+  {"id":"hull_detail","label":"Shell plating and actual porthole opening","position":[44,14.2,10.6],"target":[45.2,7.9,10.1],"lens":60,"mode":"detail","areas":["shell seams","porthole frame","glazing"]},
+  {"id":"boat_detail","label":"Boat, chocks and davits","position":[33.5,12.5,18.6],"target":[29,7,15.6],"lens":40,"mode":"detail","areas":["lifeboat ribs","ropes","davit bearings"]}
+]

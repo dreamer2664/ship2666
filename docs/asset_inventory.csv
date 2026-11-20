@@ -1,0 +1,20 @@
+id,name,category,count,evidence_id,state,function_tested,visually_approved
+HULL-SHELL,Lofted steel shell with openings,hull,1,E027,BLOCKOUT,False,False
+HULL-FRAMES,Transverse frames and stringers,structure,1,E027,BLOCKOUT,False,False
+HULL-BULKHEADS,Watertight division structure,structure,11,E016,BLOCKOUT,False,False
+EX-FUNNELS,Open raked funnel assemblies,exterior,2,E026,BLOCKOUT,False,False
+EX-MASTS,Three masts with stays and rigging,exterior,3,E026,BLOCKOUT,False,False
+EX-BOATS,Lifeboats and davit assemblies,exterior,14,E026,BLOCKOUT,False,False
+EX-ANCHORS,Anchor handling and foredeck equipment,exterior,1,E026,BLOCKOUT,False,False
+EX-RAILS,Weather-deck rails and stanchions,exterior,1,E026,BLOCKOUT,False,False
+MECH-ENGINES,Twin triple-expansion assemblies,machinery,2,E008,BLOCKOUT,False,False
+MECH-BOILERS,Twelve double and four single boilers,machinery,16,E006,BLOCKOUT,False,False
+MECH-CONDENSERS,Separate cylindrical condensers,machinery,2,E011,BLOCKOUT,False,False
+MECH-PUMPS,Circulating and feed-pump assemblies,machinery,1,E030,BLOCKOUT,False,False
+MECH-SHAFTS,Overlapping screw shafts and chambers,machinery,2,E014,BLOCKOUT,False,False
+MECH-PROPS,Three-bladed staggered screws,machinery,2,E013,BLOCKOUT,False,False
+MECH-STEER,Paired steam steering machinery,machinery,1,E015,BLOCKOUT,False,False
+SYS-DOORS,Individual pivoted doors,interactions,223,E019,BLOCKOUT,False,False
+SYS-STATE,"Pressure, throttle, shaft and rudder state",simulation,1,E007,BLOCKOUT,False,False
+ENV-OCEAN,Multiscale ocean and hull response approximation,environment,1,E025,BLOCKOUT,False,False
+ENV-SMOKE,Load-coupled volumetric smoke approximation,environment,1,E025,BLOCKOUT,False,False
