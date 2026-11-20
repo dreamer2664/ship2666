@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "vessel": "RMS Teutonic",
+  "year": 1889,
+  "configuration": "Provisional early passenger-service configuration, circa 1889–1892; no review armament or later enclosed promenades",
+  "units": "metres",
+  "coordinates": {"x": "positive forward", "y": "positive port", "z": "positive up", "origin": "midpoint of overall length, centreline, moulded baseline"},
+  "dimensions": {
+    "length_overall": 177.3936,
+    "length_between_perpendiculars": 172.5168,
+    "beam": 17.61744,
+    "registered_depth": 11.94816,
+    "reference_waterline": 7.1,
+    "gross_register_tons": 9984,
+    "service_knots": 20,
+    "source_ids": ["E001", "E002", "E003", "E004", "E005"]
+  },
+  "decks": [
+    {"id": "T", "name": "Tank top / machinery", "z": 1.05, "height": 2.55, "evidence": "E025", "confidence": "LOW", "principal": false},
+    {"id": "O", "name": "Orlop / holds", "z": 3.6, "height": 2.85, "evidence": "E025", "confidence": "LOW", "principal": true},
+    {"id": "L", "name": "Lower deck", "z": 6.45, "height": 2.7, "evidence": "E017", "confidence": "MEDIUM", "principal": true},
+    {"id": "M", "name": "Main deck", "z": 9.15, "height": 2.8, "evidence": "E017", "confidence": "MEDIUM", "principal": true},
+    {"id": "U", "name": "Upper deck", "z": 11.95, "height": 2.65, "evidence": "E017", "confidence": "MEDIUM", "principal": true},
+    {"id": "P", "name": "Promenade roof / boat platforms", "z": 14.6, "height": 2.45, "evidence": "E026", "confidence": "LOW", "principal": false}
+  ],
+  "hull": {
+    "station_fraction_halfbreadth": [[0,0],[0.012,0.2],[0.028,0.42],[0.055,0.62],[0.10,0.79],[0.18,0.91],[0.30,0.985],[0.43,1],[0.55,1],[0.67,0.96],[0.77,0.86],[0.85,0.69],[0.91,0.46],[0.96,0.21],[0.985,0.065],[1,0]],
+    "section_height_halfbreadth": [[0,0.05],[0.025,0.40],[0.07,0.69],[0.13,0.85],[0.22,0.94],[0.34,0.985],[0.50,1],[0.72,1],[1,0.99]],
+    "plating_thickness": 0.022,
+    "frame_spacing": 0.76,
+    "bulkhead_x": [-76,-59,-41,-34,-18.5,2,14.4,41,53.4,66.5,79],
+    "sheer_bow": 1.1,
+    "sheer_stern": 0.6,
+    "camber": 0.12,
+    "evidence": "E027",
+    "status": "INFERRED lines, frame spacing and bulkhead locations; not a digitized builder's lines plan"
+  },
+  "funnels": [
+    {"id":"F-AFT", "x":-9.6, "y":0, "base_z":11.95, "height":12.25, "longitudinal_radius":2.1336, "transverse_radius":1.7526, "rake_degrees":7},
+    {"id":"F-FWD", "x":22, "y":0, "base_z":11.95, "height":12.25, "longitudinal_radius":2.1336, "transverse_radius":1.7526, "rake_degrees":7}
+  ],
+  "masts": [
+    {"id":"MAST-FORE", "x":57.2, "z":12.4, "height":32.5},
+    {"id":"MAST-MAIN", "x":-35.0, "z":12.0, "height":31.0},
+    {"id":"MAST-MIZZEN", "x":-70.4, "z":12.4, "height":26.5}
+  ],
+  "engines": {
+    "count":2,
+    "cylinder_diameters":[1.0922,1.7272,2.794],
+    "stroke":1.524,
+    "connecting_rod":3.1,
+    "crank_z":2.8,
+    "cylinder_x":[-21.9,-26.0,-30.3],
+    "shaft_y":[2.1336,-2.1336],
+    "crank_phase_degrees":[0,120,240],
+    "max_rpm":82,
+    "service_rpm":78,
+    "working_pressure_psi":180,
+    "condenser_length":6.096,
+    "condenser_diameter":2.1336,
+    "evidence":["E008","E009","E010","E011","E012"],
+    "inferred":["connecting rod length", "stage pitch", "absolute elevations", "crank phasing order", "swept valve-motion parameters"]
+  },
+  "boilers": {"double_ended":12, "single_ended":4, "furnaces_total":76, "working_pressure_psi":180, "shell_diameter":4.15, "double_length":5.7, "single_length":3.0, "evidence":"E006", "placement_note":"Provisional 8+8 grouping beneath widely separated uptakes; count sourced, grouping and shell dimensions inferred"},
+  "propellers": {"diameter":5.9436, "pitch":8.9916, "blades":3, "overlap":1.6764, "shaft_separation":4.2672, "starboard_aft_stagger":1.8288, "port_x":-80.0, "z":2.99, "evidence":"E013"},
+  "steering": {"rudder_limit_degrees":32, "rudder_stock_x":-83.3, "evidence":"E015", "limit_basis":"INFERRED safe demonstrator limit, not sourced helm limit"}
+}

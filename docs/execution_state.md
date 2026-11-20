@@ -5,7 +5,7 @@
 - Session checkpoint clock started: 2026-11-20T07:13:05Z (UTC).
 - Status: **RESEARCH — NOT COMPLETE**.
 - Active-work estimate: not yet totaled; use the timestamped work log, not requested workload as reported time.
-- Last verified remote commit: pending initial push.
+- Last verified remote commit: `f5664cf606efb8b76fe7cc260a5d184b138dadbd` (initial branch push confirmed). Subsequent checkpoints are recorded in Git history.
 
 ## Verified initialization
 
