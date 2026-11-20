@@ -98,3 +98,12 @@ Read the full reconstruction brief. Inspected workspace attachments, tool availa
 - Next: commit/push; materials/lighting pass (differentiated brass/copper/iron/steel,
   upholstery fibre, glass thickness); hull rivet/plate detail; functional door-pivot
   tests; gen1 renders on render host.
+
+### 2026-11-20 · hull rivets + door mechanism test (continued, no stop)
+- source/hull/hull.js: added rivet rows following strake/plate seams (regular spacing,
+  ~0.14 m, aligned to hull normal, not random noise) at keel/bilge/sheer/deck seams.
+- tests/test_doors.py: design-review of door/pivot mechanism (unique id per door,
+  hinge axis, bounded swing arc, open direction; 11 watertight bulkhead doors slide).
+- All five test suites pass.
+- Next: commit/push; continue hull plate/rivet refinement, functional tests for
+  engines/steering/smoke, gen1 renders on render host.
