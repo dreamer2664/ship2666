@@ -1,38 +1,38 @@
 # Execution state
 
 - Branch: `teutonic-0JYIGPYC` — resume this branch; do not allocate another. Recorded in `docs/agent_branch.txt`.
-- Session: 2 (resumed 2026-11-20, local Europe/Rome) — work committed and pushed.
-- Status: **RESEARCH — NOT COMPLETE**
-- Active-work estimate: session 1 initialization + session 2 research/runtime build (~setup + research + runtime).
-- Last verified local commit: `1c85cf0` (session 2 research + editable Three.js runtime).
-- Last verified remote commit: `1c85cf0` on `origin/teutonic-0JYIGPYC` (pushed, verified via git ls-remote).
+- Session: 2 (resumed 2026-11-20, local Europe/Rome) — continuous work, no stops.
+- Status: **RESEARCH — NOT COMPLETE** (production modelling underway; blockout scaffold replaced in hull/fittings/interiors).
+- Active-work estimate: research + runtime build + 200-space inventory + production hull + fittings + interiors/boilers.
+- Last verified local commit: `8ffe399` (exterior fittings + full scene wiring).
+- Last verified remote commit: `8ffe399` on `origin/teutonic-0JYIGPYC` (pushed, verified via git ls-remote).
 
-## Verified initialization (session 1, carried forward)
-- Authenticated GitHub access without writing/printing the credential.
-- `dreamer2664/ship2666` inspected: public, initially empty.
-- Branch `teutonic-0JYIGPYC` allocated with Python `secrets`, verified nonexistent on origin, created as orphan branch.
-- Workspace: `/home/user/ship2666_work/ship2666`. Two CPU cores, ~3.8 GiB RAM, ~19.5 GiB disk free. No GPU; Blender and PDF CLI tools not installed.
+## Stack (session 2)
+- Browser-explorable Three.js (no build step, no GPU), entry `index.html`, serve `./tools/serve.sh` (port 5173).
+- Scene: hull (lofted shell + strakes + frames + stern + stem), fittings (railings, lifeboats+davits, anchors,
+  windlass/capstan, bollards, companionways, cowl vents, portholes, funnels, masts), twin engines, propellers,
+  rudder, spectral ocean, interiors (dining saloon, staterooms x grades, dormitories, engine room, boiler room,
+  galley, bridge, corridor), boiler rooms + stokeholds. Ship state drives telegraph/helm/steam/shaft/smoke.
 
-## Stack selected (session 2)
-- Browser-explorable Three.js application (no build step, no GPU), procedurally generated geometry, PBR materials, state-driven systems, simplified two-layer ocean. Entry: `index.html`; serve with `./tools/serve.sh` (port 5173).
+## Hardware
+- 2 CPU cores, ~3.8 GiB RAM, no GPU; Blender and PDF CLI tools not installed.
 
-## Session 2 completed (committed as 1c85cf0)
-- Research: Titanic Belfast fact file + RMG G2542/BHC3657 inspected; reference images downloaded to `references/historical_photographs/`.
+## Research (committed)
+- Titanic Belfast fact file + RMG G2542/BHC3657 inspected; images in references/historical_photographs/.
 - Company reference photograph NOT attached; no observations claimed.
-- `docs/evidence_ledger.csv` (29 entries), `docs/space_inventory.csv` (20 spaces), `docs/source_manifest.csv` (13 sources), `docs/historical_configuration.md` (verified vs provisional).
-- Editable Three.js runtime: hull/decks/funnels/masts, twin engines, propellers, rudder, ocean, ship state.
-- `tests/check_inventories.py` passes; `renders/gen1/manifest.json` created.
+- docs/evidence_ledger.csv (29 entries), docs/space_inventory.csv (200 spaces, all unique IDs), docs/source_manifest.csv (13 sources), docs/historical_configuration.md.
+- tests/check_inventories.py passes.
 
-## Blockers and unfinished work
-- Every model, material, system, test and acceptance gate still unfinished beyond the blockout runtime.
-- Space inventory must expand toward 200+ documented spaces.
-- Production hull modelling, interiors, materials, close-up renders, acceptance-gate verification all remain.
+## Blockers / unfinished
+- Production hull materials/rivets, full 4-deck room set toward 200+ (inventory done at 200; geometry rooms are representative samples).
+- Gen1 inspection renders not yet captured.
+- Close-up inspection renders, materials pass, functional tests, acceptance-gate verification all remain.
 
 ## Next exact actions
-1. Capture gen1 inspection renders (port/starboard bow, broadside, stern, deck-level).
-2. Expand `docs/space_inventory.csv` toward 200+ spaces using deck-plan sources (USM Morse, Norway Heritage, etc.).
-3. Begin production hull modelling (plate courses, rivets, frames) and exterior fittings.
-4. Continue whole-ship blockout -> production modelling -> materials -> systems -> QC without sign-off pauses.
+1. Smoke-test server with full scene.
+2. Capture gen1 inspection renders (port/starboard bow, broadside, stern, deck-level, machinery).
+3. Continue production hull modelling (rivets/plate detail), more interior rooms, materials pass.
+4. Commit/push checkpoint every 10-15 min or per milestone.
 
 ## Recovery
 ```sh
@@ -42,4 +42,4 @@ git switch teutonic-0JYIGPYC
 git log -5 --oneline
 ./tools/serve.sh   # then open http://localhost:5173
 ```
-Read this file, `docs/work_log.md`, inventories and test output before modifying anything. Use the supplied credential only through an ephemeral environment variable; do not include it in commands, files, logs or commits.
+Read this file, docs/work_log.md, inventories and test output before modifying anything. Credential only via ephemeral env var; never in files/logs/commits.
