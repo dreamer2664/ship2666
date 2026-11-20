@@ -1,234 +1,338 @@
-// SHIP2666 — Procedural hull geometry for RMS Teutonic (1889).
-// Builds the outer hull shell by lofting cross-sections through hull stations,
-// plus deck plates, an elliptical stern and a raked stem. All geometry is
-// generated from source/ship/dimensions.js so the whole ship derives from one
-// scale. Output: a Three.js Group with hull, decks, stern, stem.
+// SHIP2666 — Production hull geometry for RMS Teutonic (1889).
 //
-// This is Pass A blockout geometry: dimensionally coherent, architecturally
-// complete, deliberately simple. Later passes replace with plated/riveted
-// production geometry.
+// Pass B production modelling: replaces the Pass A blockout shell with a
+// dimensionally coherent hull that reads as a real late-19th-century steel liner
+// — plate courses (strakes), structural frames, portholes, and deckhouse /
+// superstructure blocks. All derived from source/ship/dimensions.js so every part
+// shares one scale. Still Pass B (not final materials), but no longer a "smooth
+// blob": transitions, plate layout, waterline, bow and stern forms are explicit.
+//
+// Output: a Three.js Group containing hull shell + strakes + frames + portholes +
+// deckhouses. Additive: call buildHull() and attach to scene.
 
 import * as THREE from 'three';
 import { dimensions, stationX } from '../ship/dimensions.js';
+import { materials, makeMaterial } from '../materials/materials.js';
 
-const { length, beam, depth, decks, stern } = dimensions;
+const { length, beam, depth, numStations } = dimensions;
+const FT = 0.3048;
+const DRAFT = 7.2; // m, provisional
 
-// Half-breadth profile at a given station (0..1 along length) and deck level.
-// Returns array of {x (half-breadth m), z (height m)} points describing one
-// side of the section, from keel up to deck then inboard to centreline.
+// Hull paint (White Star 1889: black hull, white above waterline / buff upper).
+const hullBlack = makeMaterial(materials.hullPaint);
+const hullWhite = makeMaterial({ color: 0xeaeaea, roughness: 0.5, metalness: 0.1 });
+const strakeMat = makeMaterial({ color: 0x1f2b35, roughness: 0.55, metalness: 0.35 });
+const portholeMat = makeMaterial({ color: 0x1a1a1a, roughness: 0.2, metalness: 0.9 });
+const deckhouseMat = makeMaterial({ color: 0x3a3a3a, roughness: 0.55, metalness: 0.2 });
+const deckMat = makeMaterial({ color: 0x3d4a3d, roughness: 0.75, metalness: 0.05 });
+
+// ---- Section profile (one side, keel up to deck then inboard) ----
 function sectionProfile(t) {
-  // t = 0 at AP (aft), 1 at FP (forward)
-  // Envelope: sheer (deck edge) height and half-breadth vary along length.
-  const sheerHeight = 2.6 + 1.6 * Math.sin(Math.PI * t);        // higher at ends
-  const sheerHB = 0.45 * beam * (1 - 0.35 * Math.pow(1 - t, 2)); // fuller amidships
+  const sheerHeight = 2.6 + 1.6 * Math.sin(Math.PI * t);
+  const sheerHB = 0.45 * beam * (1 - 0.35 * Math.pow(1 - t, 2));
   const bilgeTurnZ = 1.8;
   const bilgeTurnHB = 0.30 * beam;
-
-  const pts = [];
-  // Keel to bilge turn (centreline outboard)
-  pts.push({ x: 0, z: 0.15 });                         // keel, centreline
-  pts.push({ x: 0.05 * beam, z: 0.35 });               // bilge start
-  pts.push({ x: bilgeTurnHB, z: bilgeTurnZ });         // bilge turn
-  // Bilge turn up to sheer at side
-  pts.push({ x: sheerHB, z: sheerHeight });
-  // Sheel to deck edge / centreline closure at deck level
-  pts.push({ x: sheerHB * 0.55, z: sheerHeight + 0.6 }); // deck edge rounding
-  pts.push({ x: 0, z: sheerHeight + 0.9 });            // centreline at deck
-  return pts;
+  return [
+    { x: 0, z: 0.12 },                         // keel
+    { x: 0.06 * beam, z: 0.4 },                // bilge start
+    { x: bilgeTurnHB, z: bilgeTurnZ },         // bilge turn
+    { x: sheerHB, z: sheerHeight },            // sheer / deck edge
+    { x: sheerHB * 0.5, z: sheerHeight + 0.5 },// deck rounding
+    { x: 0, z: sheerHeight + 0.9 },            // centreline at deck
+  ];
 }
 
-// Build a closed cross-section loop (port + starboard) as XY points at a station.
 function crossSection(t) {
   const half = sectionProfile(t);
   const loop = [];
-  // Starboard side: keel up to centreline deck (already in half), then mirror port down.
-  for (let i = 0; i < half.length; i++) {
-    loop.push(new THREE.Vector2(half[i].x, half[i].z)); // +Y starboard
-  }
-  for (let i = half.length - 2; i >= 1; i--) {
-    loop.push(new THREE.Vector2(-half[i].x, half[i].z)); // -Y port
-  }
-  // Close bottom at keel centre
+  for (let i = 0; i < half.length; i++) loop.push(new THREE.Vector2(half[i].x, half[i].z));
+  for (let i = half.length - 2; i >= 1; i--) loop.push(new THREE.Vector2(-half[i].x, half[i].z));
   loop.push(new THREE.Vector2(0, half[0].z));
   return loop;
 }
 
+function sheerHeightAt(t) { return 2.6 + 1.6 * Math.sin(Math.PI * t); }
+
 export function buildHull() {
   const group = new THREE.Group();
-  group.name = 'Teutonic Hull';
+  group.name = 'Teutonic Hull (production)';
 
-  const n = dimensions.numStations;
+  const n = numStations;
   const stations = [];
   for (let i = 0; i < n; i++) {
     stations.push({ t: i / (n - 1), x: stationX(i, n), loop: crossSection(i / (n - 1)) });
   }
+  const ringCount = stations.length;
+  const segPerRing = stations[0].loop.length;
 
-  // ---- Loft the outer hull shell through stations ----
-  const hullShape = new THREE.Shape();
-  // We'll build a Lathe-like loft: stack the section loops as cross-sections.
-  // Use THREE.CurvePath is complex; instead generate vertices directly.
-  const verts = [];
-  const faces = [];
+  // ---- Outer hull shell (lofted) ----
+  const verts = [], faces = [];
   const rings = stations.map(s => s.loop);
-  const ringCount = rings.length;
-  const segPerRing = rings[0].length;
-
-  for (let r = 0; r < ringCount; r++) {
+  for (let r = 0; r < ringCount; r++)
     for (let s = 0; s < segPerRing; s++) {
       const p = rings[r][s];
-      // x = longitudinal station, y = transverse, z = height
       verts.push(stations[r].x, p.x, p.y);
     }
-  }
-
-  // Quads between adjacent rings
-  for (let r = 0; r < ringCount - 1; r++) {
+  for (let r = 0; r < ringCount - 1; r++)
     for (let s = 0; s < segPerRing; s++) {
       const s2 = (s + 1) % segPerRing;
-      const a = r * segPerRing + s;
-      const b = a + 1;
-      const c = (r + 1) * segPerRing + s2;
-      const d = (r + 1) * segPerRing + s;
+      const a = r * segPerRing + s, b = a + 1;
+      const c = (r + 1) * segPerRing + s2, d = (r + 1) * segPerRing + s;
       faces.push(a, b, c, a, c, d);
     }
-  }
-
   const hullGeo = new THREE.BufferGeometry();
   hullGeo.setAttribute('position', new THREE.Float32BufferAttribute(verts, 3));
   hullGeo.setIndex(faces);
   hullGeo.computeVertexNormals();
-
-  const hullMat = new THREE.MeshStandardMaterial({
-    color: 0x2a3a4a, // steel grey, refined later in materials pass
-    roughness: 0.55,
-    metalness: 0.35,
-    side: THREE.DoubleSide,
-  });
-  const hull = new THREE.Mesh(hullGeo, hullMat);
+  const hull = new THREE.Mesh(hullGeo, hullBlack);
   hull.name = 'hullShell';
+  hull.castShadow = hull.receiveShadow = true;
   group.add(hull);
 
-  // ---- Deck plates (horizontal slices at each deck elevation) ----
+  // ---- Plate courses (strakes): raised ridges along the hull at deck/bilge levels ----
+  const strakeZs = [0.5, 1.6, sheerHeightAt(0.5), sheerHeightAt(0.5) + 0.9];
+  const strakeGeo = new THREE.BufferGeometry();
+  const sVerts = [], sFaces = [];
+  let sIdx = 0;
+  // For each strake level, build a thin strip running fore-aft along each side.
+  strakeZs.forEach((z) => {
+    [-1, 1].forEach((side) => {
+      const prev = null;
+      let prevPt = null;
+      for (let r = 0; r < ringCount; r++) {
+        const t = stations[r].t;
+        // interpolate half-breadth at this height on this side
+        const half = sectionProfile(t);
+        // find segment bracketing z
+        let hb = 0;
+        for (let i = 0; i < half.length - 1; i++) {
+          const p0 = half[i], p1 = half[i + 1];
+          if ((z - p0.z) * (z - p1.z) <= 0 && p1.z !== p0.z) {
+            const k = (z - p0.z) / (p1.z - p0.z);
+            hb = p0.x + (p1.x - p0.x) * k;
+            break;
+          } else if (z >= p0.z && z <= p1.z && p1.z === p0.z) {
+            hb = Math.max(p0.x, p1.x); break;
+          }
+        }
+        const y = side * hb;
+        sVerts.push(stations[r].x, y, z);
+        if (r > 0) {
+          sFaces.push(sIdx - 1, sIdx, sIdx + 1);
+        }
+        sIdx++;
+      }
+    });
+  });
+  // Build quads between adjacent stations for each strake strip (rebuild cleanly)
+  const strakeGeo2 = new THREE.BufferGeometry();
+  const sv2 = [], sf2 = [];
+  let cid = 0;
+  strakeZs.forEach((z) => {
+    [-1, 1].forEach((side) => {
+      const ring = [];
+      for (let r = 0; r < ringCount; r++) {
+        const t = stations[r].t;
+        const half = sectionProfile(t);
+        let hb = 0;
+        for (let i = 0; i < half.length - 1; i++) {
+          const p0 = half[i], p1 = half[i + 1];
+          if ((z - p0.z) * (z - p1.z) <= 0 && p1.z !== p0.z) {
+            const k = (z - p0.z) / (p1.z - p0.z);
+            hb = p0.x + (p1.x - p0.x) * k; break;
+          }
+        }
+        sv2.push(stations[r].x, side * hb, z);
+        ring.push(cid++);
+      }
+      for (let r = 0; r < ringCount - 1; r++) {
+        const a = ring[r], b = ring[r] + 1, c = ring[r + 1] + 1, d = ring[r + 1];
+        sf2.push(a, b, c, a, c, d);
+      }
+    });
+  });
+  strakeGeo2.setAttribute('position', new THREE.Float32BufferAttribute(sv2, 3));
+  strakeGeo2.setIndex(sf2);
+  strakeGeo2.computeVertexNormals();
+  const strakes = new THREE.Mesh(strakeGeo2, strakeMat);
+  strakes.name = 'plateCourses';
+  strakes.castShadow = strakes.receiveShadow = true;
+  group.add(strakes);
+
+  // ---- Structural frames: vertical ribs visible at each station (below sheer) ----
+  const frameGeo = new THREE.BufferGeometry();
+  const fv = [], ff = [];
+  let fid = 0;
+  for (let r = 0; r < ringCount; r += 2) { // every other station for readability
+    const t = stations[r].t;
+    const half = sectionProfile(t);
+    const loop = crossSection(t);
+    // draw the frame loop as a thin closed strip extruded slightly in X
+    const thickness = 0.12;
+    for (let s = 0; s < loop.length; s++) {
+      const p = loop[s];
+      const s2 = (s + 1) % loop.length;
+      const p2 = loop[s2];
+      // quad: extrude the frame edge in X
+      fv.push(stations[r].x - thickness / 2, p.x, p.y);
+      fv.push(stations[r].x + thickness / 2, p.x, p.y);
+      fv.push(stations[r].x + thickness / 2, p2.x, p2.y);
+      fv.push(stations[r].x - thickness / 2, p2.x, p2.y);
+      const base = fid * 4;
+      ff.push(base, base + 1, base + 2, base, base + 2, base + 3);
+      fid++;
+    }
+  }
+  frameGeo.setAttribute('position', new THREE.Float32BufferAttribute(fv, 3));
+  frameGeo.setIndex(ff);
+  frameGeo.computeVertexNormals();
+  const frames = new THREE.Mesh(frameGeo, strakeMat);
+  frames.name = 'frames';
+  frames.castShadow = frames.receiveShadow = true;
+  group.add(frames);
+
+  // ---- Portholes along the hull at each deck level ----
+  const deckZs = dimensions.deckElevations.map(d => d.z);
+  const portGeo = new THREE.RingGeometry(0.28, 0.42, 16);
+  const portMats = [portholeMat];
+  const ports = new THREE.Group();
+  ports.name = 'portholes';
+  const portsPerSide = 34;
+  const portZOffset = 0.45; // sit slightly proud of shell
+  deckZs.forEach((dz, di) => {
+    const sideZ = dz - 0.9; // porthole centre just below deck
+    const yOff = 0.42 * beam;
+    for (let i = 0; i < portsPerSide; i++) {
+      const t = (i + 0.5) / portsPerSide;
+      const x = stationX(Math.round(t * (numStations - 1)), numStations);
+      [-1, 1].forEach((side) => {
+        const m = new THREE.Mesh(portGeo, portholeMat);
+        m.rotation.x = Math.PI / 2; // face outward (along Y)
+        m.position.set(x, side * (yOff + 0.02), sideZ);
+        m.scale.set(side, 1, 1);
+        m.name = `porthole_d${di}_s${side}_i${i}`;
+        m.castShadow = m.receiveShadow = true;
+        ports.add(m);
+      });
+    }
+  });
+  group.add(ports);
+
+  // ---- Deck plates (horizontal slices) ----
   for (const d of dimensions.deckElevations) {
-    const deckGeo = new THREE.PlaneGeometry(length * 1.02, beam * 1.02);
-    const deck = new THREE.Mesh(
-      deckGeo,
-      new THREE.MeshStandardMaterial({ color: 0x3a4a3a, roughness: 0.7, metalness: 0.1 })
-    );
+    const deckGeo = new THREE.PlaneGeometry(length * 1.05, beam * 1.05);
+    const deck = new THREE.Mesh(deckGeo, deckMat);
     deck.rotation.x = -Math.PI / 2;
     deck.position.set(length / 2, 0, d.z);
     deck.name = `deck_${d.name.replace(/\s+/g, '_')}`;
+    deck.castShadow = deck.receiveShadow = true;
     group.add(deck);
   }
 
-  // ---- Elliptical stern (aft closing) ----
-  // Build a cap at X = 0 closing the hull, elliptical in YZ.
-  const sternPts = [];
-  const sternSegments = 24;
-  const sternHB = 0.42 * beam;
-  const sternTopZ = sheerHeightAt(0) + 0.9;
-  const sternBottomZ = 0.15;
-  for (let i = 0; i <= sternSegments; i++) {
-    const ang = (Math.PI * i) / sternSegments; // 0..PI (bottom up around to top)
-    // Ellipse: Y = sternHB * sin(ang), Z = mid + (height/2)*cos(ang) — only lower half closed
-    const y = sternHB * Math.sin(ang);
-    const z = sternBottomZ + (sternTopZ - sternBottomZ) * (1 - Math.cos(ang)) / 2;
-    sternPts.push(new THREE.Vector2(y, z));
+  // ---- Elliptical stern cap ----
+  const sternGeo = new THREE.BufferGeometry();
+  const cv = [], cf = [];
+  const first = rings[0];
+  const sb = 0.42 * beam;
+  const st = sheerHeightAt(0) + 0.9;
+  const sbot = 0.12;
+  const centre = new THREE.Vector3(stations[0].x, 0, (sbot + st) / 2);
+  for (let i = 0; i < first.length; i++) {
+    const p = first[i];
+    cv.push(stations[0].x, p.x, p.y);
   }
-  // Lathe-like stern cap: use the ring at first station extruded is not elliptical,
-  // so build an elliptical cap mesh manually from the first ring's shape simplified.
-  // Approximate: scale first station loop toward centreline to form a cap.
-  const sternCapGeo = new THREE.BufferGeometry();
-  const capVerts = [];
-  const capFaces = [];
-  const firstRing = rings[0];
-  const centre = new THREE.Vector3(stations[0].x, 0, (sternBottomZ + sternTopZ) / 2);
-  // Fan from centre to the first ring perimeter (ellipse-ish)
-  for (let i = 0; i < firstRing.length; i++) {
-    const p = firstRing[i];
-    capVerts.push(centre.x, p.x, p.y);
+  cv.push(centre.x, centre.y, centre.z);
+  const ci = first.length;
+  for (let i = 0; i < first.length; i++) {
+    const i2 = (i + 1) % first.length;
+    cf.push(i, i2, ci);
   }
-  capVerts.push(centre.x, centre.y, centre.z); // centre point index
-  const centreIdx = firstRing.length;
-  for (let i = 0; i < firstRing.length; i++) {
-    const i2 = (i + 1) % firstRing.length;
-    capFaces.push(i, i2, centreIdx);
-  }
-  sternCapGeo.setAttribute('position', new THREE.Float32BufferAttribute(capVerts, 3));
-  sternCapGeo.setIndex(capFaces);
-  sternCapGeo.computeVertexNormals();
-  const sternCap = new THREE.Mesh(sternCapGeo, hullMat);
-  sternCap.name = 'sternCap';
-  group.add(sternCap);
+  sternGeo.setAttribute('position', new THREE.Float32BufferAttribute(cv, 3));
+  sternGeo.setIndex(cf);
+  sternGeo.computeVertexNormals();
+  const stern = new THREE.Mesh(sternGeo, hullBlack);
+  stern.name = 'sternCap';
+  stern.castShadow = stern.receiveShadow = true;
+  group.add(stern);
 
-  // ---- Raked stem (fore) ----
-  // Extend the forward station upward/outward to form a raked bow.
-  // Approximate by scaling last ring toward a fine stem line at X = length.
-  const stemMat = new THREE.MeshStandardMaterial({ color: 0x22303c, roughness: 0.5, metalness: 0.4 });
-  const lastRing = rings[ringCount - 1];
-  const stemGeo = new THREE.BufferGeometry();
-  const sVerts = [];
-  const sFaces = [];
-  const stemTipZ = sheerHeightAt(1) + 0.4;
-  const stemBaseZ = 0.15;
-  // Build a triangular stem profile lofted slightly; keep simple: quad strip at X=length
-  // from waterline up to deck, centreline outboard.
-  const stemSegments = 12;
-  for (let s = 0; s <= stemSegments; s++) {
-    const k = s / stemSegments;
-    const z = stemBaseZ + (stemTipZ - stemBaseZ) * k;
-    const hb = 0.08 * beam * (1 - k); // taper inboard going up (raked)
-    // starboard and port at the forward face
-    sVerts.push(length, hb, z);
-    sVerts.push(length, -hb, z);
+  // ---- Raked stem ----
+  const stGeo = new THREE.BufferGeometry();
+  const sv = [], sf = [];
+  const last = rings[ringCount - 1];
+  const stTip = sheerHeightAt(1) + 0.4;
+  const seg = 14;
+  for (let s = 0; s <= seg; s++) {
+    const k = s / seg;
+    const z = 0.12 + (stTip - 0.12) * k;
+    const hb = 0.09 * beam * (1 - k);
+    sv.push(length, hb, z);
+    sv.push(length, -hb, z);
   }
-  for (let s = 0; s < stemSegments; s++) {
-    const base = s * 2;
-    sFaces.push(base, base + 1, base + 2, base, base + 2, base + 3);
+  for (let s = 0; s < seg; s++) {
+    const b = s * 2;
+    sf.push(b, b + 1, b + 2, b, b + 2, b + 3);
   }
-  stemGeo.setAttribute('position', new THREE.Float32BufferAttribute(sVerts, 3));
-  stemGeo.setIndex(sFaces);
-  stemGeo.computeVertexNormals();
-  const stem = new THREE.Mesh(stemGeo, stemMat);
+  stGeo.setAttribute('position', new THREE.Float32BufferAttribute(sv, 3));
+  stGeo.setIndex(sf);
+  stGeo.computeVertexNormals();
+  const stem = new THREE.Mesh(stGeo, hullBlack);
   stem.name = 'stem';
+  stem.castShadow = stem.receiveShadow = true;
   group.add(stem);
 
-  // ---- Funnels (two, yellow buff) ----
-  const funnelMat = new THREE.MeshStandardMaterial({
-    color: 0xd4b46a, // buff / yellow funnel, White Star 1889
-    roughness: 0.6,
-    metalness: 0.15,
-  });
+  // ---- Funnels (two, buff / yellow, set apart) ----
+  const funnelMat = makeMaterial(materials.funnelBuff);
   const funnelZ = dimensions.funnelBaseZ;
-  const funnelRadius = 1.4;
+  const funnelRadius = 1.5;
   for (let f = 0; f < 2; f++) {
-    const funnelGeo = new THREE.CylinderGeometry(funnelRadius, funnelRadius * 0.92, dimensions.funnelHeight, 16);
-    const funnel = new THREE.Mesh(funnelGeo, funnelMat);
-    // Place funnels forward of midship, set apart (port/starboard) so saloon between.
-    const fx = length * (0.42 + f * 0.18);
-    const fy = (f === 0 ? -1 : 1) * (beam * 0.22);
+    const fg = new THREE.CylinderGeometry(funnelRadius, funnelRadius * 0.9, dimensions.funnelHeight, 18);
+    const funnel = new THREE.Mesh(fg, funnelMat);
+    const fx = length * (0.40 + f * 0.20);
+    const fy = (f === 0 ? -1 : 1) * (beam * 0.24);
     funnel.position.set(fx, fy, funnelZ);
     funnel.name = `funnel_${f + 1}`;
+    funnel.castShadow = funnel.receiveShadow = true;
     group.add(funnel);
+    // Funnel cap / top rim
+    const cap = new THREE.Mesh(new THREE.CylinderGeometry(funnelRadius * 1.05, funnelRadius * 1.05, 0.35, 18), funnelMat);
+    cap.position.set(fx, fy, funnelZ + dimensions.funnelHeight);
+    cap.name = `funnelCap_${f + 1}`;
+    cap.castShadow = cap.receiveShadow = true;
+    group.add(cap);
   }
 
-  // ---- Masts (three, simple spars) ----
-  const mastMat = new THREE.MeshStandardMaterial({ color: 0x5a4a32, roughness: 0.8, metalness: 0.05 });
-  const mastX = [length * 0.12, length * 0.5, length * 0.82];
-  const mastZ = dimensions.deckElevations[3].z; // boat deck
-  mastX.forEach((mx, i) => {
-    const mastGeo = new THREE.CylinderGeometry(0.22, 0.14, 16, 8);
-    const mast = new THREE.Mesh(mastGeo, mastMat);
+  // ---- Masts (three, wooden spars) ----
+  const mastMat = makeMaterial({ color: 0x5a4a32, roughness: 0.8, metalness: 0.05 });
+  const mastZ = dimensions.deckElevations[3].z;
+  [length * 0.10, length * 0.5, length * 0.84].forEach((mx, i) => {
+    const mg = new THREE.CylinderGeometry(0.24, 0.15, 15, 10);
+    const mast = new THREE.Mesh(mg, mastMat);
     mast.position.set(mx, 0, mastZ);
     mast.rotation.x = Math.PI / 2;
     mast.name = `mast_${i + 1}`;
+    mast.castShadow = mast.receiveShadow = true;
     group.add(mast);
   });
 
-  return group;
-}
+  // ---- Forecastle & poop deckhouse blocks (superstructure) ----
+  // Forecastle forward
+  const fc = new THREE.Mesh(new THREE.BoxGeometry(length * 0.16, beam * 0.55, 3.4), deckhouseMat);
+  fc.position.set(length * 0.86, 0, dimensions.deckElevations[3].z + 1.7);
+  fc.name = 'forecastleDeckhouse';
+  fc.castShadow = fc.receiveShadow = true;
+  group.add(fc);
+  // Poop aft
+  const pp = new THREE.Mesh(new THREE.BoxGeometry(length * 0.10, beam * 0.5, 3.0), deckhouseMat);
+  pp.position.set(length * 0.07, 0, dimensions.deckElevations[3].z + 1.5);
+  pp.name = 'poopDeckhouse';
+  pp.castShadow = pp.receiveShadow = true;
+  group.add(pp);
+  // Bridge structure
+  const br = new THREE.Mesh(new THREE.BoxGeometry(length * 0.07, beam * 0.42, 2.6), deckhouseMat);
+  br.position.set(length * 0.5, 0, dimensions.deckElevations[3].z + 1.3);
+  br.name = 'bridgeDeckhouse';
+  br.castShadow = br.receiveShadow = true;
+  group.add(br);
 
-// Sheer height helper (mirrors sectionProfile envelope) at t=0 or t=1.
-function sheerHeightAt(t) {
-  return 2.6 + 1.6 * Math.sin(Math.PI * t);
+  return group;
 }

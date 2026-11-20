@@ -32,3 +32,15 @@ Read the full reconstruction brief. Inspected workspace attachments, tool availa
 - Verified app serves via local HTTP server (all modules HTTP 200; Three.js CDN reachable). Stopped server after verification.
 - Updated docs/execution_state.md, docs/project_status.md, README.md (runtime + build instructions).
 - Next: commit/push session 2; capture gen1 inspection renders; expand space inventory toward 200+ spaces; begin production hull modelling.
+
+### 2026-11-20 · production hull modelling (continued, no stop)
+- Rewrote source/hull/hull.js as Pass B production hull: lofted shell + plate courses
+  (strakes at keel/bilge/sheer/deck levels) + structural frames at stations +
+  portholes at each deck level (both sides) + deck plates + elliptical stern cap +
+  raked stem + two buff/yellow funnels set apart + three masts + forecastle/poop/
+  bridge deckhouse blocks. All geometry derives from source/ship/dimensions.js.
+- source/materials/materials.js: PBR definitions for hull paint/white, strakes,
+  portholes, deckhouse, decks.
+- Verified hull.js syntax with node --check.
+- Next: commit/push; advance interior architecture (rooms from space_inventory.csv)
+  and machinery (boilers, engines kinematic); capture gen1 renders.
