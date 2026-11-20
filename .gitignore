@@ -1,0 +1,29 @@
+# Secrets and environment
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials*
+*token*
+
+# Tools and caches
+node_modules/
+__pycache__/
+.pytest_cache/
+*.pyc
+.venv/
+.cache/
+.DS_Store
+*.blend1
+*.blend2
+
+# Reproducible builds and bounded job logs
+build/
+dist/
+.tmp/
+logs/
+
+# Local downloaded reference material; provenance is versioned.
+# Individual files may be explicitly included after licensing/size review.
+references/downloads/
