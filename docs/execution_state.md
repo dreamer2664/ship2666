@@ -6,16 +6,18 @@
 - Active-work estimate: research + runtime build + 200-space inventory + production hull
   (strakes/frames/rivets/stern/stem/funnels/masts/deckhouses) + fittings (railings, lifeboats+davits,
   anchors, windlass/capstan, bollards, companionways, cowl vents, portholes, funnels, masts,
-  deck planking/hatches/skylights/drains) + interiors (200/200 geometry coverage +
-  per-room-type PBR materials) + boilers + period lighting + functional doors + 6 test suites.
-- Last verified local commit: `57fc97d` (hull deck detail).
-- Last verified remote commit: `57fc97d` on `origin/teutonic-0JYIGPYC` (pushed, verified).
+  deck planking/hatches/skylights/drains, mast rigging shrouds/stays/turnbuckles)
+  + interiors (200/200 geometry coverage + per-room-type PBR materials) + boilers + period lighting
+  + functional doors + 6 test suites.
+- Last verified local commit: `05d0d0b` (mast standing rigging).
+- Last verified remote commit: `05d0d0b` on `origin/teutonic-0JYIGPYC` (pushed, verified).
 
 ## Stack (session 2)
 - Browser-explorable Three.js (no build step, no GPU), entry `index.html`, serve `./tools/serve.sh` (port 5173).
 - Full scene verified serving: hull + fittings + twin engines + propellers + rudder + spectral ocean
   + interiors (200 rooms, per-room-type materials) + boiler rooms + period lighting
-  + functional per-door open/close + deck detail. All modules HTTP 200 including Three.js CDN.
+  (nav lights red/green/white, cabin practicals, engine glow) + functional per-door open/close
+  + deck detail (planking, hatches, skylights, drains) + mast rigging.
 - Ship state (telegraph→steam→load→RPM→propeller→rudder→smoke/wake) drives all motion.
 
 ## Hardware
@@ -35,17 +37,16 @@
 - tests/test_mechanisms.py — engine→shaft→propeller, helm→rudder ±35°, load→smoke→wake coupling.
 - tests/test_doors.py — door pivot mechanism + 11 watertight sliding bulkhead doors.
 
-## Blockers / unfinished
+## Blockers / unfinished (documented, not hidden)
 - Gen1 inspection renders not captured (no GPU, no headless browser — documented in
   tools/render_capture_plan.md; not a reduced quality target).
-- Hull plate/rivet refinement; texture maps/trim sheets; acceptance-gate verification.
+- Texture maps/trim sheets; hull plate/rivet refinement; acceptance-gate verification.
 
 ## Next exact actions
 1. Commit/push execution state (this record).
-2. Smoke-test full app server (done — all modules HTTP 200).
-3. Hull production detail refinement; quality checklist progress tracking.
-4. Gen1 renders on render host; acceptance-gate verification.
-5. Commit/push checkpoint every 10-15 min or per milestone.
+2. Gen1 renders on render host (camera rig in source/lighting/cameras.js).
+3. Acceptance-gate verification against docs/quality_checklist.md.
+4. Commit/push checkpoint every 10-15 min or per milestone.
 
 ## Recovery
 ```sh
