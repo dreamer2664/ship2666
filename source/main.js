@@ -2,8 +2,8 @@
 //
 // Editable 3D project: Three.js scene with procedurally generated hull, decks,
 // funnels, masts, twin engine rooms, propellers, rudder, spectral ocean, interiors,
-// boiler rooms and exterior fittings. Ship state (telegraph/helm/steam/shaft/smoke)
-// is the single source of truth and drives all motion kinematically.
+// boiler rooms, exterior fittings, and period lighting. Ship state
+// (telegraph/helm/steam/shaft/smoke) drives all motion kinematically.
 
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
@@ -20,7 +20,7 @@ import {
 import { materials, makeMaterial } from './materials/materials.js';
 
 // ---- Configuration ----
-const { length, beam, depth } = dimensions;
+const { length, beam } = dimensions;
 const DRAFT = 7.2; // m, provisional
 
 // ---- Scene ----
@@ -29,7 +29,8 @@ scene.background = new THREE.Color(0x8bb8d8);
 scene.fog = new THREE.FogExp2(0x8bb8d8, 0.0004);
 
 const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.5, 5000);
-camera.position.set(-length * 0.9, depth * 1.4, length * 0.55);
+camera.position.set(-length * 0.9, depthOrDefault(), length * 0.55);
+function depthOrDefault() { return 12; }
 
 const renderer = new THREE.WebGLRenderer({ antialias: true, powerPreference: 'high-performance' });
 renderer.setSize(window.innerWidth, window.innerHeight);
@@ -44,11 +45,11 @@ controls.dampingFactor = 0.05;
 controls.minDistance = 10;
 controls.maxDistance = 2500;
 
-// ---- Lights ----
-const hemi = new THREE.HemisphereLight(0xbbe0ee, 0x3a4a5a, 0.55);
+// ---- Lights: period-appropriate (warm cabin practicals, not modern LED) ----
+const hemi = new THREE.HemisphereLight(0xbbe0ee, 0x2a2218, 0.45); // warm ground bounce
 scene.add(hemi);
 
-const sun = new THREE.DirectionalLight(0xffffff, 0.9);
+const sun = new THREE.DirectionalLight(0xffffff, 0.8);
 sun.position.set(-400, 600, 200);
 sun.castShadow = true;
 sun.shadow.mapSize.width = 2048;
@@ -60,6 +61,35 @@ sun.shadow.camera.right = 800;
 sun.shadow.camera.top = 800;
 sun.shadow.camera.bottom = -800;
 scene.add(sun);
+
+// Navigation lights (historically correct: red port, green starboard, white masthead)
+const navRed = new THREE.PointLight(0xff2a1a, 0.5, 12);
+navRed.position.set(-length / 2, DRAFT + 6, beam * 0.45); // port (red)
+scene.add(navRed);
+const navGreen = new THREE.PointLight(0x2aff2a, 0.5, 12);
+navGreen.position.set(-length / 2, DRAFT + 6, -beam * 0.45); // starboard (green)
+scene.add(navGreen);
+const navWhite = new THREE.PointLight(0xffffff, 0.7, 20);
+navWhite.position.set(0, DRAFT + 13, 0); // masthead
+scene.add(navWhite);
+
+// Warm cabin practicals (period lighting: oil/early electric, warm, low)
+function practicalLight(x, y, z, intensity = 0.35, color = 0xfff0d8) {
+  const l = new THREE.PointLight(color, intensity, 8);
+  l.position.set(x, y, z);
+  l.castShadow = false;
+  scene.add(l);
+  return l;
+}
+// A few representative cabin practicals along the main-deck corridor
+for (let i = 0; i < 6; i++) {
+  const px = -length / 2 + length * (0.30 + i * 0.05);
+  practicalLight(px, DRAFT + 3.6 + 2.4, beam * 0.48);
+}
+// Engine room glow (faint, warm)
+const engGlow = new THREE.PointLight(0xffb84d, 0.25, 15);
+engGlow.position.set(-length / 2 + length * 0.22, DRAFT + 2.2, beam * 0.1);
+scene.add(engGlow);
 
 // ---- Ocean ----
 const { ocean, material: oceanMat } = buildOcean({ size: 2600, segments: 140 });
@@ -91,7 +121,6 @@ enginePort.position.set(0, DRAFT, -14);
 // ---- Propellers & rudder (stern) ----
 const propMat = new THREE.MeshStandardMaterial({ color: 0x7a8288, roughness: 0.3, metalness: 0.85 });
 const rudderMat = new THREE.MeshStandardMaterial({ color: 0x2a3a4a, roughness: 0.5, metalness: 0.4 });
-
 const sternX = -length / 2;
 const propZ = beam * 0.3;
 
@@ -120,15 +149,14 @@ rudder.position.set(sternX, DRAFT + 0.9, 0);
 rudder.rotation.y = Math.PI / 2;
 scene.add(rudder);
 
-// ---- Interiors (positioned within hull local coords; hull offset -length/2 in X) ----
+// ---- Interiors ----
 const interiors = buildInteriors();
 interiors.position.set(-length / 2, 0, 0);
 interiors.traverse((c) => { c.castShadow = true; c.receiveShadow = true; });
 scene.add(interiors);
 
-// ---- Boiler rooms + stokeholds (lower / tank top) ----
+// ---- Boiler rooms + stokeholds ----
 const boilerGroup = new THREE.Group(); boilerGroup.name = 'boilerRooms';
-const boilerZ = depth * 0.08;
 for (let i = 0; i < 4; i++) {
   const b = buildBoiler();
   b.position.set(-length / 2 + length * (0.12 + i * 0.14), DRAFT + 2.2, (i % 2 === 0 ? -1 : 1) * beam * 0.12);
@@ -141,13 +169,10 @@ boilerGroup.traverse((c) => { c.castShadow = true; c.receiveShadow = true; });
 scene.add(boilerGroup);
 
 // ---- UI ----
-const ui = {
-  panel: document.getElementById('ui'),
-  status: document.getElementById('status'),
-};
+const uiStatus = document.getElementById('status');
 function updateUI() {
   const s = shipState;
-  ui.status.textContent =
+  uiStatus.textContent =
     `Telegraph: ${s.telegraph} | Power: ${(s.engineLoad * 100).toFixed(0)}% | ` +
     `Steam: ${(s.steamPressure * 100).toFixed(0)}% | Shaft: ${s.shaftRpm.toFixed(0)} rpm | ` +
     `Propeller: ${s.propellerState} | Rudder: ${s.rudderAngle.toFixed(0)}\u00b0 | Smoke: ${(s.smokeOutput * 100).toFixed(0)}%`;
@@ -213,6 +238,14 @@ function animate(time) {
   });
 
   rudder.rotation.y = Math.PI / 2 + THREE.MathUtils.degToRad(shipState.rudderAngle);
+
+  // Navigation light intensity responds to engine state (lamps lit underway)
+  const navBright = 0.35 + shipState.smokeOutput * 0.35;
+  navRed.intensity = navGreen.intensity = navBright;
+  navWhite.intensity = 0.5 + shipState.smokeOutput * 0.4;
+
+  // Engine glow responds to load
+  engGlow.intensity = 0.15 + shipState.engineLoad * 0.4;
 
   updateUI();
   updateOcean(ocean, oceanMat, deltaSec, time);
