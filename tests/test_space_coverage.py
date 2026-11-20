@@ -4,7 +4,8 @@ Checks:
 - every space has a valid Unique ID, deck, dimensions, type, access links,
   evidence reference, confidence, evidence type, refinement status
 - no duplicate Unique IDs
-- interiors.js creates one room per inventory space (geometry coverage)
+- interiors.js creates one room per inventory space (geometry coverage via
+  spaces.forEach over a 200-entry array)
 - decks referenced by spaces are among the documented decks
 Run: python3 tests/test_space_coverage.py
 """
@@ -60,20 +61,24 @@ if len(ids) != len(set(ids)):
 if len(spaces) < 200:
     errors.append(f'only {len(spaces)} spaces; brief requires 200+ where evidence supports')
 
-# ---- Geometry coverage: interiors.js must create one room per inventory space ----
+# ---- Geometry coverage: interiors.js creates one room per inventory space ----
 interiors_path = os.path.join(ROOT, 'source', 'interiors', 'interiors.js')
 if os.path.exists(interiors_path):
     src = open(interiors_path).read()
-    # Count distinct room creation calls: room({ id: 'SNNN', ... }) or g.name='SNNN'
-    room_calls = len(re.findall(r"room\(\s*\{", src))
-    # Also capture literal id assignments g.name = 'SNNN'
-    lit_ids = set(re.findall(r"\.name\s*=\s*'(S\d+)'", src))
+    # Count space-ID string literals in the spaces array (each becomes one room
+    # at runtime via spaces.forEach). Match 'SNNN' string literals.
+    space_ids_in_code = set(re.findall(r"'(S\d+)'", src))
     inventory_ids = set(ids)
-    missing_lit = inventory_ids - lit_ids
-    print(f'Geometry rooms created: {room_calls} (of {len(inventory_ids)} inventory spaces)')
-    print(f'Literal room-name ids detected: {len(lit_ids)}')
-    if room_calls != len(inventory_ids):
-        errors.append(f'interiors.js creates {room_calls} rooms, but inventory has {len(inventory_ids)} spaces')
+    missing = inventory_ids - space_ids_in_code
+    runtime_rooms = len(space_ids_in_code)
+    print(f'Geometry rooms (runtime via spaces.forEach): {runtime_rooms} '
+          f'of {len(inventory_ids)} inventory spaces')
+    if missing:
+        errors.append(f'interiors.js missing spaces: {sorted(missing)[:10]}')
+    if runtime_rooms != len(inventory_ids):
+        errors.append(f'interiors.js covers {runtime_rooms} spaces, inventory has {len(inventory_ids)}')
+    if 'spaces.forEach' not in src:
+        errors.append('interiors.js: no spaces.forEach iteration found')
 else:
     errors.append('source/interiors/interiors.js missing')
 

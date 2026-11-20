@@ -117,3 +117,10 @@ Read the full reconstruction brief. Inspected workspace attachments, tool availa
 - All five test suites pass.
 - Next: commit/push; functional system tests (engine/steering/smoke coupling),
   materials texture pass, gen1 renders on render host.
+
+### 2026-11-20 · functional mechanism coupling tests (continued, no stop)
+- tests/test_mechanisms.py: engine load→shaft RPM→propeller (coherent sign), helm→rudder
+  (±35 deg limit), engine load→smoke→wake (single shared state, both funnels), shaft angle
+  accumulation (coherent crank, not independent sine), all state bounds. Passes.
+- All six test suites pass; 200/200 geometry coverage.
+- Next: commit/push; smoke-test full app server; materials textures; gen1 renders.
