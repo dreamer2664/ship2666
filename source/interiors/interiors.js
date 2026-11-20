@@ -1,8 +1,8 @@
 // SHIP2666 — Complete interior geometry for all 200 documented spaces (RMS Teutonic 1889).
 // One room per Unique ID from docs/space_inventory.csv, at real scale, positioned by deck.
 // Every room is named by its space Unique ID for audit and coverage testing.
-// Pass B blockout geometry: real floor/wall/ceiling, correct proportions, lower-deck
-// rooms respect the curved hull envelope. Furnishings/materials refined in later passes.
+// Pass B blockout geometry with materials differentiated by room type (brief section 5):
+// machinery -> iron/steel/coal, cabins -> wood/upholstery, sanitation -> glazed tile.
 
 import * as THREE from 'three';
 import { dimensions } from '../ship/dimensions.js';
@@ -18,72 +18,70 @@ const bulkMat = makeMaterial({ color: 0x4a4a4a, roughness: 0.6, metalness: 0.5 }
 const doorMat = makeMaterial({ color: 0x5a3a2a, roughness: 0.6, metalness: 0.1 });
 const uph = makeMaterial(materials.upholstery);
 const wood = makeMaterial(materials.woodHardwood);
+const woodPainted = makeMaterial(materials.woodPainted);
 const iron = makeMaterial(materials.ironCast);
+const steelMachined = makeMaterial(materials.steelMachined);
 const coal = makeMaterial(materials.coal);
+const glazedTile = makeMaterial(materials.glazedTile);
+const leather = makeMaterial(materials.leather);
+const carpet = makeMaterial(materials.carpet);
 
-// Dimension lookup (w, h, d) from inventory; fallback defaults.
-const dimsMap = {
-  S001:[14,4.2,8],S002:[10,3.8,6],S003:[6,4,4],S004:[14,4.5,9],S005:[14,4.5,9],
-  S006:[20,3.5,3],S007:[4,3,3],S008:[15,5,10],S009:[15,5,10],S010:[7,4,5],
-  S011:[7,4,5],S012:[7,4,5],S013:[7,4,5],S014:[7,4,5],S015:[15,4.5,9],
-  S016:[15,4.5,9],S017:[6,4,4],S018:[6,4,4],S019:[4,3.5,3],S020:[4,3.5,3],
-  S021:[4,3.5,3],S022:[4,3.5,3],S023:[22,3.6,3],S024:[22,3.6,3],S025:[4,3.5,4],
-  S026:[3.5,3.2,3],S027:[5,3.5,4],S028:[3.5,3.2,3],S029:[3.5,3.2,3],S030:[4,3.2,3],
-  S031:[18,5.5,12],S032:[18,5.5,12],S033:[6,4.5,5],S034:[4,3.8,3.5],
-  S035:[8,4,6],S036:[8,4,6],S037:[24,3.8,13],S038:[8,3.4,6],S039:[15,3.6,10],
-  S040:[4,3.4,3],S041:[12,3.6,9],S042:[7,3.4,6],S043:[6.5,12,6.5],
-  S044:[36,2.8,3],S045:[5,2.8,4],S046:[4.2,2.6,3.2],S047:[4.2,2.6,3.2],
-  S048:[4,2.6,3],S049:[4,2.6,3],S050:[3.8,2.6,3],S051:[3.8,2.6,3],
-  S052:[3.6,2.5,3],S053:[3.6,2.5,3],S054:[3.6,2.5,3],S055:[3.6,2.5,3],
-  S056:[4.2,2.6,3.2],S057:[4.2,2.6,3.2],S058:[4,2.6,3],S059:[4,2.6,3],
-  S060:[3.8,2.6,3],S061:[3.8,2.6,3],S062:[3.6,2.5,3],S063:[3.6,2.5,3],
-  S064:[22,3.6,12],S065:[7,3.4,5],S066:[13,3.4,9],S067:[30,2.6,3],
-  S068:[3.8,2.5,3],S069:[3.8,2.5,3],S070:[3.8,2.5,3],S071:[3.8,2.5,3],
-  S072:[3.8,2.5,3],S073:[3.8,2.5,3],S074:[3.8,2.5,3],S075:[3.8,2.5,3],
-  S076:[6,3.2,4],S077:[3,2.8,3],S078:[3.5,2.8,3],S079:[5,2.9,4],
-  S080:[3,2.5,3],S081:[4,2.7,4],S082:[3.8,2.7,3],S083:[3.8,2.7,3],
-  S084:[3.6,2.7,3],S085:[3,2.6,3],S086:[3,2.6,3],S087:[4,2.7,4],
-  S088:[20,3,3],S089:[20,3,3],S090:[6,3,4],S091:[6,3,4],S092:[3,2.7,3],
-  S093:[4,2.8,3],S094:[3,2.4,3],S095:[3,2.6,3],S096:[12,2.4,8],
-  S097:[12,2.4,8],S098:[10,2.6,7],S099:[6,2.8,5],S100:[5,2.8,4],
-  S101:[4,2.6,3],S102:[3.5,2.6,3],S103:[4,2.6,4],S104:[5,2.6,4],
-  S105:[8,4,6],S106:[14,2.4,9],S107:[14,2.4,9],S108:[12,2.4,8],
-  S109:[12,2.4,8],S110:[20,2.6,10],S111:[15,2.6,9],S112:[6,2.6,4],
-  S113:[25,2.5,3],S114:[4,2.4,3],S115:[7,3,5],S116:[5,2.8,4],
-  S117:[4,2.6,4],S118:[4,2.6,4],S119:[5,2.8,4],S120:[4,2.6,4],
-  S121:[3.5,2.6,3],S122:[3.5,2.6,3],S123:[3,2.5,3],S124:[3.5,2.6,3],
-  S125:[4,3.2,3],S126:[3.5,3,3],S127:[3,2.8,3],S128:[2,12,2],
-  S129:[3,2.4,3],S130:[3,2.4,3],S131:[3,2.8,3],S132:[3,2.8,3],
-  S133:[3,2.8,3],S134:[3,2.8,3],S135:[7,1.2,3],S136:[7,1.2,3],
-  S137:[7,1.2,3],S138:[7,1.2,3],S139:[3,1,2],S140:[3,1,2],
-  S141:[2,1.6,2],S142:[1.2,1,2],S143:[1.2,1,2],S144:[1.2,1,2],
-  S145:[2,1.2,2],S146:[1.5,1,2],S147:[1.5,1,2],S148:[1.5,12,2],
-  S149:[1.5,2.2,1],S150:[1,2,1],S151:[4,2.6,3],S152:[4,2.6,3],
-  S153:[3.8,2.6,3],S154:[3.8,2.6,3],S155:[3.6,2.5,3],S156:[3.6,2.5,3],
-  S157:[3.6,2.5,3],S158:[3.6,2.5,3],S159:[11,2.4,7],S160:[11,2.4,7],
-  S161:[11,2.4,7],S162:[11,2.4,7],S163:[11,2.4,7],S164:[11,2.4,7],
-  S165:[10,2.4,7],S166:[10,2.4,7],S167:[8,2.4,6],S168:[6,2.4,5],
-  S169:[4,2.4,3],S170:[6,4,5],S171:[6,4,5],S172:[5,3.8,4],
-  S173:[4,2.8,3],S174:[4,2.8,3],S175:[3,2.6,3],S176:[3,2.6,3],
-  S177:[3,2.6,3],S178:[3,2.6,3],S179:[16,2.6,10],S180:[16,2.6,10],
-  S181:[3.6,2.5,3],S182:[3.6,2.5,3],S183:[3.6,2.5,3],S184:[3.6,2.5,3],
-  S185:[3.6,2.5,3],S186:[3.6,2.5,3],S187:[3.6,2.5,3],S188:[3.6,2.5,3],
-  S189:[3.5,2.7,3],S190:[3,2.6,3],S191:[3,2.6,3],S192:[4,2.8,3],
-  S193:[3,2.5,3],S194:[3,2.5,3],S195:[8,3,6],S196:[4,2.6,3],
-  S197:[4,2.6,3],S198:[5,2.8,4],S199:[4,2.6,3],S200:[12,3,3],
-};
+// Per-room-type material assignment (brief section 5 material families).
+function matFor(typeHint) {
+  const t = typeHint.toLowerCase();
+  if (t.indexOf('machinery') >= 0 || t.indexOf('engine') >= 0 || t.indexOf('boiler') >= 0
+      || t.indexOf('pump') >= 0 || t.indexOf('condenser') >= 0 || t.indexOf('shaft') >= 0
+      || t.indexOf('stern tube') >= 0 || t.indexOf('steering') >= 0 || t.indexOf('auxiliary') >= 0
+      || t.indexOf('refrigeration') >= 0 || t.indexOf('electrical') >= 0 || t.indexOf('battery') >= 0
+      || t.indexOf('switchboard') >= 0) {
+    return { wall: iron, floor: coal, ceil: bulkMat };
+  }
+  if (t.indexOf('stokehold') >= 0 || t.indexOf('coal') >= 0 || t.indexOf('ash') >= 0) {
+    return { wall: iron, floor: coal, ceil: bulkMat };
+  }
+  if (t.indexOf('sanitation') >= 0 || t.indexOf('head') >= 0) {
+    return { wall: glazedTile, floor: glazedTile, ceil: glazedTile };
+  }
+  if (t.indexOf('cabin') >= 0 || t.indexOf('stateroom') >= 0 || t.indexOf('dormitory') >= 0) {
+    return { wall: wood, floor: carpet, ceil: woodPainted };
+  }
+  if (t.indexOf('dining') >= 0 || t.indexOf('saloon') >= 0 || t.indexOf('lounge') >= 0
+      || t.indexOf('library') >= 0 || t.indexOf('mess') >= 0) {
+    return { wall: wood, floor: carpet, ceil: woodPainted };
+  }
+  if (t.indexOf('galley') >= 0 || t.indexOf('scullery') >= 0 || t.indexOf('bakery') >= 0
+      || t.indexOf('butchery') >= 0 || t.indexOf('pantry') >= 0 || t.indexOf('provisions') >= 0
+      || t.indexOf('cold room') >= 0 || t.indexOf('dishwash') >= 0 || t.indexOf('veg prep') >= 0
+      || t.indexOf('pastry') >= 0) {
+    return { wall: iron, floor: glazedTile, ceil: iron };
+  }
+  if (t.indexOf('corridor') >= 0 || t.indexOf('promenade') >= 0 || t.indexOf('staircase') >= 0
+      || t.indexOf('companionway') >= 0 || t.indexOf('ladder') >= 0) {
+    return { wall: woodPainted, floor: carpet, ceil: ceilMat };
+  }
+  if (t.indexOf('bridge') >= 0 || t.indexOf('chart') >= 0 || t.indexOf('wheelhouse') >= 0
+      || t.indexOf('navigation') >= 0 || t.indexOf('officers') >= 0) {
+    return { wall: wood, floor: carpet, ceil: woodPainted };
+  }
+  if (t.indexOf('ventilation') >= 0 || t.indexOf('trunk') >= 0 || t.indexOf('watertight door') >= 0
+      || t.indexOf('porthole') >= 0 || t.indexOf('access ladder') >= 0) {
+    return { wall: iron, floor: iron, ceil: iron };
+  }
+  return { wall: wallMat, floor: floorMat, ceil: ceilMat };
+}
 
-function room({ id, x, y, z, w, d, h, wall = wallMat }) {
+function room({ id, x, y, z, w, d, h, typeHint = '' }) {
+  const m = matFor(typeHint);
   const g = new THREE.Group(); g.name = id;
-  const f = new THREE.Mesh(new THREE.BoxGeometry(w, 0.12, d), floorMat);
+  const f = new THREE.Mesh(new THREE.BoxGeometry(w, 0.12, d), m.floor);
   f.position.set(0, 0.06, 0); g.add(f);
-  const c = new THREE.Mesh(new THREE.BoxGeometry(w, 0.12, d), ceilMat);
+  const c = new THREE.Mesh(new THREE.BoxGeometry(w, 0.12, d), m.ceil);
   c.position.set(0, h - 0.06, 0); g.add(c);
   const ws = [
-    new THREE.Mesh(new THREE.BoxGeometry(0.12, h, d), wall),
-    new THREE.Mesh(new THREE.BoxGeometry(0.12, h, d), wall),
-    new THREE.Mesh(new THREE.BoxGeometry(w, h, 0.12), wall),
-    new THREE.Mesh(new THREE.BoxGeometry(w, h, 0.12), wall),
+    new THREE.Mesh(new THREE.BoxGeometry(0.12, h, d), m.wall),
+    new THREE.Mesh(new THREE.BoxGeometry(0.12, h, d), m.wall),
+    new THREE.Mesh(new THREE.BoxGeometry(w, h, 0.12), m.wall),
+    new THREE.Mesh(new THREE.BoxGeometry(w, h, 0.12), m.wall),
   ];
   ws[0].position.set(-w / 2, h / 2, -d / 2);
   ws[1].position.set(w / 2, h / 2, -d / 2);
@@ -105,9 +103,9 @@ function posFor(deck, typeHint) {
   c.x += 7.0;
   if (c.x > length * 0.92) { c.x = length * 0.05; c.z += 8.0; }
   let y = 0;
-  const t = typeHint.toLowerCase();
-  if (t.indexOf('port') >= 0) y = -beam * 0.35;
-  else if (t.indexOf('stbd') >= 0 || t.indexOf('starboard') >= 0) y = beam * 0.35;
+  const tt = typeHint.toLowerCase();
+  if (tt.indexOf('port') >= 0) y = -beam * 0.35;
+  else if (tt.indexOf('stbd') >= 0 || tt.indexOf('starboard') >= 0) y = beam * 0.35;
   return [x, y, Z[deck] || 5.6];
 }
 
@@ -115,7 +113,6 @@ export function buildInteriors() {
   const group = new THREE.Group(); group.name = 'Interiors';
 
   // All 200 documented spaces, one room each, keyed by Unique ID.
-  // (deck, typeHint, w, h, d)
   const spaces = [
     ['S001','Lower / tank top','Machinery - boiler room (port, boilers 1-2)',14,4.2,8],
     ['S002','Lower / tank top','Machinery - boiler room (stbd, boilers 3-4)',14,4.2,8],
@@ -321,7 +318,7 @@ export function buildInteriors() {
 
   spaces.forEach(([id, deck, typeHint, w, h, d]) => {
     const [x, y, baseZ] = posFor(deck, typeHint);
-    group.add(room({ id, x, y, z: baseZ, w, d, h }));
+    group.add(room({ id, x, y, z: baseZ, w, d, h, typeHint }));
   });
 
   return group;
