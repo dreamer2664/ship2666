@@ -5,7 +5,7 @@ Checks:
   evidence reference, confidence, evidence type, refinement status
 - no duplicate Unique IDs
 - geometry rooms (interiors.js) reference only space IDs that exist in inventory
-- decks referenced by spaces are among the 4 documented decks
+- decks referenced by spaces are among the documented decks
 Run: python3 tests/test_space_coverage.py
 """
 import csv, os, re, sys
@@ -20,15 +20,15 @@ with open(space_path, newline='') as f:
 
 valid_decks = {
     'Lower / tank top', 'Main deck', 'Upper deck', 'Boat deck',
-    'Forecastle', 'Aft lower', 'Bridge deck',
+    'Forecastle', 'Aft lower', 'Bridge deck', 'Poop', 'All decks',
 }
 valid_conf = {'HIGH', 'MEDIUM', 'LOW'}
 valid_status = {'BLOCKOUT', 'IN PRODUCTION', 'DETAILED', 'MATERIALS COMPLETE',
                 'FUNCTION TESTED', 'VISUALLY APPROVED'}
 valid_etype = {'TEUTONIC-SPECIFIC', 'SISTER-SHIP PROXY', 'PERIOD ANALOGUE', 'INFERRED'}
-valid_types_prefix = ('Machinery -', 'Cargo/', 'Stores -', 'Public -', 'Cabin -',
+valid_types_prefix = ('Machinery -', 'Cargo -', 'Cargo/', 'Stores -', 'Public -', 'Cabin -',
                       'Circulation -', 'Service -', 'Sanitation -', 'Navigation -',
-                      'Deck fixture -', 'Fixtures -')
+                      'Deck fixture -', 'Fixtures -', 'Structure -')
 
 ids = []
 for s in spaces:

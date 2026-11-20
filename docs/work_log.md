@@ -79,3 +79,12 @@ Read the full reconstruction brief. Inspected workspace attachments, tool availa
 - All three tests pass: check_inventories, test_render_manifest, test_space_coverage.
 - Next: commit/push; materials/lighting pass (PBR textures, trim sheets); functional
   mechanism tests (door pivots, engine kinematics, rudder); gen1 renders on render host.
+
+### 2026-11-20 · canonicalized inventory + tests pass (continued, no stop)
+- docs/space_inventory.csv: canonicalized deck names (8 documented levels) and
+  type prefixes; all 200 spaces valid, unique IDs.
+- tests/test_space_coverage.py updated to canonical decks/types; passes:
+  200 spaces, geometry-covered spaces cross-referenced against interiors.js.
+- All three test suites pass.
+- Next: commit/push; materials/lighting pass (PBR, trim sheets); functional
+  mechanism tests; gen1 renders on render host.

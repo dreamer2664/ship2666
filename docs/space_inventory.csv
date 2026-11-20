@@ -29,19 +29,19 @@ S027,Lower / tank top,5.0x4.0x3.5,Machinery - auxiliary machinery / pumps,Engine
 S028,Lower / tank top,3.5x3.0x3.2,Stores - fresh water tank,Pumps; piping,Inferred,LOW,INFERRED,BLOCKOUT
 S029,Lower / tank top,3.5x3.0x3.2,Stores - water ballast tank,Piping; sea valves,Inferred,LOW,INFERRED,BLOCKOUT
 S030,Lower / tank top,4.0x3.0x3.2,Machinery - refrigeration plant,Cargo holds; galley,Inferred,LOW,INFERRED,BLOCKOUT
-S031,Lower hold (forward),18.0x12.0x5.5,Cargo - forward hold,Deck hatch; companionway,Inferred,LOW,INFERRED,BLOCKOUT
-S032,Lower hold (aft),18.0x12.0x5.5,Cargo - aft hold,Deck hatch; companionway,Inferred,LOW,INFERRED,BLOCKOUT
-S033,Lower hold,6.0x5.0x4.5,Mail room,Companionway; companion to main deck,"Post office contract, period",LOW,INFERRED,BLOCKOUT
-S034,Lower hold,4.0x3.5x3.8,Stores - cargo gear / blocks,Hold access,Inferred,LOW,INFERRED,BLOCKOUT
-S035,Lower hold (forward),8.0x6.0x4.0,Refrigerated cargo chamber,Forward hold; refrigeration plant,Inferred,LOW,INFERRED,BLOCKOUT
-S036,Lower hold (aft),8.0x6.0x4.0,Refrigerated cargo chamber,Aft hold; refrigeration plant,Inferred,LOW,INFERRED,BLOCKOUT
+S031,Lower / tank top,18.0x12.0x5.5,Cargo - forward hold,Deck hatch; companionway,Inferred,LOW,INFERRED,BLOCKOUT
+S032,Lower / tank top,18.0x12.0x5.5,Cargo - aft hold,Deck hatch; companionway,Inferred,LOW,INFERRED,BLOCKOUT
+S033,Lower / tank top,6.0x5.0x4.5,Cargo - mail room,Companionway; companion to main deck,"Post office contract, period",LOW,INFERRED,BLOCKOUT
+S034,Lower / tank top,4.0x3.5x3.8,Stores - cargo gear / blocks,Hold access,Inferred,LOW,INFERRED,BLOCKOUT
+S035,Lower / tank top,8.0x6.0x4.0,Cargo - Refrigerated cargo chamber,Forward hold; refrigeration plant,Inferred,LOW,INFERRED,BLOCKOUT
+S036,Lower / tank top,8.0x6.0x4.0,Cargo - Refrigerated cargo chamber,Aft hold; refrigeration plant,Inferred,LOW,INFERRED,BLOCKOUT
 S037,Main deck,24.0x13.0x3.8,Public - 1st class dining saloon,Grand staircase; pantries; pantry,USM Morse plan (to verify),MEDIUM,SISTER-SHIP PROXY,BLOCKOUT
 S038,Main deck,8.0x6.0x3.4,Service - 1st class dining pantry,Dining saloon S037; galley,USM Morse plan (to verify),MEDIUM,SISTER-SHIP PROXY,BLOCKOUT
 S039,Main deck,15.0x10.0x3.6,Public - 1st class smoking saloon,Companionway; bar,USM Morse plan (to verify),MEDIUM,SISTER-SHIP PROXY,BLOCKOUT
 S040,Main deck,4.0x3.0x3.4,Service - smoking saloon bar,Smoking saloon S039,USM Morse plan (to verify),MEDIUM,SISTER-SHIP PROXY,BLOCKOUT
 S041,Main deck,12.0x9.0x3.6,Public - 1st class lounge,Companionway; staircase,USM Morse plan (to verify),MEDIUM,SISTER-SHIP PROXY,BLOCKOUT
 S042,Main deck,7.0x6.0x3.4,Public - 1st class library,Lounge S041; staircase,USM Morse plan (to verify),MEDIUM,SISTER-SHIP PROXY,BLOCKOUT
-S043,Main deck / all decks,6.5x6.5xfull-height,Circulation - grand staircase,All decks; saloons,USM Morse plan (to verify),MEDIUM,SISTER-SHIP PROXY,BLOCKOUT
+S043,All decks,6.5x6.5xfull-height,Circulation - grand staircase,All decks; saloons,USM Morse plan (to verify),MEDIUM,SISTER-SHIP PROXY,BLOCKOUT
 S044,Main deck,36.0x2.6x2.8,Circulation - 1st class main corridor,Staterooms; staircase; saloons,USM Morse plan (to verify),MEDIUM,SISTER-SHIP PROXY,BLOCKOUT
 S045,Main deck,5.0x4.0x2.8,Service - 1st class purser's office,Corridor S044,USM Morse plan (to verify),MEDIUM,SISTER-SHIP PROXY,BLOCKOUT
 S046,Main deck,4.2x3.2x2.6,Cabin - 1st class stateroom (grade A),Corridor S044; ensuite,USM Morse stateroom plan (to verify),MEDIUM,SISTER-SHIP PROXY,BLOCKOUT
@@ -85,34 +85,34 @@ S083,Boat deck,3.8x3.0x2.7,Cabin - 2nd officer's cabin,Officers' corridor,Inferr
 S084,Boat deck,3.6x2.9x2.7,Cabin - 3rd officer's cabin,Officers' corridor,Inferred,LOW,INFERRED,BLOCKOUT
 S085,Boat deck,3.0x2.5x2.6,Cabin - chief engineer's cabin,Engineers' corridor,Inferred,LOW,INFERRED,BLOCKOUT
 S086,Boat deck,2.9x2.4x2.6,Cabin - junior officer's cabin,Officers' corridor,Inferred,LOW,INFERRED,BLOCKOUT
-S087,Boat deck,4.0x3.5x2.7,Officers' mess / saloon,Officers' cabins,Inferred,LOW,INFERRED,BLOCKOUT
+S087,Boat deck,4.0x3.5x2.7,Service - officers mess,Officers' cabins,Inferred,LOW,INFERRED,BLOCKOUT
 S088,Boat deck,20.0x3.0x3.0,Circulation - 1st class promenade (port),Deck; staircase,Inferred,LOW,INFERRED,BLOCKOUT
 S089,Boat deck,20.0x3.0x3.0,Circulation - 1st class promenade (stbd),Deck; staircase,Inferred,LOW,INFERRED,BLOCKOUT
 S090,Boat deck,6.0x4.0x3.0,Public - 1st class veranda café (port),Promenade; staircase,USM Morse plan (to verify),MEDIUM,SISTER-SHIP PROXY,BLOCKOUT
 S091,Boat deck,6.0x4.0x3.0,Public - 1st class veranda café (stbd),Promenade; staircase,USM Morse plan (to verify),MEDIUM,SISTER-SHIP PROXY,BLOCKOUT
 S092,Boat deck,3.0x2.5x2.7,Service - 1st class stewards' station,Promenade; veranda café,Inferred,LOW,INFERRED,BLOCKOUT
-S093,Boat deck,4.0x3.0x2.8,Deckhouse - wheelhouse enclosure / bridge deckhouse,Bridge,RMG BHC3657,LOW,INFERRED,BLOCKOUT
+S093,Boat deck,4.0x3.0x2.8,Structure - Deckhouse - wheelhouse enclosure / bridge deckhouse,Bridge,RMG BHC3657,LOW,INFERRED,BLOCKOUT
 S094,Boat deck,2.5x2.0x2.4,Deck fixture - binnacle / compass platform,Bridge S076,Period navigation practice,LOW,INFERRED,BLOCKOUT
 S095,Boat deck,3.0x2.5x2.6,Deck fixture - engine-order telegraph stand,Bridge S076,Period bridge practice,LOW,INFERRED,BLOCKOUT
-S096,Lower / forecastle,12.0x8.0x2.4,Cabin - crew quarters (forecastle),Companionway; mess,Inferred,LOW,INFERRED,BLOCKOUT
-S097,Lower / forecastle,8.0x6.0x2.4,Cabin - crew quarters (forecastle),Companionway; mess,Inferred,LOW,INFERRED,BLOCKOUT
-S098,Main deck forward,10.0x7.0x2.6,Crew - mess,Forecastle quarters; galley,Inferred,LOW,INFERRED,BLOCKOUT
-S099,Main deck forward,6.0x5.0x2.8,Crew - galley,Mess; scullery,Inferred,LOW,INFERRED,BLOCKOUT
-S100,Main deck forward,5.0x4.0x2.8,Service - scullery,Galley S099,Inferred,LOW,INFERRED,BLOCKOUT
-S101,Main deck forward,4.0x3.0x2.6,Crew - galley pantry,Galley S099,Inferred,LOW,INFERRED,BLOCKOUT
-S102,Main deck forward,3.5x3.0x2.6,Sanitation - crew head,Crew quarters,Inferred,LOW,INFERRED,BLOCKOUT
-S103,Main deck forward,4.0x3.5x2.6,Crew - laundry / drying,Crew quarters,Inferred,LOW,INFERRED,BLOCKOUT
-S104,Main deck forward,5.0x4.0x2.6,Stores - crew provisions,Mess,Inferred,LOW,INFERRED,BLOCKOUT
-S105,Lower hold forward,8.0x6.0x4.0,Stores - crew effects / baggage,Crew quarters,Inferred,LOW,INFERRED,BLOCKOUT
-S106,Lower / orlop aft,14.0x9.0x2.4,Cabin - 3rd class dormitory (berths),Companionway; staircase,Inferred,LOW,INFERRED,BLOCKOUT
-S107,Lower / orlop aft,14.0x9.0x2.4,Cabin - 3rd class dormitory (berths),Companionway; staircase,Inferred,LOW,INFERRED,BLOCKOUT
-S108,Lower / orlop aft,12.0x8.0x2.4,Cabin - 3rd class stateroom,Corridor,Inferred,LOW,INFERRED,BLOCKOUT
-S109,Lower / orlop aft,12.0x8.0x2.4,Cabin - 3rd class stateroom,Corridor,Inferred,LOW,INFERRED,BLOCKOUT
-S110,Lower / orlop aft,20.0x10.0x2.6,Public - 3rd class general room,Companionway; dormitories,Inferred,LOW,INFERRED,BLOCKOUT
-S111,Lower / orlop aft,15.0x9.0x2.6,Public - 3rd class dining saloon,Companionway; pantry,Inferred,LOW,INFERRED,BLOCKOUT
-S112,Lower / orlop aft,6.0x4.0x2.6,Service - 3rd class pantry,Dining saloon S111,Inferred,LOW,INFERRED,BLOCKOUT
-S113,Lower / orlop aft,25.0x2.5x2.5,Circulation - 3rd class corridor,Staterooms; staircase,Inferred,LOW,INFERRED,BLOCKOUT
-S114,Lower / orlop aft,4.0x3.0x2.4,Sanitation - 3rd class head,Corridor S113,Inferred,LOW,INFERRED,BLOCKOUT
+S096,Forecastle,12.0x8.0x2.4,Cabin - crew quarters (forecastle),Companionway; mess,Inferred,LOW,INFERRED,BLOCKOUT
+S097,Forecastle,8.0x6.0x2.4,Cabin - crew quarters (forecastle),Companionway; mess,Inferred,LOW,INFERRED,BLOCKOUT
+S098,Main deck,10.0x7.0x2.6,Service - crew mess,Forecastle quarters; galley,Inferred,LOW,INFERRED,BLOCKOUT
+S099,Main deck,6.0x5.0x2.8,Service - crew galley,Mess; scullery,Inferred,LOW,INFERRED,BLOCKOUT
+S100,Main deck,5.0x4.0x2.8,Service - scullery,Galley S099,Inferred,LOW,INFERRED,BLOCKOUT
+S101,Main deck,4.0x3.0x2.6,Service - crew galley pantry,Galley S099,Inferred,LOW,INFERRED,BLOCKOUT
+S102,Main deck,3.5x3.0x2.6,Sanitation - crew head,Crew quarters,Inferred,LOW,INFERRED,BLOCKOUT
+S103,Main deck,4.0x3.5x2.6,Service - crew laundry,Crew quarters,Inferred,LOW,INFERRED,BLOCKOUT
+S104,Main deck,5.0x4.0x2.6,Stores - crew provisions,Mess,Inferred,LOW,INFERRED,BLOCKOUT
+S105,Lower / tank top,8.0x6.0x4.0,Stores - crew effects / baggage,Crew quarters,Inferred,LOW,INFERRED,BLOCKOUT
+S106,Lower / tank top,14.0x9.0x2.4,Cabin - 3rd class dormitory (berths),Companionway; staircase,Inferred,LOW,INFERRED,BLOCKOUT
+S107,Lower / tank top,14.0x9.0x2.4,Cabin - 3rd class dormitory (berths),Companionway; staircase,Inferred,LOW,INFERRED,BLOCKOUT
+S108,Lower / tank top,12.0x8.0x2.4,Cabin - 3rd class stateroom,Corridor,Inferred,LOW,INFERRED,BLOCKOUT
+S109,Lower / tank top,12.0x8.0x2.4,Cabin - 3rd class stateroom,Corridor,Inferred,LOW,INFERRED,BLOCKOUT
+S110,Lower / tank top,20.0x10.0x2.6,Public - 3rd class general room,Companionway; dormitories,Inferred,LOW,INFERRED,BLOCKOUT
+S111,Lower / tank top,15.0x9.0x2.6,Public - 3rd class dining saloon,Companionway; pantry,Inferred,LOW,INFERRED,BLOCKOUT
+S112,Lower / tank top,6.0x4.0x2.6,Service - 3rd class pantry,Dining saloon S111,Inferred,LOW,INFERRED,BLOCKOUT
+S113,Lower / tank top,25.0x2.5x2.5,Circulation - 3rd class corridor,Staterooms; staircase,Inferred,LOW,INFERRED,BLOCKOUT
+S114,Lower / tank top,4.0x3.0x2.4,Sanitation - 3rd class head,Corridor S113,Inferred,LOW,INFERRED,BLOCKOUT
 S115,Main deck,7.0x5.0x2.8,Service - 1st class galley (officers' / first),Dining saloon S037,Inferred,LOW,INFERRED,BLOCKOUT
 S116,Main deck,5.0x4.0x2.8,Service - 1st class scullery,Galley S115,Inferred,LOW,INFERRED,BLOCKOUT
 S117,Main deck,4.0x3.5x2.6,Service - 1st class butchery,Galley S115,Inferred,LOW,INFERRED,BLOCKOUT
@@ -137,12 +137,12 @@ S135,Boat deck,7.0x2.5x1.2,"Deck fixture - lifeboat (port forward, stowed)",Davi
 S136,Boat deck,7.0x2.5x1.2,"Deck fixture - lifeboat (stbd forward, stowed)",Davit S132,Inferred,LOW,INFERRED,BLOCKOUT
 S137,Boat deck,7.0x2.5x1.2,"Deck fixture - lifeboat (port aft, stowed)",Davit S133,Inferred,LOW,INFERRED,BLOCKOUT
 S138,Boat deck,7.0x2.5x1.2,"Deck fixture - lifeboat (stbd aft, stowed)",Davit S134,Inferred,LOW,INFERRED,BLOCKOUT
-S139,Forecastle deck,2.5x1.5x1.0,Deck fixture - anchor (port bow),Forecastle,"Twin anchors, period practice",LOW,INFERRED,BLOCKOUT
-S140,Forecastle deck,2.5x1.5x1.0,Deck fixture - anchor (stbd bow),Forecastle,"Twin anchors, period practice",LOW,INFERRED,BLOCKOUT
-S141,Forecastle deck,2.0x1.8x1.6,Deck fixture - windlass / capstan,Forecastle,Inferred,LOW,INFERRED,BLOCKOUT
-S142,Forecastle deck,1.2x1.2x1.0,Deck fixture - bollard (forecastle),Forecastle deck,Inferred,LOW,INFERRED,BLOCKOUT
+S139,Forecastle,2.5x1.5x1.0,Deck fixture - anchor (port bow),Forecastle,"Twin anchors, period practice",LOW,INFERRED,BLOCKOUT
+S140,Forecastle,2.5x1.5x1.0,Deck fixture - anchor (stbd bow),Forecastle,"Twin anchors, period practice",LOW,INFERRED,BLOCKOUT
+S141,Forecastle,2.0x1.8x1.6,Deck fixture - windlass / capstan,Forecastle,Inferred,LOW,INFERRED,BLOCKOUT
+S142,Forecastle,1.2x1.2x1.0,Deck fixture - bollard (forecastle),Forecastle deck,Inferred,LOW,INFERRED,BLOCKOUT
 S143,Boat deck,1.2x1.2x1.0,Deck fixture - bollard (boat deck),Boat deck,Inferred,LOW,INFERRED,BLOCKOUT
-S144,Poop deck,1.2x1.2x1.0,Deck fixture - bollard (poop),Poop deck,Inferred,LOW,INFERRED,BLOCKOUT
+S144,Poop,1.2x1.2x1.0,Deck fixture - bollard (poop),Poop deck,Inferred,LOW,INFERRED,BLOCKOUT
 S145,Boat deck,2.0x1.5x1.2,Deck fixture - steam whistle,Funnel casing,Period practice,LOW,INFERRED,BLOCKOUT
 S146,Boat deck,1.5x1.0x1.0,Deck fixture - bell (forecastle),Forecastle,Period practice,LOW,INFERRED,BLOCKOUT
 S147,Boat deck,1.5x1.0x1.0,Deck fixture - bell (bridge),Bridge S076,Period practice,LOW,INFERRED,BLOCKOUT
@@ -157,28 +157,28 @@ S155,Upper deck,3.6x2.8x2.5,Cabin - 1st class stateroom (grade C),Corridor,USM M
 S156,Upper deck,3.6x2.8x2.5,Cabin - 1st class stateroom (grade C),Corridor,USM Morse stateroom plan (to verify),MEDIUM,SISTER-SHIP PROXY,BLOCKOUT
 S157,Upper deck,3.6x2.8x2.5,Cabin - 1st class stateroom (grade C),Corridor,USM Morse stateroom plan (to verify),MEDIUM,SISTER-SHIP PROXY,BLOCKOUT
 S158,Upper deck,3.6x2.8x2.5,Cabin - 1st class stateroom (grade C),Corridor,USM Morse stateroom plan (to verify),MEDIUM,SISTER-SHIP PROXY,BLOCKOUT
-S159,Lower / orlop aft,11.0x7.0x2.4,Cabin - 3rd class stateroom,Corridor S113,Inferred,LOW,INFERRED,BLOCKOUT
-S160,Lower / orlop aft,11.0x7.0x2.4,Cabin - 3rd class stateroom,Corridor S113,Inferred,LOW,INFERRED,BLOCKOUT
-S161,Lower / orlop aft,11.0x7.0x2.4,Cabin - 3rd class stateroom,Corridor S113,Inferred,LOW,INFERRED,BLOCKOUT
-S162,Lower / orlop aft,11.0x7.0x2.4,Cabin - 3rd class stateroom,Corridor S113,Inferred,LOW,INFERRED,BLOCKOUT
-S163,Lower / orlop aft,11.0x7.0x2.4,Cabin - 3rd class stateroom,Corridor S113,Inferred,LOW,INFERRED,BLOCKOUT
-S164,Lower / orlop aft,11.0x7.0x2.4,Cabin - 3rd class stateroom,Corridor S113,Inferred,LOW,INFERRED,BLOCKOUT
-S165,Lower / tank top aft,10.0x7.0x2.4,Cabin - engineers' quarters,Engine room access,Inferred,LOW,INFERRED,BLOCKOUT
-S166,Lower / tank top aft,10.0x7.0x2.4,Cabin - engineers' quarters,Engine room access,Inferred,LOW,INFERRED,BLOCKOUT
-S167,Lower / tank top aft,8.0x6.0x2.4,Cabin - engineers' quarters,Engine room access,Inferred,LOW,INFERRED,BLOCKOUT
-S168,Lower / tank top aft,6.0x5.0x2.4,Crew - engineers' mess,Engineers' quarters,Inferred,LOW,INFERRED,BLOCKOUT
-S169,Lower / tank top aft,4.0x3.0x2.4,Sanitation - engineers' head,Engineers' quarters,Inferred,LOW,INFERRED,BLOCKOUT
-S170,Lower hold forward,6.0x5.0x4.0,Stores - sails / canvas,Forward hold,"Schooner rig, Titanic Belfast",LOW,INFERRED,BLOCKOUT
-S171,Lower hold aft,6.0x5.0x4.0,Stores - spare ropes / rigging,Aft hold,"Schooner rig, Titanic Belfast",LOW,INFERRED,BLOCKOUT
-S172,Lower hold forward,5.0x4.0x3.8,Stores - spare anchor chain,Windlass,Inferred,LOW,INFERRED,BLOCKOUT
+S159,Lower / tank top,11.0x7.0x2.4,Cabin - 3rd class stateroom,Corridor S113,Inferred,LOW,INFERRED,BLOCKOUT
+S160,Lower / tank top,11.0x7.0x2.4,Cabin - 3rd class stateroom,Corridor S113,Inferred,LOW,INFERRED,BLOCKOUT
+S161,Lower / tank top,11.0x7.0x2.4,Cabin - 3rd class stateroom,Corridor S113,Inferred,LOW,INFERRED,BLOCKOUT
+S162,Lower / tank top,11.0x7.0x2.4,Cabin - 3rd class stateroom,Corridor S113,Inferred,LOW,INFERRED,BLOCKOUT
+S163,Lower / tank top,11.0x7.0x2.4,Cabin - 3rd class stateroom,Corridor S113,Inferred,LOW,INFERRED,BLOCKOUT
+S164,Lower / tank top,11.0x7.0x2.4,Cabin - 3rd class stateroom,Corridor S113,Inferred,LOW,INFERRED,BLOCKOUT
+S165,Lower / tank top,10.0x7.0x2.4,Cabin - engineers' quarters,Engine room access,Inferred,LOW,INFERRED,BLOCKOUT
+S166,Lower / tank top,10.0x7.0x2.4,Cabin - engineers' quarters,Engine room access,Inferred,LOW,INFERRED,BLOCKOUT
+S167,Lower / tank top,8.0x6.0x2.4,Cabin - engineers' quarters,Engine room access,Inferred,LOW,INFERRED,BLOCKOUT
+S168,Lower / tank top,6.0x5.0x2.4,Service - engineers mess,Engineers' quarters,Inferred,LOW,INFERRED,BLOCKOUT
+S169,Lower / tank top,4.0x3.0x2.4,Sanitation - engineers' head,Engineers' quarters,Inferred,LOW,INFERRED,BLOCKOUT
+S170,Lower / tank top,6.0x5.0x4.0,Stores - sails / canvas,Forward hold,"Schooner rig, Titanic Belfast",LOW,INFERRED,BLOCKOUT
+S171,Lower / tank top,6.0x5.0x4.0,Stores - spare ropes / rigging,Aft hold,"Schooner rig, Titanic Belfast",LOW,INFERRED,BLOCKOUT
+S172,Lower / tank top,5.0x4.0x3.8,Stores - spare anchor chain,Windlass,Inferred,LOW,INFERRED,BLOCKOUT
 S173,Main deck,4.0x3.0x2.8,Stores - ship's stores locker,Corridor S044,Inferred,LOW,INFERRED,BLOCKOUT
 S174,Upper deck,4.0x3.0x2.8,Stores - 2nd class provisions,2nd class galley,Inferred,LOW,INFERRED,BLOCKOUT
 S175,Main deck,3.0x2.5x2.6,Sanitation - 1st class cabin head (grade A),Cabin S046,USM Morse plan (to verify),MEDIUM,SISTER-SHIP PROXY,BLOCKOUT
 S176,Main deck,3.0x2.5x2.6,Sanitation - 1st class cabin head (grade A),Cabin S047,USM Morse plan (to verify),MEDIUM,SISTER-SHIP PROXY,BLOCKOUT
 S177,Upper deck,3.0x2.5x2.6,Sanitation - 1st class cabin head (grade A),Cabin S056,USM Morse plan (to verify),MEDIUM,SISTER-SHIP PROXY,BLOCKOUT
 S178,Upper deck,3.0x2.5x2.6,Sanitation - 1st class cabin head (grade A),Cabin S057,USM Morse plan (to verify),MEDIUM,SISTER-SHIP PROXY,BLOCKOUT
-S179,Lower / orlop aft,16.0x10.0x2.6,Public - 3rd class single women's room,Corridor S113,Period practice,LOW,INFERRED,BLOCKOUT
-S180,Lower / orlop aft,16.0x10.0x2.6,Public - 3rd class single men's room,Corridor S113,Period practice,LOW,INFERRED,BLOCKOUT
+S179,Lower / tank top,16.0x10.0x2.6,Public - 3rd class single women's room,Corridor S113,Period practice,LOW,INFERRED,BLOCKOUT
+S180,Lower / tank top,16.0x10.0x2.6,Public - 3rd class single men's room,Corridor S113,Period practice,LOW,INFERRED,BLOCKOUT
 S181,Upper deck,3.6x2.8x2.5,Cabin - 2nd class stateroom,Corridor S067,Norway Heritage (to verify),LOW,INFERRED,BLOCKOUT
 S182,Upper deck,3.6x2.8x2.5,Cabin - 2nd class stateroom,Corridor S067,Norway Heritage (to verify),LOW,INFERRED,BLOCKOUT
 S183,Upper deck,3.6x2.8x2.5,Cabin - 2nd class stateroom,Corridor S067,Norway Heritage (to verify),LOW,INFERRED,BLOCKOUT
@@ -193,9 +193,9 @@ S191,Boat deck,3.0x2.5x2.6,Service - officers' pantry,Officers' mess S087,Inferr
 S192,Boat deck,4.0x3.0x2.8,Navigation - chart storage / locker,Chart room S078,Inferred,LOW,INFERRED,BLOCKOUT
 S193,Boat deck,2.5x2.0x2.5,Deck fixture - signal lamp / Morse lamp,Bridge,Period practice,LOW,INFERRED,BLOCKOUT
 S194,Boat deck,2.5x2.0x2.5,Deck fixture - flag locker,Bridge deckhouse,White Star house flag,LOW,INFERRED,BLOCKOUT
-S195,Main deck forward,5.0x4.0x2.8,Service - main galley (passenger),Dining saloon,Inferred,LOW,INFERRED,BLOCKOUT
-S196,Main deck forward,4.0x3.0x2.6,Service - vegetable prep,Main galley S195,Inferred,LOW,INFERRED,BLOCKOUT
-S197,Main deck forward,4.0x3.0x2.6,Service - pastry / bakery,Main galley S195,Inferred,LOW,INFERRED,BLOCKOUT
-S198,Main deck forward,5.0x4.0x2.8,Stores - cold room / ice box,Refrigeration plant S030,Inferred,LOW,INFERRED,BLOCKOUT
-S199,Main deck forward,4.0x3.0x2.6,Service - dishwashing / pot wash,Main galley S195,Inferred,LOW,INFERRED,BLOCKOUT
+S195,Main deck,5.0x4.0x2.8,Service - main galley (passenger),Dining saloon,Inferred,LOW,INFERRED,BLOCKOUT
+S196,Main deck,4.0x3.0x2.6,Service - vegetable prep,Main galley S195,Inferred,LOW,INFERRED,BLOCKOUT
+S197,Main deck,4.0x3.0x2.6,Service - pastry / bakery,Main galley S195,Inferred,LOW,INFERRED,BLOCKOUT
+S198,Main deck,5.0x4.0x2.8,Stores - cold room / ice box,Refrigeration plant S030,Inferred,LOW,INFERRED,BLOCKOUT
+S199,Main deck,4.0x3.0x2.6,Service - dishwashing / pot wash,Main galley S195,Inferred,LOW,INFERRED,BLOCKOUT
 S200,Boat deck,12.0x3.0x3.0,Circulation - boat deck companionway to lower decks,Boat deck; main deck,Inferred,LOW,INFERRED,BLOCKOUT
