@@ -10,8 +10,8 @@
   real plate boundaries between stations) + interiors (200/200 geometry coverage +
   per-room-type PBR materials) + boilers + period lighting + functional doors + smoke particles +
   8 test suites + acceptance-gate verification (32/33 gates verified; 1 blocked = final renders need render farm).
-- Last verified local commit: `f69c5a4` (ocean shader fix + visual quality improvements + gen1 re-capture).
-- Last verified remote commit: `93625d2` on `origin/teutonic-0JYIGPYC` (pushed, verified). Local commit `f69c5a4` awaiting push (PAT not available in this environment).
+- Last verified local commit: `1c3ef32` (procedural PBR textures + trim sheet + gen1 re-capture with textures).
+- Last verified remote commit: `1c3ef32` on `origin/teutonic-0JYIGPYC` (pushed, verified).
 
 ## Stack (session 2)
 - Browser-explorable Three.js (no build step, no GPU), entry `index.html`, serve `./tools/serve.sh` (port 5173).
@@ -65,7 +65,7 @@
 - Texture maps/trim sheets; acceptance-gate re-verification after final renders.
 
 ## Next exact actions
-1. Commit/push execution state + test updates (this record).
+1. Commit/push execution state + docs (this record).
 2. Final renders on render host (3840x2160, renders/final/).
 3. Acceptance-gate re-verification after final renders.
 4. Commit/push checkpoint every 10-15 min or per milestone.

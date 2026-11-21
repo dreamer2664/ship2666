@@ -179,7 +179,7 @@ Read the full reconstruction brief. Inspected workspace attachments, tool availa
   (gen1 renders captured: 27/27 cameras, preview 1920x1080; detail close-ups: 5/5).
 - Acceptance gates: 32 verified, 1 blocked (final 3840x2160 renders need render farm).
 - Committed 68d9201 and pushed to origin/teutonic-0JYIGPYC (verified via git ls-remote).
-- Remaining: final renders at renders/final/ (render-capable host), texture maps/trim sheets.
+- Remaining: final renders at renders/final/ (render-capable host).
 
 ### 2026-11-20 · visual quality improvements (continued, no stop)
 - Fixed ocean.shader GLSL ES vec2/vec3 dot product mismatch (uDir changed from vec3 to vec2).
@@ -189,4 +189,20 @@ Read the full reconstruction brief. Inspected workspace attachments, tool availa
 - Improved hull PBR materials: better roughness/metalness on hull paint, strakes, rivets,
   portholes, deckhouse, deck planking — more realistic metallic/weathered look.
 - Re-captured all 27 gen1 renders — ocean now visible, no shader errors.
-- Committed f69c5a4 locally; push to origin pending PAT availability.
+- Committed f69c5a4 and pushed to origin/teutonic-0JYIGPYC.
+
+### 2026-11-20 · procedural PBR textures + trim sheet (continued, no stop)
+- source/textures/textureGenerator.js: runtime canvas-based procedural texture generation.
+  No GPU, no Blender, no native deps — works in any browser with canvas 2D.
+  Generates albedo, normal, roughness, AO maps for: hull paint, hull white, steel machined,
+  brass, wood (hardwood/teak), deck planking, funnel buff, coal, soot, glazed tile, glass.
+  Includes trimSheet (2048px) with rivet rows, plate seams, caulking gaps, porthole rings,
+  railing base, hatch coaming.
+- tools/apply_textures.js: maps generated textures to material definitions
+  (map/normalMap/roughnessMap/aoMap per material).
+- source/main.js: imports generateAllTextures + applyTextures, runs before scene build.
+- source/materials/materials.js: makeMaterial() picks up texture map properties and
+  trim sheet normal overlay.
+- Re-captured all 27 gen1 renders with PBR textures applied — ocean visible, hull
+  weathered, realistic materials, no shader errors.
+- Committed 1c3ef32 and pushed to origin/teutonic-0JYIGPYC.
