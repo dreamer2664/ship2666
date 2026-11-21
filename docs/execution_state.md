@@ -10,8 +10,8 @@
   real plate boundaries between stations) + interiors (200/200 geometry coverage +
   per-room-type PBR materials) + boilers + period lighting + functional doors + smoke particles +
   8 test suites + acceptance-gate verification (32/33 gates verified; 1 blocked = final renders need render farm).
-- Last verified local commit: `68d9201` (gen1 renders captured + manifest committed).
-- Last verified remote commit: `68d9201` on `origin/teutonic-0JYIGPYC` (pushed, verified).
+- Last verified local commit: `f69c5a4` (ocean shader fix + visual quality improvements + gen1 re-capture).
+- Last verified remote commit: `93625d2` on `origin/teutonic-0JYIGPYC` (pushed, verified). Local commit `f69c5a4` awaiting push (PAT not available in this environment).
 
 ## Stack (session 2)
 - Browser-explorable Three.js (no build step, no GPU), entry `index.html`, serve `./tools/serve.sh` (port 5173).
@@ -43,6 +43,16 @@
 - tests/test_doors.py — door pivot mechanism + 11 watertight sliding bulkhead doors.
 - tests/test_materials.py — 37 PBR materials defined; metals differentiated; glass transparent.
 - tests/test_acceptance_gates.py — 32 gates verified, 1 blocked (final renders need render farm).
+
+## Visual quality fixes (session 2, continued)
+
+- Ocean shader: Fixed GLSL ES  mismatch —  changed from  to .
+  Ocean now renders correctly (was completely missing due to shader compile error).
+- Lighting: Brighter sun (1.1 vs 0.8), better position (-800,900,400), expanded shadow frustum.
+- Sky/fog: Gradient navy-to-horizon background, denser atmospheric fog (0.00035).
+- Hull PBR materials: Improved roughness/metalness on hull paint, strakes, rivets, portholes,
+  deckhouse, and deck planking for more realistic metallic/weathered look.
+- All 27 gen1 renders re-captured — ocean now visible, no shader errors.
 
 ## Gen1 renders — COMPLETE
 - `renders/gen1/`: 27 PNG renders from all named cameras (exterior, decks, public rooms,

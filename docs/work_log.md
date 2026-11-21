@@ -180,3 +180,13 @@ Read the full reconstruction brief. Inspected workspace attachments, tool availa
 - Acceptance gates: 32 verified, 1 blocked (final 3840x2160 renders need render farm).
 - Committed 68d9201 and pushed to origin/teutonic-0JYIGPYC (verified via git ls-remote).
 - Remaining: final renders at renders/final/ (render-capable host), texture maps/trim sheets.
+
+### 2026-11-20 · visual quality improvements (continued, no stop)
+- Fixed ocean.shader GLSL ES vec2/vec3 dot product mismatch (uDir changed from vec3 to vec2).
+  Ocean was completely missing due to shader compile error — now renders correctly.
+- Improved sky/fog: gradient navy-to-horizon background, denser atmospheric fog (0.00035).
+- Improved lighting: brighter sun (1.1 vs 0.8), position (-800,900,400), expanded shadow frustum.
+- Improved hull PBR materials: better roughness/metalness on hull paint, strakes, rivets,
+  portholes, deckhouse, deck planking — more realistic metallic/weathered look.
+- Re-captured all 27 gen1 renders — ocean now visible, no shader errors.
+- Committed f69c5a4 locally; push to origin pending PAT availability.
