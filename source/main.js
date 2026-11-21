@@ -18,10 +18,16 @@ import {
   shipState, setTelegraph, setHelm, tick, getPistonPhase,
 } from './systems/shipState.js';
 import { materials, makeMaterial } from './materials/materials.js';
+import { generateAllTextures } from './textures/textureGenerator.js';
+import { applyTextures } from '../tools/apply_textures.js';
 
 // ---- Configuration ----
 const { length, beam } = dimensions;
 const DRAFT = 7.2; // m, provisional
+
+// ---- Generate procedural PBR textures (runtime, CPU-only) ----
+const textures = generateAllTextures();
+applyTextures(materials, textures);
 
 // ---- Scene ----
 const scene = new THREE.Scene();

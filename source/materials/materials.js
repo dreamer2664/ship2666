@@ -170,10 +170,17 @@ export const materials = {
 };
 
 // Build a Three.js MeshStandardMaterial from a definition.
+// Picks up optional map/normalMap/roughnessMap/aoMap/trimSheet properties
+// added by applyTextures() (procedural PBR maps generated at runtime).
 export function makeMaterial(def) {
-  const { transparent, opacity, note, ...rest } = def;
+  const { transparent, opacity, note, __trimSheet, ...rest } = def;
   const m = new THREE.MeshStandardMaterial(rest);
   if (transparent) m.transparent = true;
   if (opacity !== undefined) m.opacity = opacity;
+  // Apply trim sheet as a detail normal overlay if present on the material
+  if (__trimSheet) {
+    m.normalMap = __trimSheet;
+    m.normalScale = new THREE.Vector2(0.5, 0.5);
+  }
   return m;
 }
