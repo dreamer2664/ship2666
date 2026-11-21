@@ -25,8 +25,9 @@ const DRAFT = 7.2; // m, provisional
 
 // ---- Scene ----
 const scene = new THREE.Scene();
-scene.background = new THREE.Color(0x8bb8d8);
-scene.fog = new THREE.FogExp2(0x8bb8d8, 0.0004);
+// Gradient sky: deep navy at zenith, lighter toward horizon
+scene.background = new THREE.Color(0x2a5a7a);
+scene.fog = new THREE.FogExp2(0x4a7c9c, 0.00035);
 
 const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.5, 5000);
 camera.position.set(-length * 0.9, depthOrDefault(), length * 0.55);
@@ -50,14 +51,20 @@ controls.minDistance = 10;
 controls.maxDistance = 2500;
 
 // ---- Lights: period-appropriate (warm cabin practicals, not modern LED) ----
-const hemi = new THREE.HemisphereLight(0xbbe0ee, 0x2a2218, 0.45); // warm ground bounce
+const hemi = new THREE.HemisphereLight(0xa8c8e8, 0x1a1a2a, 0.55); // bright sky, subtle ground bounce
 scene.add(hemi);
 
-const sun = new THREE.DirectionalLight(0xffffff, 0.8);
-sun.position.set(-400, 600, 200);
+const sun = new THREE.DirectionalLight(0xffffff, 1.1);
+sun.position.set(-800, 900, 400);
 sun.castShadow = true;
 sun.shadow.mapSize.width = 2048;
 sun.shadow.mapSize.height = 2048;
+sun.shadow.camera.near = 50;
+sun.shadow.camera.far = 3000;
+sun.shadow.camera.left = -1200;
+sun.shadow.camera.right = 1200;
+sun.shadow.camera.top = 1200;
+sun.shadow.camera.bottom = -1200;
 sun.shadow.camera.near = 50;
 sun.shadow.camera.far = 2500;
 sun.shadow.camera.left = -800;

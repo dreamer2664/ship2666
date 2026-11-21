@@ -13,13 +13,13 @@ import { materials, makeMaterial } from '../materials/materials.js';
 const { length, beam, numStations } = dimensions;
 const DRAFT = 7.2; // m, provisional
 
-const hullBlack = makeMaterial(materials.hullPaint);
-const hullWhite = makeMaterial({ color: 0xeaeaea, roughness: 0.5, metalness: 0.1 });
-const strakeMat = makeMaterial({ color: 0x1f2b35, roughness: 0.55, metalness: 0.35 });
-const rivetMat = makeMaterial({ color: 0x3a3a3a, roughness: 0.7, metalness: 0.6 });
-const portholeMat = makeMaterial({ color: 0x1a1a1a, roughness: 0.2, metalness: 0.9 });
-const deckhouseMat = makeMaterial({ color: 0x3a3a3a, roughness: 0.55, metalness: 0.2 });
-const deckMat = makeMaterial({ color: 0x3d4a3d, roughness: 0.75, metalness: 0.05 });
+const hullBlack = makeMaterial({ ...materials.hullPaint, roughness: 0.45, metalness: 0.25 });
+const hullWhite = makeMaterial({ color: 0xe8e8e8, roughness: 0.4, metalness: 0.08 });
+const strakeMat = makeMaterial({ color: 0x2a3a4a, roughness: 0.5, metalness: 0.3 });
+const rivetMat = makeMaterial({ color: 0x4a4a4a, roughness: 0.65, metalness: 0.7 });
+const portholeMat = makeMaterial({ color: 0x0f0f0f, roughness: 0.1, metalness: 0.95 });
+const deckhouseMat = makeMaterial({ color: 0x4a4a4a, roughness: 0.5, metalness: 0.25 });
+const deckMat = makeMaterial({ color: 0x3d4a3d, roughness: 0.7, metalness: 0.02 });
 
 function sectionProfile(t) {
   const sheerHeight = 2.6 + 1.6 * Math.sin(Math.PI * t);

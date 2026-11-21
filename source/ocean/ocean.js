@@ -19,7 +19,7 @@ uniform float uSwellLen;
 uniform float uChopAmp;
 uniform float uChopLen;
 uniform float uChopSpeed;
-uniform vec3 uDir;
+uniform vec2 uDir;   // direction in xz plane (vec2, not vec3)
 varying float vElevation;
 varying float vFoam;
 varying vec3 vNormal;
@@ -50,7 +50,7 @@ void main() {
   dX *= 0.5 / eps;
   float dZ = wave(pos.xz + vec2(0.0,eps), uSwellAmp, uSwellLen, 0.6, 0.0)
            - wave(pos.xz - vec2(0.0,eps), uSwellAmp, uSwellLen, 0.6, 0.0)
-           + wave(pos.xz + vec2(0.0,eps), uChopAmp, uChopLen, uChopSpeed, 0.0)
+           + wave(pos.xz + vec2(eps,0.0), uChopAmp, uChopLen, uChopSpeed, 0.0)
            - wave(pos.xz - vec2(0.0,eps), uChopAmp, uChopLen, uChopSpeed, 0.0);
   dZ *= 0.5 / eps;
   vec3 normal = normalize(vec3(-dX, 1.0, -dZ));
@@ -84,8 +84,8 @@ void main() {
 }`;
 
 export function buildOcean(options = {}) {
-  const size = options.size || 2000;
-  const seg = options.segments || 128;
+  const size = options.size || 3200;
+  const seg = options.segments || 160;
 
   const geo = new THREE.PlaneGeometry(size, size, seg, seg);
   geo.rotateX(-Math.PI / 2);
@@ -99,7 +99,7 @@ export function buildOcean(options = {}) {
       uChopAmp: { value: 0.25 },
       uChopLen: { value: 12 },
       uChopSpeed: { value: 2.0 },
-      uDir: { value: new THREE.Vector3(0.6, 0, 0.8).normalize() },
+      uDir: { value: new THREE.Vector2(0.6, 0.8).normalize() },
       uDeepColor: { value: new THREE.Color(0x0b2440) },
       uShallowColor: { value: new THREE.Color(0x2a6a9a) },
     },
@@ -124,7 +124,7 @@ export function updateOcean(ocean, material, deltaSec, time) {
 export function oceanHeightAt(material, x, z, time) {
   // Reuse the shader math analytically (matches vertex shader).
   const dir = material.uniforms.uDir.value;
-  const d = new THREE.Vector2(dir.x, dir.z).normalize();
+  const d = new THREE.Vector2(dir.x, dir.y).normalize();
   const wave = (amp, len, speed, phase) =>
     amp * Math.sin((x * d.x + z * d.y) / len + speed * time + phase);
   const swell = wave(material.uniforms.uSwellAmp.value, material.uniforms.uSwellLen.value, 0.6, 0.0);
